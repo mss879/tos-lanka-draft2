@@ -78,9 +78,9 @@ export default function Hero() {
 
         {/* Cinematic Background Layer */}
         <div className="absolute inset-0 z-0 bg-brand-background">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-background via-brand-background/90 to-transparent"></div>
-          <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-primary opacity-[0.05] blur-[120px] rounded-full"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-[0.35] mix-blend-luminosity"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-background via-brand-background/70 to-transparent"></div>
+          <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-primary opacity-10 blur-[120px] rounded-full"></div>
         </div>
 
         {/* --- ISLANDS OVERLAY --- */}
@@ -102,7 +102,7 @@ export default function Hero() {
           {/* Search Trigger */}
           <button 
             onClick={openSearch}
-            className="flex items-center justify-center w-[44px] h-[44px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-gray-700 shadow-sm"
+            className="flex items-center justify-center w-[44px] h-[44px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-gray-700 shadow-sm cursor-pointer"
             title="Search (Cmd+K)"
           >
             <Search size={18} />
@@ -191,7 +191,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={textItemVariants} className="flex flex-col sm:flex-row items-center gap-5 mt-2">
-              <button className="w-full sm:w-auto px-8 py-4 bg-brand-primary text-white font-bold text-base rounded-full hover:bg-brand-primary-hover hover:shadow-[0_0_24px_rgba(0,186,52,0.4)] transition-all flex items-center justify-center gap-2 group">
+              <button className="w-full sm:w-auto px-8 py-4 bg-brand-primary text-white font-bold text-base rounded-2xl hover:bg-brand-primary-hover hover:shadow-[0_0_24px_rgba(0,186,52,0.4)] transition-all flex items-center justify-center gap-2 group">
                 Get Your Free Quote
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
