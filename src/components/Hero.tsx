@@ -86,7 +86,7 @@ export default function Hero() {
         {/* --- ISLANDS OVERLAY --- */}
 
         {/* 1. Top-Left Logo Island */}
-        <div className="absolute top-0 left-0 bg-white rounded-br-[32px] z-50 pt-2 lg:pt-4 pl-4 lg:pl-6 pr-6 pb-4 flex items-center justify-center pointer-events-auto shadow-sm">
+        <div className="absolute top-0 left-0 bg-white rounded-br-[32px] z-[60] pt-2 lg:pt-4 pl-4 lg:pl-6 pr-6 pb-4 flex items-center justify-center pointer-events-auto shadow-sm">
           <img
             src="/tos-logo.png"
             alt="TOS Lanka Logo"
@@ -98,7 +98,7 @@ export default function Hero() {
         </div>
 
         {/* 2. Top-Right Nav Island */}
-        <div className="absolute top-0 right-0 bg-white rounded-bl-[32px] z-50 pt-2 lg:pt-3 pr-4 lg:pr-5 pl-5 pb-3 flex items-center gap-3 pointer-events-auto shadow-sm">
+        <div className="absolute top-0 right-0 bg-white rounded-bl-[32px] z-[60] pt-2 lg:pt-3 pr-4 lg:pr-5 pl-5 pb-3 flex items-center gap-3 pointer-events-auto shadow-sm">
           {/* Search Trigger */}
           <button 
             onClick={openSearch}
@@ -210,44 +210,44 @@ export default function Hero() {
         </div>
 
         {/* Bottom Left Info Bar */}
-        <div className="absolute bottom-0 left-0 w-full lg:w-[calc(100%-400px)] border-t border-white/10 bg-black/40 backdrop-blur-md z-30 py-6 px-6 sm:px-12 lg:px-20 hidden md:block">
+        <div className="absolute bottom-0 left-0 w-full lg:w-[calc(100%-400px)] border-t border-white/10 bg-black/40 backdrop-blur-md z-30 py-4 xl:py-6 px-4 sm:px-6 lg:px-4 xl:px-20 hidden md:block">
           <motion.div
             variants={bottomBarContainer}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap items-center justify-start gap-6 lg:gap-10 text-xs lg:text-sm text-white/50 font-medium"
+            className="flex flex-nowrap items-center justify-between xl:justify-start gap-2 lg:gap-3 xl:gap-10 text-xs lg:text-sm text-white/50 font-medium overflow-hidden"
           >
-            <motion.div variants={bottomItemVariants} className="flex items-center gap-5 group cursor-default">
-              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 mt-1">
-                <BadgeCheck size={36} strokeWidth={1} />
+            <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
+              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
+                <BadgeCheck className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
               </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-white/40 font-mono tracking-[0.25em] uppercase mb-1">Quality Assurance</span>
-                <span className="text-[13px] text-white/90 tracking-widest uppercase font-light">Triple ISO Certified</span>
-              </div>
-            </motion.div>
-
-            <motion.div variants={bottomItemVariants} className="hidden sm:block w-px h-12 bg-white/10"></motion.div>
-
-            <motion.div variants={bottomItemVariants} className="flex items-center gap-5 group cursor-default">
-              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 mt-1">
-                <Earth size={36} strokeWidth={1} />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-white/40 font-mono tracking-[0.25em] uppercase mb-1">Global Reach</span>
-                <span className="text-[13px] text-white/90 tracking-widest uppercase font-light">Exporting to 4 Continents</span>
+              <div className="flex flex-col shrink-0">
+                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Quality Assurance</span>
+                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">Triple ISO Certified</span>
               </div>
             </motion.div>
 
-            <motion.div variants={bottomItemVariants} className="hidden sm:block w-px h-12 bg-white/10"></motion.div>
+            <motion.div variants={bottomItemVariants} className="block w-px h-8 xl:h-12 bg-white/10 shrink-0"></motion.div>
 
-            <motion.div variants={bottomItemVariants} className="flex items-center gap-5 group cursor-default">
-              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 mt-1">
-                <CircuitBoard size={36} strokeWidth={1} />
+            <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
+              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
+                <Earth className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
               </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-white/40 font-mono tracking-[0.25em] uppercase mb-1">Infrastructure</span>
-                <span className="text-[13px] text-white/90 tracking-widest uppercase font-light">Panasonic Equipment</span>
+              <div className="flex flex-col shrink-0">
+                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Global Reach</span>
+                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">Exporting to 4 Continents</span>
+              </div>
+            </motion.div>
+
+            <motion.div variants={bottomItemVariants} className="block w-px h-8 xl:h-12 bg-white/10 shrink-0"></motion.div>
+
+            <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
+              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
+                <CircuitBoard className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
+              </div>
+              <div className="flex flex-col shrink-0">
+                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Infrastructure</span>
+                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">Panasonic Equipment</span>
               </div>
             </motion.div>
           </motion.div>

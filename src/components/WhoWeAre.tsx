@@ -83,7 +83,7 @@ export default function WhoWeAre() {
               {/* Video Card */}
               <motion.div
                 variants={itemVariants}
-                className="relative w-full min-h-[200px] lg:min-h-[250px] flex-1 rounded-[2.5rem] overflow-hidden shadow-sm border border-black/5"
+                className="relative w-full aspect-video lg:aspect-auto lg:flex-1 rounded-2xl lg:rounded-3xl overflow-hidden shadow-sm border border-black/5 bg-black"
               >
                 <video
                   src="/who-we-are-vid-opt.mp4"
@@ -92,7 +92,7 @@ export default function WhoWeAre() {
                   muted
                   playsInline
                   suppressHydrationWarning
-                  className="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 brightness-110"
+                  className="absolute inset-0 w-full h-full object-contain filter grayscale contrast-125 brightness-110"
                 />
               </motion.div>
 
