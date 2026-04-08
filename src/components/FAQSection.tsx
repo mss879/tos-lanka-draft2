@@ -166,6 +166,7 @@ export default function FAQSection() {
   const [activeCat, setActiveCat] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({});
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   const toggleItem = (id: string) => {
     setOpenItems(prev => ({
@@ -186,9 +187,9 @@ export default function FAQSection() {
     { id: 'all', label: 'All' },
     { id: 'about', label: 'About TOS Lanka' },
     { id: 'services', label: 'Services' },
-    { id: 'quality', label: 'Quality & certifications' },
-    { id: 'logistics', label: 'Quoting & logistics' },
-    { id: 'equipment', label: 'Equipment & technology' }
+    { id: 'quality', label: 'Quality & Certifications' },
+    { id: 'logistics', label: 'Quoting & Logistics' },
+    { id: 'equipment', label: 'Equipment & Technology' }
   ];
 
   // Filter content
@@ -211,106 +212,202 @@ export default function FAQSection() {
     }).filter(section => section.items.length > 0);
   }, [activeCat, searchQuery]);
 
+  // Framer motion variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } }
+  };
+
   return (
-    <div className="w-full bg-white rounded-[2.5rem] shadow-sm border border-black/5 p-8 md:p-12 lg:p-16 mb-8 mt-12">
-      <div className="flex flex-col mb-10 text-center">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-black mb-4">Frequently Asked Questions</h2>
-        <p className="text-black/60 max-w-2xl mx-auto">
-          Everything you need to know about TOS Lanka's capabilities, quality standards, and how to work with us.
-        </p>
+    <div className="w-full mt-12 mb-8">
+      {/* Header & Search */}
+      <div className="flex flex-col mb-12 text-center items-center">
+        <motion.div
+           initial={{ opacity: 0, y: -20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, ease: "easeOut" }}
+           className="mb-8"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-bold tracking-widest uppercase mb-6">
+            <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse shadow-[0_0_8px_var(--color-brand-primary)]" />
+            Knowledge Base
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-primary-hover">Questions</span>
+          </h2>
+          <p className="text-black/60 max-w-2xl mx-auto text-lg leading-relaxed">
+            Everything you need to know about TOS Lanka's capabilities, quality standards, and how we bring your hardware to life.
+          </p>
+        </motion.div>
+
+        {/* Animated Search Bar */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative w-full max-w-2xl mx-auto z-20 group"
+        >
+          <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none transition-colors duration-300">
+            <Search 
+              size={20} 
+              className={isSearchFocused || searchQuery ? "text-brand-primary" : "text-black/30 group-hover:text-black/50 transition-colors"} 
+            />
+          </div>
+          <input 
+            type="text" 
+            placeholder="Search questions..." 
+            value={searchQuery}
+            onChange={handleSearch}
+            onFocus={() => setIsSearchFocused(true)}
+            onBlur={() => setIsSearchFocused(false)}
+            className="w-full pl-14 pr-6 py-4 bg-white border border-black/5 rounded-2xl text-black placeholder:text-black/40 focus:outline-none transition-all duration-300 shadow-sm"
+            style={{
+              boxShadow: isSearchFocused ? '0 4px 20px rgba(0, 143, 40, 0.1)' : undefined,
+              borderColor: isSearchFocused ? 'rgba(0, 143, 40, 0.4)' : undefined
+            }}
+          />
+        </motion.div>
       </div>
 
-      <div className="relative mb-8 max-w-2xl mx-auto">
-        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-black/40">
-          <Search size={18} />
-        </div>
-        <input 
-          type="text" 
-          placeholder="Search questions..." 
-          value={searchQuery}
-          onChange={handleSearch}
-          className="w-full pl-11 pr-4 py-3 bg-[#f8f9fb] border border-black/10 rounded-2xl text-black placeholder:text-black/40 outline-none focus:border-brand-tertiary focus:ring-1 focus:ring-brand-tertiary transition-all"
-        />
-      </div>
-
-      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start mt-8">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start mt-12 relative z-10">
         
         {/* LEFT COLUMN: Categories */}
-        <div className="w-full lg:w-[300px] shrink-0 sticky top-32 flex flex-row lg:flex-col flex-wrap gap-2 lg:gap-3 z-10">
-          {categories.map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCat(cat.id)}
-              className={`px-5 py-3 lg:py-4 rounded-full lg:rounded-2xl text-[13px] font-bold tracking-wide transition-all duration-300 text-left flex items-center ${
-                activeCat === cat.id 
-                  ? 'bg-black text-white shadow-md' 
-                  : 'bg-[#f8f9fb] text-black/60 border border-black/5 hover:border-black/20 hover:text-black'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+        <div className="w-full lg:w-[280px] shrink-0 lg:sticky lg:top-32 flex flex-row lg:flex-col flex-wrap gap-2 lg:gap-3 z-10">
+          {categories.map(cat => {
+            const isActive = activeCat === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCat(cat.id)}
+                className="relative px-6 py-4 rounded-xl text-[14px] font-bold tracking-wide transition-all duration-300 text-left outline-none"
+              >
+                <span className={`relative z-10 ${isActive ? 'text-brand-primary' : 'text-black/60 hover:text-black'}`}>
+                  {cat.label}
+                </span>
+                {isActive && (
+                  <motion.div
+                    layoutId="activeCategory"
+                    className="absolute inset-0 bg-brand-primary/5 border border-brand-primary/20 rounded-xl"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                {!isActive && (
+                  <div className="absolute inset-0 bg-black/5 border border-black/5 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                )}
+              </button>
+            )
+          })}
         </div>
 
         {/* RIGHT COLUMN: FAQ Items */}
-        <div className="flex-1 w-full flex flex-col gap-8">
-          {visibleData.length > 0 ? (
-            visibleData.map(section => (
-              <div key={section.cat} className="flex flex-col gap-4">
-                <h3 className="text-[11px] lg:text-xs font-bold tracking-[0.2em] text-brand-tertiary uppercase mb-2 ml-2">
-                  {section.catLabel}
-                </h3>
-                
-                <div className="flex flex-col gap-3">
-                  {section.items.map(item => {
-                    const isOpen = openItems[item.id] || false;
+        <div className="flex-1 w-full min-h-[500px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCat + searchQuery}
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, transition: { duration: 0.2 } }}
+              className="flex flex-col gap-10"
+            >
+              {visibleData.length > 0 ? (
+                visibleData.map(section => (
+                  <div key={section.cat} className="flex flex-col gap-4">
+                    <motion.h3 
+                      variants={itemVariants} 
+                      className="text-[11px] lg:text-xs font-bold tracking-[0.2em] text-brand-primary uppercase mb-3 ml-2 flex items-center gap-3 opacity-80"
+                    >
+                      {section.catLabel}
+                      <span className="h-[1px] flex-1 bg-gradient-to-r from-brand-primary/20 to-transparent" />
+                    </motion.h3>
                     
-                    return (
-                      <div 
-                        key={item.id} 
-                        className={`border border-black/5 rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-300 ${isOpen ? 'bg-[#f8f9fa] shadow-sm ring-1 ring-black/5' : 'bg-white hover:border-black/15'}`}
-                      >
-                        <button 
-                          onClick={() => toggleItem(item.id)}
-                          className="w-full text-left px-5 md:px-8 py-5 flex items-center justify-between gap-6 outline-none"
-                        >
-                          <span className={`font-semibold md:text-lg transition-colors leading-snug ${isOpen ? 'text-brand-tertiary' : 'text-black'}`}>
-                            {item.q}
-                          </span>
-                          <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${isOpen ? 'bg-brand-tertiary text-white' : 'bg-black/5 text-black'}`}>
-                            <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3, ease: 'easeOut' }}>
-                              <ChevronDown size={16} strokeWidth={2.5} />
-                            </motion.div>
-                          </div>
-                        </button>
+                    <div className="flex flex-col gap-3">
+                      {section.items.map((item, index) => {
+                        const isOpen = openItems[item.id] || false;
                         
-                        <AnimatePresence initial={false}>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3, ease: 'easeInOut' }}
-                              className="px-5 md:px-8 overflow-hidden"
+                        return (
+                          <motion.div 
+                            key={item.id}
+                            variants={itemVariants}
+                            layout
+                            className={`bg-white border rounded-2xl overflow-hidden transition-all duration-500 ${
+                              isOpen 
+                                ? 'border-brand-primary/20 shadow-md ring-1 ring-brand-primary/5' 
+                                : 'border-black/5 hover:border-black/15 shadow-sm'
+                            }`}
+                          >
+                            <button 
+                              onClick={() => toggleItem(item.id)}
+                              className="w-full text-left px-5 md:px-8 py-6 flex items-center justify-between gap-6 outline-none"
                             >
-                              <div 
-                                className="pb-6 pt-2 text-black/70 text-sm md:text-base leading-relaxed prose prose-p:my-2 prose-strong:text-black prose-ul:my-2 prose-li:my-1 max-w-none"
-                                dangerouslySetInnerHTML={{ __html: item.a }}
-                              />
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="text-center py-16 text-black/50 bg-[#f8f9fb] rounded-3xl border border-black/5 border-dashed text-lg font-medium">
-              No questions match your search "{searchQuery}"
-            </div>
-          )}
+                              <span className={`font-semibold md:text-lg transition-colors leading-snug ${isOpen ? 'text-black' : 'text-black/80'}`}>
+                                {item.q}
+                              </span>
+                              <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-brand-primary/10 text-brand-primary' : 'bg-black/5 text-black/50 group-hover:text-black/80'}`}>
+                                <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.4, ease: 'backOut' }}>
+                                  <ChevronDown size={18} strokeWidth={2.5} />
+                                </motion.div>
+                              </div>
+                            </button>
+                            
+                            <AnimatePresence initial={false}>
+                              {isOpen && (
+                                <motion.div
+                                  initial={{ height: 0, opacity: 0 }}
+                                  animate={{ height: 'auto', opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                                  className="px-5 md:px-8 overflow-hidden"
+                                >
+                                  <div 
+                                    className="pb-8 pt-2 text-black/70 text-sm md:text-base leading-relaxed max-w-3xl
+                                      prose prose-p:my-2 prose-strong:text-black prose-ul:my-2 prose-li:my-1 prose-a:text-brand-primary hover:prose-a:text-brand-primary-hover
+                                    "
+                                    dangerouslySetInnerHTML={{ __html: item.a }}
+                                  />
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex flex-col items-center justify-center py-20 px-8 text-center bg-white rounded-3xl border border-black/5 shadow-sm mt-4"
+                >
+                  <Search size={40} className="text-black/20 mb-4" />
+                  <h3 className="text-xl font-bold text-black mb-2">No results found</h3>
+                  <p className="text-black/50">
+                    We couldn't find any questions matching "{searchQuery}".
+                  </p>
+                  <button 
+                    onClick={() => { setSearchQuery(''); setActiveCat('all'); }}
+                    className="mt-6 px-6 py-2 bg-black/5 hover:bg-black/10 rounded-full text-black/80 transition-colors font-medium text-sm"
+                  >
+                    Clear Search
+                  </button>
+                </motion.div>
+              )}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>

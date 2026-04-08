@@ -43,9 +43,7 @@ export default function WhoWeAre() {
           {/* ─── Section Header ─── */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
             <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-semibold tracking-tighter text-black font-heading leading-tight md:leading-[1.1]">
-              <span className="text-black">Authentic Japanese </span>
-              <br className="hidden md:block" />
-              <span className="text-black/60">Manufacturing Discipline.</span>
+              <span className="text-black">About Us</span>
             </h2>
             <p className="max-w-[340px] text-[13px] text-black/50 md:text-[15px] leading-relaxed font-medium md:text-right pb-1">
               Precision engineering and zero-defect assembly from Tosslec Ltd.&apos;s sole overseas facility.
