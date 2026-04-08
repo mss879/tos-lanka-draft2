@@ -9,7 +9,8 @@ export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
 
 // Lazy-init admin client (env vars not available at build time on Netlify)
-let _supabaseAdmin: ReturnType<typeof createClient> | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let _supabaseAdmin: any = null;
 function getSupabaseAdmin() {
   if (!_supabaseAdmin) {
     _supabaseAdmin = createClient(
@@ -41,7 +42,7 @@ export async function POST(req: Request) {
         session_id: sessionId,
         role: 'user',
         content: latestMessage.content
-      }).then(({ error }) => {
+      }).then(({ error }: any) => {
         if (error) console.error('Error inserting user message:', error);
       });
     }
@@ -131,7 +132,7 @@ export async function POST(req: Request) {
         session_id: sessionId,
         role: 'assistant',
         content: responseText
-      }).then(({ error }) => {
+      }).then(({ error }: any) => {
         if (error) console.error('Error inserting assistant message:', error);
       });
     }

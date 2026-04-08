@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
 // Lazy-init admin client (env vars not available at build time on Netlify)
-let _supabaseAdmin: ReturnType<typeof createClient> | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let _supabaseAdmin: any = null;
 function getSupabaseAdmin() {
   if (!_supabaseAdmin) {
     _supabaseAdmin = createClient(
