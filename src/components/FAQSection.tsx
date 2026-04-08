@@ -43,7 +43,7 @@ const faqData = [
       {
         id: "services-0",
         q: "What electronics manufacturing services does TOS Lanka offer?",
-        a: "TOS Lanka provides nine distinct service lines under one roof:<ul class=\"list-disc pl-5 mt-2 space-y-1\"><li><strong>SMT Assembly</strong> — high-speed surface mount technology</li><li><strong>Systems Integration & Box Build</strong> — full product assembly</li><li><strong>Through Hole Technology (THT)</strong> — automated and manual insertion</li><li><strong>Conformal Coating & Potting</strong> — PCB environmental protection</li><li><strong>BGA Rework & Reballing</strong> — component-level repair</li><li><strong>Test & Inspection</strong> — AOI, ICT, functional testing, X-ray</li><li><strong>Prototype PCB Assembly</strong> — rapid-turnaround, production-grade</li><li><strong>Automotive Wire Harnessing</strong> — vehicle-grade harness manufacturing</li><li><strong>Inductive Component Assembly</strong> — coil winding, transformers, chokes</li></ul>"
+        a: "TOS Lanka provides nine distinct service lines under one roof:<ul class=\"list-disc pl-5 mt-2 space-y-1\"><li><strong>SMT Assembly</strong> — high-speed surface mount technology</li><li><strong>Systems Integration & Box Build</strong> — full product assembly</li><li><strong>Through Hole Technology (THT)</strong> — automated and manual insertion</li><li><strong>Conformal Coating & Potting</strong> — PCB environmental protection</li><li><strong>Supply Chain Network</strong> — consigned and turnkey solutions</li><li><strong>Test & Inspection</strong> — AOI, ICT, functional testing, X-ray</li><li><strong>Prototype PCB Assembly</strong> — rapid-turnaround, production-grade</li><li><strong>Automotive Wire Harnessing</strong> — vehicle-grade harness manufacturing</li><li><strong>Inductive Component Assembly</strong> — coil winding, transformers, chokes</li></ul>"
       },
       {
         id: "services-1",
@@ -99,7 +99,7 @@ const faqData = [
       {
         id: "quality-4",
         q: "Does TOS Lanka follow IPC standards?",
-        a: "Yes. Visual inspection and workmanship are performed per <strong>IPC-A-610</strong> (Class 2 or Class 3 as specified). Wire harness assemblies are inspected per <strong>IPC/WHMA-A-620</strong>. BGA rework follows <strong>IPC-7711/7721</strong> guidelines. ESD protection is maintained per <strong>ANSI/ESD S20.20</strong> across the entire production environment."
+        a: "Yes. Visual inspection and workmanship are performed per <strong>IPC-A-610</strong> (Class 2 or Class 3 as specified). Wire harness assemblies are inspected per <strong>IPC/WHMA-A-620</strong>. ESD protection is maintained per <strong>ANSI/ESD S20.20</strong> across the entire production environment."
       }
     ]
   },
@@ -141,7 +141,7 @@ const faqData = [
       {
         id: "equipment-0",
         q: "What equipment does TOS Lanka use for SMT assembly?",
-        a: "TOS Lanka's SMT production floor runs on <strong>Panasonic high-speed chip-placement machines</strong> — the same platform technology used by leading electronics manufacturers in Japan, Europe, and North America. Supporting equipment includes:<ul class=\"list-disc pl-5 mt-2 space-y-1\"><li>Precision screen printers with automatic stencil alignment and 3D SPI</li><li>Multi-zone convection reflow ovens with nitrogen capability</li><li>High-resolution AOI systems with 3D solder joint analysis</li><li>X-ray inspection for BGA and hidden-joint verification</li><li>YAMAHA AOI machines for inspection</li><li>ICT systems for electrical verification</li><li>BGA rework stations with controlled thermal profiles</li><li>Coil winding machines for inductive component manufacturing</li></ul>"
+        a: "TOS Lanka's SMT production floor runs on <strong>Panasonic high-speed chip-placement machines</strong> — the same platform technology used by leading electronics manufacturers in Japan, Europe, and North America. Supporting equipment includes:<ul class=\"list-disc pl-5 mt-2 space-y-1\"><li>Precision screen printers with automatic stencil alignment and 3D SPI</li><li>Multi-zone convection reflow ovens with nitrogen capability</li><li>High-resolution AOI systems with 3D solder joint analysis</li><li>X-ray inspection for hidden-joint verification</li><li>YAMAHA AOI machines for inspection</li><li>ICT systems for electrical verification</li><li>Coil winding machines for inductive component manufacturing</li></ul>"
       },
       {
         id: "equipment-1",

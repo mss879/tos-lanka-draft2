@@ -66,11 +66,21 @@ export default function Footer() {
               <div className="ml-4 flex-1 h-[1px] bg-gradient-to-r from-brand-primary/50 to-transparent" />
             </h3>
             <ul className="space-y-3 text-sm text-white/90">
-              {['SMT Assembly', 'Systems Integration', 'Conformal Coating', 'BGA Rework', 'Test & Inspection', 'Through Hole Technology', 'Prototype Assembling', 'Automotive Harnessing', 'Inductive Components'].map((service, i) => (
+              {[
+                { label: 'SMT Assembly', slug: 'smt' },
+                { label: 'Systems Integration', slug: 'system-integration' },
+                { label: 'Through Hole', slug: 'through-hole' },
+                { label: 'Coating & Potting', slug: 'coating-potting' },
+                { label: 'Test & Inspection', slug: 'test-inspection' },
+                { label: 'Prototyping', slug: 'prototype-assembling' },
+                { label: 'Automotive Harnessing', slug: 'automotive-harnessing' },
+                { label: 'Inductive Components', slug: 'inductive-components' },
+                { label: 'Supply Chain', slug: 'supply-chain' },
+              ].map((service, i) => (
                 <li key={i}>
-                  <Link href={`/${service.toLowerCase().replace(/[ &]+/g, '-')}`} className="hover:text-brand-primary transition-colors flex items-center group">
+                  <Link href={`/services/${service.slug}`} className="hover:text-brand-primary transition-colors flex items-center group">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-primary/50 mr-2 group-hover:scale-150 group-hover:bg-brand-primary transition-all" />
-                    {service}
+                    {service.label}
                   </Link>
                 </li>
               ))}
@@ -84,11 +94,18 @@ export default function Footer() {
               <div className="ml-4 flex-1 h-[1px] bg-gradient-to-r from-brand-primary/50 to-transparent" />
             </h3>
             <ul className="space-y-3 text-sm text-white/90">
-              {['Home', 'About Us', 'Services', 'Certifications', 'Articles', 'Contact'].map((link, i) => (
+              {[
+                { label: 'Home', href: '/' },
+                { label: 'About Us', href: '/about' },
+                { label: 'Services', href: '/#services' },
+                { label: 'Certifications', href: '/certification' },
+                { label: 'Articles', href: '/articles' },
+                { label: 'Contact', href: '/contact' },
+              ].map((link, i) => (
                 <li key={i}>
-                  <Link href={`/${link.toLowerCase().replace(' ', '-')}`} className="hover:text-brand-primary transition-colors flex items-center group">
+                  <Link href={link.href} className="hover:text-brand-primary transition-colors flex items-center group">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-primary/50 mr-2 group-hover:scale-150 group-hover:bg-brand-primary transition-all" />
-                    {link}
+                    {link.label}
                   </Link>
                 </li>
               ))}

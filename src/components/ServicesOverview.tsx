@@ -2,72 +2,82 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Plus, Minus, Cpu, Blocks, Droplets, Settings, Microscope, CircuitBoard, Beaker, CarFront, Magnet } from 'lucide-react';
+import Link from 'next/link';
+import { Plus, Minus, Cpu, Blocks, Droplets, Settings, Microscope, CircuitBoard, Beaker, CarFront, Magnet, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const services = [
   {
     id: "001",
     title: "Surface Mount Technology (SMT)",
+    slug: "smt",
     description: "Tos Lanka, with 20+ years in Surface Mount Technology, excels using advanced Panasonic machines and ROHS compliance.",
     icon: Cpu,
-    image: "/services/smt.jpg"
+    image: "/services/smt_new.png"
   },
   {
     id: "002",
     title: "Systems Integration",
+    slug: "system-integration",
     description: "We provide complete product assemblies and testing, ensuring zero defects using manual and semi-automatic tools.",
     icon: Blocks,
-    image: "/services/integration.jpg"
+    image: "/services/integration_new.png"
   },
   {
     id: "003",
     title: "Coating | Potting",
+    slug: "coating-potting",
     description: "We offer custom coating for moisture-sensitive PCBs, featuring inline coating and potting facilities for components.",
     icon: Droplets,
-    image: "/services/coating.jpg"
+    image: "/services/coating_new.png"
   },
   {
     id: "004",
-    title: "BGA Rework",
-    description: "We offer solutions for BGA rework and repair, equipped with advanced systems and skilled, knowledgeable staff.",
-    icon: Settings,
-    image: "/services/bga-rework.jpg"
+    title: "Supply Chain Network",
+    slug: "supply-chain",
+    description: "We provide both consigned and turnkey solutions, adapting seamlessly to customer requirements.\n• PCBs & Components: sourced from Hong Kong, China, Taiwan, Japan, USA, Germany, and India\n• Consumables (solder, flux, chemicals): sourced from Singapore and Malaysia\n• Plastic & Aluminum Parts (including enclosures): sourced from China, Vietnam, and Sri Lanka\nBy leveraging a diverse global supply network, we ensure flexibility, quality, and reliability in every project.",
+    icon: Globe,
+    image: "/services/supply-chain_new.png"
   },
   {
     id: "005",
     title: "Test | Inspection",
+    slug: "test-inspection",
     description: "Equipped with advanced AOI machines, we ensure quality through inspections, testing, and firmware uploading for circuit boards.",
     icon: Microscope,
-    image: "/services/inspection.jpg"
+    image: "/services/inspection_new.png"
   },
   {
     id: "006",
     title: "Through Hole Technology",
+    slug: "through-hole",
     description: "Through Hole technology utilizes advanced machines for component insertion, supported by skilled, Japan-trained workers for hand soldering.",
     icon: CircuitBoard,
-    image: "/services/through-hole.jpg"
+    image: "/services/through-hole_new.png"
   },
   {
     id: "007",
     title: "Prototype Assembling",
+    slug: "prototype-assembling",
     description: "Prototype PCB assemblies are handled by skilled technicians, offering affordable, flexible processes with fast turnaround times.",
     icon: Beaker,
-    image: "/services/prototype.jpg"
+    image: "/services/prototype_new.png"
   },
   {
     id: "008",
     title: "Automotive Harnessing",
+    slug: "automotive-harnessing",
     description: "Extensive experience includes assembling automotive safety sensor harnesses for seat belts and ABS systems for major brands.",
     icon: CarFront,
-    image: "/services/automotive.jpg"
+    image: "/services/automotive_new.png"
   },
   {
     id: "009",
     title: "Inductive Components Assemblies",
+    slug: "inductive-components",
     description: "Specializing in inductive component assemblies, skilled professionals leverage expertise for various industrial applications and needs.",
     icon: Magnet,
-    image: "/services/inductive.jpg"
+    image: "/services/inductive_new.png"
   }
 ];
 
@@ -159,15 +169,15 @@ export default function ServicesOverview() {
                           <p className="text-[#F5F5F5]/60 text-base md:text-lg leading-relaxed">
                             {service.description}
                           </p>
-                          <a
-                            href={`/services/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                          <Link
+                            href={`/services/${service.slug}`}
                             className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors duration-300 group/link"
                           >
                             Learn more
                             <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
 
                         {/* Image */}

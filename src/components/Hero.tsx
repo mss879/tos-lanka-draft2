@@ -100,7 +100,7 @@ export default function Hero() {
         {/* 2. Top-Right Nav Island */}
         <div className="absolute top-0 right-0 bg-white rounded-bl-[32px] z-[60] pt-2 lg:pt-3 pr-4 lg:pr-5 pl-5 pb-3 flex items-center gap-3 pointer-events-auto shadow-sm">
           {/* Search Trigger */}
-          <button 
+          <button
             onClick={openSearch}
             className="flex items-center justify-center w-[44px] h-[44px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-gray-700 shadow-sm cursor-pointer"
             title="Search (Cmd+K)"
@@ -186,13 +186,13 @@ export default function Hero() {
               <span className="text-brand-tertiary whitespace-nowrap">Precision Manufacturing</span>
             </motion.h1>
 
-            <motion.p variants={textItemVariants} className="text-base lg:text-lg text-white/70 max-w-[580px] leading-relaxed mb-6 font-light">
-              TOS Lanka is the only overseas manufacturing facility of Tosslec Ltd., Japan — delivering world-class printed circuit board assembly, systems integration, and contract electronics manufacturing to global OEMs since 1995.
+            <motion.p variants={textItemVariants} className="text-base lg:text-[19px] text-white/70 max-w-[800px] leading-relaxed mb-8 font-light">
+              Established in 1995 as the sole overseas facility of Tosslec Ltd., Japan, we provide comprehensive contract electronics manufacturing and PCB assembly for global OEMs.
             </motion.p>
 
             <motion.div variants={textItemVariants} className="flex flex-col sm:flex-row items-center gap-5 mt-2">
               <button className="w-full sm:w-auto px-8 py-4 bg-brand-primary text-white font-bold text-base rounded-2xl hover:bg-brand-primary-hover hover:shadow-[0_0_24px_rgba(0,186,52,0.4)] transition-all flex items-center justify-center gap-2 group">
-                Get Your Free Quote
+                Contact Us
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <a href="#capabilities" className="text-white/80 hover:text-white font-medium text-base flex items-center gap-3 transition-colors group">
@@ -219,10 +219,22 @@ export default function Hero() {
           >
             <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
               <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
-                <BadgeCheck className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
+                <Globe className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
               </div>
               <div className="flex flex-col shrink-0">
-                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Quality Assurance</span>
+                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Ownership & Heritage</span>
+                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">100% Japanese Owned</span>
+              </div>
+            </motion.div>
+
+            <motion.div variants={bottomItemVariants} className="block w-px h-8 xl:h-12 bg-white/10 shrink-0"></motion.div>
+
+            <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
+              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
+                <ShieldCheck className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
+              </div>
+              <div className="flex flex-col shrink-0">
+                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Quality & Compliance</span>
                 <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">Triple ISO Certified</span>
               </div>
             </motion.div>
@@ -231,23 +243,11 @@ export default function Hero() {
 
             <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
               <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
-                <Earth className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
+                <BadgeCheck className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
               </div>
               <div className="flex flex-col shrink-0">
-                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Global Reach</span>
-                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">Exporting to 4 Continents</span>
-              </div>
-            </motion.div>
-
-            <motion.div variants={bottomItemVariants} className="block w-px h-8 xl:h-12 bg-white/10 shrink-0"></motion.div>
-
-            <motion.div variants={bottomItemVariants} className="flex items-center gap-2 xl:gap-5 group cursor-default shrink-0">
-              <div className="text-white/80 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 xl:mt-1 flex shrink-0">
-                <CircuitBoard className="w-6 h-6 lg:w-7 lg:h-7 xl:w-9 xl:h-9" strokeWidth={1} />
-              </div>
-              <div className="flex flex-col shrink-0">
-                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Infrastructure</span>
-                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">Panasonic Equipment</span>
+                <span className="text-[8px] lg:text-[9px] xl:text-[10px] text-white/40 font-mono tracking-[0.2em] xl:tracking-[0.25em] uppercase mb-0.5 xl:mb-1 whitespace-nowrap">Investment Status</span>
+                <span className="text-[10px] lg:text-[11px] xl:text-[13px] text-white/90 tracking-widest uppercase font-light whitespace-nowrap">BOI Approved Facility</span>
               </div>
             </motion.div>
           </motion.div>

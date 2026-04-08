@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 
 import { SearchProvider } from "@/context/SearchContext";
 import GlobalSearch from "@/components/GlobalSearch";
+import { AiChatWidget } from "@/components/ai-chat-widget";
 
 export default function RootLayout({
   children,
@@ -35,6 +36,7 @@ export default function RootLayout({
         <SearchProvider>
           {children}
           <GlobalSearch />
+          <AiChatWidget />
         </SearchProvider>
       </body>
     </html>

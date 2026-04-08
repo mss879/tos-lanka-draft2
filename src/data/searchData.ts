@@ -28,12 +28,12 @@ export const searchIndex: SearchResult[] = [
     keywords: ["integration", "firmware", "mechanical", "assembly", "box build", "testing"]
   },
   {
-    id: "svc-bga",
-    title: "BGA Rework",
-    description: "Precision Ball Grid Array repair, removal, and reballing processes.",
+    id: "service-4",
+    title: "Supply Chain Network",
+    description: "We provide both consigned and turnkey solutions, adapting seamlessly to customer requirements.",
     url: "/#services",
     category: "Services",
-    keywords: ["bga", "rework", "reballing", "repair", "ball grid", "precision"]
+    keywords: ["supply chain", "consigned", "turnkey", "logistics", "procurement"]
   },
   {
     id: "svc-coat",

@@ -37,23 +37,23 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   colors = ['#00ba34', '#3a5bfb'], // TOS Lanka Green and Blue
   items = [
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-    { label: 'About Us', ariaLabel: 'Learn about us', link: '/#who-we-are' },
+    { label: 'About Us', ariaLabel: 'Learn about us', link: '/about' },
     { 
       label: 'Services', ariaLabel: 'View our services', link: '/#services',
       subItems: [
-        { label: 'SMT Assembly', link: '/#smt-assembly' },
-        { label: 'Systems Integration', link: '/#systems-integration' },
-        { label: 'Conformal Coating', link: '/#conformal-coating' },
-        { label: 'BGA Rework', link: '/#bga-rework' },
-        { label: 'Test & Inspection', link: '/#test-inspection' },
-        { label: 'Through Hole Technology', link: '/#through-hole' },
-        { label: 'Prototype Assembling', link: '/#prototype-assembling' },
-        { label: 'Automotive Harnessing', link: '/#automotive-harnessing' },
-        { label: 'Inductive Components', link: '/#inductive-components' },
+        { label: 'SMT Assembly', link: '/services/smt' },
+        { label: 'Systems Integration', link: '/services/system-integration' },
+        { label: 'Through Hole', link: '/services/through-hole' },
+        { label: 'Coating & Potting', link: '/services/coating-potting' },
+        { label: 'Test & Inspection', link: '/services/test-inspection' },
+        { label: 'Prototyping', link: '/services/prototype-assembling' },
+        { label: 'Automotive Harnessing', link: '/services/automotive-harnessing' },
+        { label: 'Inductive Components', link: '/services/inductive-components' },
+        { label: 'Supply Chain', link: '/services/supply-chain' },
       ]
     },
     { label: 'Certifications', ariaLabel: 'View our certifications', link: '/certification' },
-    { label: 'Articles', ariaLabel: 'Read our articles', link: '/#articles' },
+    { label: 'Articles', ariaLabel: 'Read our articles', link: '/articles' },
     { label: 'FAQ', ariaLabel: 'Frequently Asked Questions', link: '/faq' },
     { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
   ],

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowUpRight, BadgeCheck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -21,34 +22,34 @@ const itemVariants: Variants = {
   },
 };
 
-/* Membership logos for the marquee */
-const membershipLogos = [
-  { src: "/Memberships/Picture2.png", name: "SLEEMEA" },
-  { src: "/Memberships/Picture3.png", name: "Ceylon Chamber" },
-  { src: "/Memberships/Picture4.png", name: "ECCSL" },
-  { src: "/Memberships/Picture5.png", name: "SLACMA" },
-  { src: "/Memberships/Picture6.png", name: "SL-Japan Business Council" },
+/* Industries we serve */
+const industries = [
+  { name: "Industrial & Automation", image: "/industries/industrial_v4.png" },
+  { name: "Automotive", image: "/industries/automotive_v4.png" },
+  { name: "Medical", image: "/industries/medical_v4.png" },
+  { name: "Telecommunication", image: "/industries/telecom_v4.png" },
+  { name: "IoT & Smart Apparel", image: "/industries/iot_v4.png" },
+  { name: "High-end Consumer", image: "/industries/consumer_v4.png" },
+  { name: "Agriculture", image: "/industries/agritech_v4.png" },
 ];
 
 export default function WhoWeAre() {
   return (
     <div className="w-full bg-white px-[5px] pb-12 md:pb-24 pt-12 md:pt-24">
       <section className="relative w-full overflow-hidden rounded-[32px] sm:rounded-[40px] md:rounded-[48px] bg-[#f8f9fa] shadow-sm selection:bg-blue-500/30 selection:text-white p-[5px]">
-        
-        <div className="w-full flex flex-col gap-10 px-4 py-12 md:px-8 lg:px-12 xl:px-16 lg:gap-14">
+
+        <div className="w-full flex flex-col gap-8 px-4 py-10 md:px-6 lg:px-8 xl:px-12 lg:gap-10">
 
           {/* ─── Section Header ─── */}
-          <div className="flex flex-col gap-5">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-semibold tracking-tighter text-black md:text-5xl lg:text-6xl font-heading leading-tight md:leading-[1.1]">
-                <span className="text-black">Authentic Japanese </span>
-                <br className="hidden md:block" />
-                <span className="text-black/60">Manufacturing Discipline.</span>
-              </h2>
-              <p className="max-w-[560px] text-sm text-black/60 md:text-base leading-relaxed font-light">
-                Precision engineering, zero-defect culture, and continuous improvement — powered by the sole overseas facility of Tosslec Ltd., Kyoto.
-              </p>
-            </div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+            <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-semibold tracking-tighter text-black font-heading leading-tight md:leading-[1.1]">
+              <span className="text-black">Authentic Japanese </span>
+              <br className="hidden md:block" />
+              <span className="text-black/60">Manufacturing Discipline.</span>
+            </h2>
+            <p className="max-w-[340px] text-[13px] text-black/50 md:text-[15px] leading-relaxed font-medium md:text-right pb-1">
+              Precision engineering and zero-defect assembly from Tosslec Ltd.&apos;s sole overseas facility.
+            </p>
           </div>
 
           {/* ─── Bento Grid ─── */}
@@ -57,101 +58,82 @@ export default function WhoWeAre() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid gap-3"
+            className="grid gap-4 md:gap-5"
           >
             {/* ═══ ROW 1 ═══ */}
-            <div className="grid grid-cols-1 gap-3 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-4 md:gap-5 lg:grid-cols-12">
 
               {/* ── Card 1: Main About Copy + Membership Marquee (9 cols) ── */}
               <motion.div
                 variants={itemVariants}
-                className="relative overflow-hidden rounded-[2.5rem] border border-black/5 bg-white p-6 lg:p-8 lg:col-span-9 shadow-sm flex flex-col justify-between"
+                className="relative overflow-hidden rounded-[2rem] border border-black/5 bg-white p-5 lg:p-6 lg:col-span-9 shadow-sm flex flex-col justify-between gap-6"
               >
                 {/* Watermark */}
-                <span className="pointer-events-none absolute -top-10 -right-4 hidden text-[160px] font-black leading-none text-black/[0.02] md:block font-heading">
+                <span className="pointer-events-none absolute -top-8 -right-4 hidden text-[120px] font-black leading-none text-black/[0.02] md:block font-heading">
                   01
                 </span>
 
-                <div className="relative flex h-full flex-col justify-between gap-8">
+                <div className="relative flex h-full flex-col justify-between gap-6">
                   {/* Copy */}
-                  <div className="max-w-4xl space-y-6 lg:pr-12 xl:pr-24">
-                    <h3 className="text-2xl font-medium md:text-3xl font-heading leading-tight text-black">
+                  <div className="max-w-4xl space-y-4 lg:pr-10 xl:pr-20">
+                    <h3 className="text-xl font-medium md:text-[26px] font-heading leading-tight text-black">
                       Your Contract Electronics Manufacturing Partner
                     </h3>
-                    <div className="flex flex-col gap-5 text-sm text-black/60 md:text-base leading-[1.7]">
+                    <div className="flex flex-col gap-4 text-[13px] text-black/60 md:text-[15px] leading-[1.6]">
                       <p>
-                        Tos Lanka (Pvt) Ltd. is a fully Japanese-owned enterprise, approved by the Board of Investment of Sri Lanka under Section 17, and incorporated in 1995. It is a wholly owned subsidiary of <a href="https://www.tosslec.co.jp/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 hover:underline transition-colors">Tosslec Company Limited, Kyoto, Japan</a>, situated in the second-largest export processing zone in Sri Lanka, with easy access to major logistics hubs including the airport and seaport.
+                        Incorporated in 1995, Tos Lanka is a BOI-approved, wholly owned subsidiary of <a href="https://www.tosslec.co.jp/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 hover:underline transition-colors">Tosslec Company Limited, Kyoto, Japan</a> — and Sri Lanka&apos;s pioneer Electronic Manufacturing Services (EMS) provider.
                       </p>
                       <p>
-                        As the pioneer Electronic Manufacturing Services (EMS) provider in Sri Lanka, Tos Lanka delivers complete solutions for high-tech electronic assembly. With nearly three decades of proven expertise, we serve global markets across Japan, Germany, Norway, Switzerland, USA, Canada, and Australia. Our customer base spans diverse industries including automotive, biomedical, telecommunications, industrial automation, oil drilling, smart garments and IoT electronics.
-                      </p>
-                      <p>
-                        The Company has emerged as a global centre of relevance in supplying electronic manufacturing services due to its proven commitment to quality standards, delivery schedules and competitive pricing.
+                        With nearly three decades of expertise, we deliver end-to-end high-tech assembly for global clients across Japan, Germany, Norway, Switzerland, USA, Canada and Australia — spanning automotive, biomedical, telecom, industrial automation, IoT and beyond.
                       </p>
                     </div>
                   </div>
 
-                  {/* Membership Logo Marquee */}
-                  <div className="relative overflow-hidden rounded-2xl border border-black/5 bg-[#f8f9fa] p-3">
+                  {/* Industries We Serve — Infinite Scroll */}
+                  <div className="relative flex flex-col justify-center overflow-hidden rounded-[20px] bg-black py-4">
                     {/* Gradient fade edges */}
-                    <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-r from-[#f8f9fa] to-transparent" />
-                    <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-l from-[#f8f9fa] to-transparent" />
+                    <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-20 bg-gradient-to-r from-black to-transparent" />
+                    <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-20 bg-gradient-to-l from-black to-transparent" />
 
-                    <div className="animate-infinite-scroll gap-4 items-center" aria-hidden="true">
+                    <div className="animate-infinite-scroll gap-4 items-center">
                       {/* First set */}
-                      {membershipLogos.map((logo, i) => (
-                        <div key={`a-${i}`} className="group relative flex w-[180px] shrink-0 flex-col gap-2">
-                          <div className="relative h-[80px] overflow-hidden flex items-center justify-center p-1">
-                            <img
-                              src={logo.src}
-                              alt={logo.name}
-                              className={`max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105 ${
-                                logo.name === "SLACMA" ? "scale-[1.8] group-hover:scale-[1.9]" : ""
-                              }`}
-                              loading="lazy"
-                            />
-                          </div>
-                          <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.2em] text-black/50 px-1">
-                            <span className="truncate">{logo.name}</span>
-                            <span className="flex h-4 w-4 items-center justify-center rounded-full border border-black/10 bg-white shrink-0 text-blue-500">
-                              <BadgeCheck className="h-[10px] w-[10px]" />
+                      {industries.map((industry) => {
+                        return (
+                          <div
+                            key={`a-${industry.name}`}
+                            className="group flex shrink-0 items-center gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.06] backdrop-blur-md px-4 py-3 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.12]"
+                          >
+                            <span className="text-[13px] sm:text-[14px] font-medium text-white/90 whitespace-nowrap tracking-wide group-hover:text-blue-300 transition-colors duration-300">
+                              {industry.name}
                             </span>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                       {/* Duplicate for seamless loop */}
-                      {membershipLogos.map((logo, i) => (
-                        <div key={`b-${i}`} className="group relative flex w-[180px] shrink-0 flex-col gap-2">
-                          <div className="relative h-[80px] overflow-hidden flex items-center justify-center p-1">
-                            <img
-                              src={logo.src}
-                              alt={logo.name}
-                              className={`max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105 ${
-                                logo.name === "SLACMA" ? "scale-[1.8] group-hover:scale-[1.9]" : ""
-                              }`}
-                              loading="lazy"
-                            />
-                          </div>
-                          <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.2em] text-black/50 px-1">
-                            <span className="truncate">{logo.name}</span>
-                            <span className="flex h-4 w-4 items-center justify-center rounded-full border border-black/10 bg-white shrink-0 text-blue-500">
-                              <BadgeCheck className="h-[10px] w-[10px]" />
+                      {industries.map((industry) => {
+                        return (
+                          <div
+                            key={`b-${industry.name}`}
+                            className="group flex shrink-0 items-center gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.06] backdrop-blur-md px-4 py-3 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.12]"
+                          >
+                            <span className="text-[13px] sm:text-[14px] font-medium text-white/90 whitespace-nowrap tracking-wide group-hover:text-blue-300 transition-colors duration-300">
+                              {industry.name}
                             </span>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
               </motion.div>
 
               {/* ── Card 2a & 2b: Stacked Info & CTA (3 cols) ── */}
-              <div className="flex flex-col gap-3 lg:col-span-3 lg:h-full">
-                
+              <div className="flex flex-col gap-4 md:gap-5 lg:col-span-3 lg:h-full">
+
                 {/* Top Card: Years of Excellence */}
                 <motion.div
                   variants={itemVariants}
-                  className="relative overflow-hidden flex-1 rounded-[2.5rem] border border-black/5 bg-black p-6 flex flex-col justify-between shadow-sm min-h-[220px]"
+                  className="relative overflow-hidden flex-1 rounded-[2rem] border border-black/5 bg-black p-5 flex flex-col justify-between shadow-sm lg:min-h-[160px]"
                 >
                   <div className="absolute inset-0 max-h-full overflow-hidden">
                     <img
@@ -162,24 +144,21 @@ export default function WhoWeAre() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
                   </div>
-                  
+
                   <div className="relative z-10 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">
-                      <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
+                    <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-white">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
                       Established
                     </div>
                   </div>
-                  
-                  <div className="relative z-10 mt-6">
-                     <p className="text-[56px] lg:text-[64px] font-semibold leading-none text-white font-heading tracking-tighter">
-                        1995
-                     </p>
-                     <p className="mt-5 text-lg lg:text-xl text-white/90 font-medium tracking-wide">
-                        Pioneer EMS Provider
-                     </p>
-                     <p className="mt-2.5 text-[14px] text-white/60 leading-relaxed max-w-[240px]">
-                        Nearly three decades of proven expertise in high-tech assembly.
-                     </p>
+
+                  <div className="relative z-10 mt-4">
+                    <p className="text-[48px] lg:text-[52px] font-semibold leading-none text-white font-heading tracking-tighter">
+                      1995
+                    </p>
+                    <p className="mt-3 text-[16px] lg:text-[18px] text-white/90 font-medium tracking-wide">
+                      Pioneer EMS Provider
+                    </p>
                   </div>
                 </motion.div>
 
@@ -187,25 +166,20 @@ export default function WhoWeAre() {
                 <motion.div
                   variants={itemVariants}
                   whileHover={{ y: -2 }}
-                  className="relative overflow-hidden flex-1 rounded-[2.5rem] border border-black/5 bg-white p-6 justify-between flex flex-col cursor-pointer group shadow-sm transition-all min-h-[220px]"
+                  className="relative overflow-hidden flex-1 rounded-[2rem] border border-black/5 bg-white p-5 justify-between flex flex-col cursor-pointer group shadow-sm transition-all lg:min-h-[140px]"
                 >
                   <a href="/about-us" className="absolute inset-0 z-20" aria-label="Learn More" />
-                  
-                  <div className="space-y-5 relative z-10">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-black/40 font-medium">
-                      <span className="text-blue-500">*</span> BOI Processing Zone
+
+                  <div className="flex flex-col gap-1.5 relative z-10 mt-2">
+                    <h3 className="text-[26px] lg:text-[28px] font-semibold leading-tight font-heading text-black tracking-tight">
+                      Learn More
+                    </h3>
+                    <p className="text-[13px] text-black/60 leading-relaxed max-w-[240px]">
+                      Discover how our 9 service lines — from prototype to mass production.
                     </p>
-                    <div className="space-y-3">
-                      <h3 className="text-3xl lg:text-[32px] font-semibold leading-tight font-heading text-black tracking-tight">
-                        Learn More
-                      </h3>
-                      <p className="text-[14px] text-black/60 leading-relaxed max-w-[240px]">
-                        Discover how our 9 service lines — from prototype to mass production — operate under one roof.
-                      </p>
-                    </div>
                   </div>
-                  
-                  <div className="relative z-10 mt-4 flex items-center justify-between">
+
+                  <div className="relative z-10 mt-3 flex items-center justify-between">
                     <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-black line-clamp-1">
                       <span className="relative flex h-[6px] w-[6px]">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
@@ -223,12 +197,12 @@ export default function WhoWeAre() {
             </div>
 
             {/* ═══ ROW 2 ═══ */}
-            <div className="grid grid-cols-1 gap-3 lg:grid-cols-12 lg:auto-rows-[minmax(0,1fr)]">
+            <div className="grid grid-cols-1 gap-4 md:gap-5 lg:grid-cols-12 lg:auto-rows-[minmax(0,1fr)]">
 
               {/* ── Card 3: Video (5 cols) ── */}
               <motion.div
                 variants={itemVariants}
-                className="relative overflow-hidden rounded-[2.5rem] border border-black/5 bg-black lg:col-span-5 shadow-sm min-h-[300px]"
+                className="relative overflow-hidden rounded-[2rem] border border-black/5 bg-black lg:col-span-5 shadow-sm min-h-[220px] lg:min-h-[260px]"
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <video
@@ -244,29 +218,29 @@ export default function WhoWeAre() {
               </motion.div>
 
               {/* ── Card 4+5: Two Stacked Cards (3 cols) ── */}
-              <div className="flex flex-col gap-3 lg:col-span-3 lg:h-full">
+              <div className="flex flex-col gap-4 md:gap-5 lg:col-span-3 lg:h-full">
 
                 {/* Card 4a: Triple ISO */}
                 <motion.div
                   variants={itemVariants}
-                  className="flex h-full flex-1 flex-col justify-between rounded-[2.5rem] border border-black/5 bg-white p-6 shadow-sm"
+                  className="flex h-full flex-1 flex-col justify-between rounded-[2rem] border border-black/5 bg-white p-5 shadow-sm"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-500">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-500">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                       </svg>
                     </span>
                     <span className="hidden h-px flex-1 bg-black/5 sm:block" />
                   </div>
-                  <div className="space-y-2 mt-5">
-                    <h3 className="text-xl md:text-2xl font-semibold font-heading text-black tracking-tight">Triple ISO Certified</h3>
-                    <p className="text-[14px] md:text-[15px] text-black/60 leading-relaxed font-medium">
+                  <div className="space-y-1 mt-4">
+                    <h3 className="text-[18px] md:text-[20px] font-semibold font-heading text-black tracking-tight">Triple ISO Certified</h3>
+                    <p className="text-[13px] md:text-[14px] text-black/60 leading-relaxed font-medium">
                       ISO 9001 · 14001 · 45001
                     </p>
                   </div>
-                  <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-black/40 mt-5">
-                    <span className="h-1 lg:h-1.5 w-6 lg:w-8 rounded-full bg-blue-500" />
+                  <div className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.3em] text-black/40 mt-4">
+                    <span className="h-1 lg:h-1 w-6 lg:w-6 rounded-full bg-blue-500" />
                     <span>Quality</span>
                   </div>
                 </motion.div>
@@ -274,11 +248,11 @@ export default function WhoWeAre() {
                 {/* Card 4b: Japanese Ownership */}
                 <motion.div
                   variants={itemVariants}
-                  className="flex h-full flex-1 flex-col justify-between rounded-[2.5rem] border border-black/5 bg-white p-6 shadow-sm"
+                  className="flex h-full flex-1 flex-col justify-between rounded-[2rem] border border-black/5 bg-white p-5 shadow-sm"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-500">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-500">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                         <path d="M2 12h20" />
@@ -286,76 +260,49 @@ export default function WhoWeAre() {
                     </span>
                     <span className="hidden h-px flex-1 bg-black/5 sm:block" />
                   </div>
-                  <div className="space-y-2 mt-5">
-                    <h3 className="text-xl md:text-2xl font-semibold font-heading text-black tracking-tight">100% Japanese</h3>
-                    <p className="text-[14px] md:text-[15px] text-black/60 leading-relaxed font-medium">
+                  <div className="space-y-1 mt-4">
+                    <h3 className="text-[18px] md:text-[20px] font-semibold font-heading text-black tracking-tight">100% Japanese</h3>
+                    <p className="text-[13px] md:text-[14px] text-black/60 leading-relaxed font-medium">
                       Sole overseas facility of Tosslec Ltd., Kyoto.
                     </p>
                   </div>
-                  <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-black/40 mt-5">
-                    <span className="h-1 lg:h-1.5 w-6 lg:w-8 rounded-full bg-blue-500" />
+                  <div className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.3em] text-black/40 mt-4">
+                    <span className="h-1 lg:h-1 w-6 lg:w-6 rounded-full bg-blue-500" />
                     <span>Ownership</span>
                   </div>
                 </motion.div>
               </div>
 
-              {/* ── Card 6: Zero Defect Culture (4 cols) ── */}
+              {/* ── Card 6: Zero Defect Culture Image Card (4 cols) ── */}
               <motion.div
                 variants={itemVariants}
-                className="relative flex h-full flex-col gap-6 rounded-[2.5rem] border border-black/5 bg-white p-6 lg:p-8 lg:col-span-4 overflow-hidden shadow-sm"
+                className="group relative flex h-full flex-col justify-between rounded-[2rem] border border-black/5 bg-black p-5 lg:p-6 lg:col-span-4 overflow-hidden shadow-sm min-h-[220px]"
               >
-                <div className="relative space-y-3">
-                  <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.3em] text-black/40">
-                    <span>Manufacturing</span>
-                    <span className="h-2 lg:h-2.5 w-2 lg:w-2.5 rounded-full bg-blue-500 animate-pulse" />
+                <div className="absolute inset-0 max-h-full overflow-hidden">
+                  <img
+                    src="/zero_defect_bg.png"
+                    alt="Zero Defect Manufacturing"
+                    className="h-full w-full object-cover opacity-60 mix-blend-luminosity transition-transform duration-[800ms] group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                </div>
+
+                <div className="relative z-10 flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/80">
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+                    Manufacturing
                   </div>
-                  <h3 className="text-2xl md:text-[32px] md:leading-tight font-semibold font-heading text-black tracking-tight">
-                    Zero-Defect Culture
+                </div>
+
+                <div className="relative z-10 space-y-2 mt-auto pt-10">
+                  <h3 className="text-[26px] md:text-[30px] font-semibold font-heading text-white tracking-tight leading-tight group-hover:text-blue-50 transition-colors">
+                    Zero-Defect<br />Culture
                   </h3>
-                </div>
-
-                {/* Animated Chip SVG */}
-                <div className="relative flex items-center justify-center flex-1 py-2">
-                  <motion.svg
-                    width="90"
-                    height="90"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-blue-500"
-                  >
-                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
-                    <rect x="9" y="9" width="6" height="6" />
-                    <motion.line x1="9" y1="1" x2="9" y2="4" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="15" y1="1" x2="15" y2="4" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 0.5, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="9" y1="20" x2="9" y2="23" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 1, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="15" y1="20" x2="15" y2="23" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 1.5, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="20" y1="9" x2="23" y2="9" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 0.2, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="20" y1="14" x2="23" y2="14" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 0.7, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="1" y1="9" x2="4" y2="9" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 1.2, repeat: Infinity, ease: "linear" }} />
-                    <motion.line x1="1" y1="14" x2="4" y2="14" animate={{ pathLength: [0, 1, 0], opacity: [0.2, 1, 0.2] }} transition={{ duration: 3, delay: 1.7, repeat: Infinity, ease: "linear" }} />
-                  </motion.svg>
-                </div>
-
-                {/* Status Text */}
-                <div className="relative space-y-5">
-                  <div className="flex items-start gap-3">
-                    <span className="relative flex h-[8px] w-[8px] mt-[6px] flex-shrink-0">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-[8px] w-[8px] bg-blue-500" />
+                  <div className="flex items-center pt-2 gap-3 opacity-80 mix-blend-lighten">
+                    <span className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-white/70 uppercase">
+                      Precision Assembly
                     </span>
-                    <div>
-                      <p className="text-[11px] lg:text-[12px] font-bold tracking-[0.15em] text-black/50 uppercase leading-[1.7]">
-                        Precision Assembly<br />Continuous Kaizen<br />RoHS Compliant
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-black/40">
-                    <span className="h-1 lg:h-1.5 w-6 lg:w-8 rounded-full bg-blue-500" />
-                    <span>Tosslec DNA</span>
                   </div>
                 </div>
               </motion.div>
