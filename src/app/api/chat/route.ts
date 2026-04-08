@@ -8,10 +8,17 @@ import { SYSTEM_PROMPT } from '@/lib/ai-context';
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
 
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-);
+// Lazy-init admin client (env vars not available at build time on Netlify)
+let _supabaseAdmin: ReturnType<typeof createClient> | null = null;
+function getSupabaseAdmin() {
+  if (!_supabaseAdmin) {
+    _supabaseAdmin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+  }
+  return _supabaseAdmin;
+}
 
 export async function POST(req: Request) {
   try {
@@ -30,7 +37,7 @@ export async function POST(req: Request) {
     
     // Non-blockingly insert user message into chat_messages
     if (latestMessage && latestMessage.role === 'user') {
-      supabaseAdmin.from('chat_messages').insert({
+      getSupabaseAdmin().from('chat_messages').insert({
         session_id: sessionId,
         role: 'user',
         content: latestMessage.content
@@ -62,7 +69,7 @@ export async function POST(req: Request) {
           execute: async ({ name, phone, email, company, notes }) => {
             console.log(`Executing saveLead tool for ${name}...`);
             try {
-              const { data, error } = await supabaseAdmin.rpc('submit_contact_form', {
+              const { data, error } = await getSupabaseAdmin().rpc('submit_contact_form', {
                 p_full_name: name,
                 p_email: email || 'no-email-provided@pending.com',
                 p_phone: phone || null,
@@ -99,7 +106,7 @@ export async function POST(req: Request) {
             topicInterest: z.string().optional().describe('The overarching manufacturing or service topic they are interested in.'),
           }),
           execute: async ({ email, topicInterest }) => {
-            const { error } = await supabaseAdmin.rpc('subscribe_email_list', {
+            const { error } = await getSupabaseAdmin().rpc('subscribe_email_list', {
               p_email: email,
               p_topic_interest: topicInterest || 'General',
               p_source: 'AI Sales Agent',
@@ -120,7 +127,7 @@ export async function POST(req: Request) {
 
     // Non-blockingly insert the AI's reply to chat_messages
     if (responseText) {
-      supabaseAdmin.from('chat_messages').insert({
+      getSupabaseAdmin().from('chat_messages').insert({
         session_id: sessionId,
         role: 'assistant',
         content: responseText

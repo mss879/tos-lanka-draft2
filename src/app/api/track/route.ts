@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-// Use admin client here to bypass RLS for logging functionality anonymously
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-);
+// Lazy-init admin client (env vars not available at build time on Netlify)
+let _supabaseAdmin: ReturnType<typeof createClient> | null = null;
+function getSupabaseAdmin() {
+  if (!_supabaseAdmin) {
+    _supabaseAdmin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+  }
+  return _supabaseAdmin;
+}
 
 export async function POST(request: Request) {
   try {
@@ -17,7 +23,7 @@ export async function POST(request: Request) {
     }
 
     // Call the security definer RPC
-    const { error } = await supabaseAdmin.rpc('log_page_visit', {
+    const { error } = await getSupabaseAdmin().rpc('log_page_visit', {
       p_visitor_id: visitorId,
       p_page_path: pagePath,
       p_referrer: referrer || null
