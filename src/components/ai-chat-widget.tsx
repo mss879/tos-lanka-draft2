@@ -103,13 +103,12 @@ export function AiChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.92 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="absolute bottom-[68px] right-0 w-[360px] sm:w-[400px] h-[520px] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-white/10"
-            style={{ background: "#0e0e0f" }}
+            className="absolute bottom-[68px] right-0 w-[360px] sm:w-[400px] h-[520px] rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.3),inset_0_1px_2px_rgba(255,255,255,0.1)] flex flex-col overflow-hidden border border-white/20 bg-[#0e0e0f]/80 backdrop-blur-2xl backdrop-saturate-150"
           >
             {/* ── Header ─────────────────────────────────── */}
-            <div className="px-5 py-4 flex justify-between items-center border-b border-white/10" style={{ background: "#141415" }}>
+            <div className="px-5 py-4 flex justify-between items-center border-b border-white/10 bg-white/5 backdrop-blur-md relative z-10">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white text-sm" style={{ background: "#008f28" }}>
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-white text-sm bg-gradient-to-b from-brand-primary/90 to-brand-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.4)] border border-white/20">
                   TL
                 </div>
                 <div>
@@ -139,22 +138,18 @@ export function AiChatWidget() {
             </div>
 
             {/* ── Chat Messages ──────────────────────────── */}
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ background: "#0e0e0f" }}>
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-transparent relative z-0">
               {messages.map((msg, index) => (
                 <div
                   key={index}
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[85%] px-4 py-3 text-sm leading-relaxed ${
+                    className={`max-w-[85%] px-4 py-3 text-[14px] leading-relaxed shadow-sm ${
                       msg.role === "user"
-                        ? "rounded-2xl rounded-tr-md text-white"
-                        : "rounded-2xl rounded-tl-md text-white/90 border border-white/8"
+                        ? "rounded-2xl rounded-tr-sm text-white bg-gradient-to-b from-brand-primary/90 to-brand-primary shadow-[0_4px_12px_rgba(0,186,52,0.25),inset_0_1px_2px_rgba(255,255,255,0.3)] border border-white/20 backdrop-blur-md"
+                        : "rounded-2xl rounded-tl-sm text-white/90 bg-white/5 border border-white/10 backdrop-blur-lg"
                     }`}
-                    style={{
-                      background:
-                        msg.role === "user" ? "#008f28" : "#1a191b",
-                    }}
                   >
                     {msg.role === "user" ? (
                       <p className="whitespace-pre-wrap">{msg.content}</p>
@@ -171,13 +166,10 @@ export function AiChatWidget() {
 
               {isLoading && (
                 <div className="flex justify-start">
-                  <div
-                    className="px-4 py-3 rounded-2xl rounded-tl-md flex space-x-1.5 items-center border border-white/8"
-                    style={{ background: "#1a191b" }}
-                  >
-                    <span className="w-2 h-2 rounded-full animate-bounce" style={{ background: "#008f28", animationDelay: "0ms" }} />
-                    <span className="w-2 h-2 rounded-full animate-bounce" style={{ background: "#008f28", animationDelay: "150ms" }} />
-                    <span className="w-2 h-2 rounded-full animate-bounce" style={{ background: "#008f28", animationDelay: "300ms" }} />
+                  <div className="px-4 py-3 rounded-2xl rounded-tl-sm flex space-x-1.5 items-center bg-white/5 border border-white/10 backdrop-blur-lg shadow-sm">
+                    <span className="w-2 h-2 rounded-full animate-bounce bg-brand-primary shadow-[0_0_8px_rgba(0,186,52,0.8)]" style={{ animationDelay: "0ms" }} />
+                    <span className="w-2 h-2 rounded-full animate-bounce bg-brand-primary shadow-[0_0_8px_rgba(0,186,52,0.8)]" style={{ animationDelay: "150ms" }} />
+                    <span className="w-2 h-2 rounded-full animate-bounce bg-brand-primary shadow-[0_0_8px_rgba(0,186,52,0.8)]" style={{ animationDelay: "300ms" }} />
                   </div>
                 </div>
               )}
@@ -194,8 +186,7 @@ export function AiChatWidget() {
             {/* ── Input ───────────────────────────────────── */}
             <form
               onSubmit={handleSubmit}
-              className="p-3 border-t border-white/10"
-              style={{ background: "#141415" }}
+              className="p-3 border-t border-white/10 bg-black/20 backdrop-blur-xl relative z-10"
             >
               <div className="relative flex items-center gap-2">
                 <input
@@ -206,16 +197,21 @@ export function AiChatWidget() {
                   placeholder="Ask about our services..."
                   disabled={isLoading}
                   maxLength={2000}
-                  className="flex-1 px-4 py-3 rounded-xl text-sm text-white placeholder:text-white/30 outline-none border border-white/10 focus:border-[#008f28] focus:ring-1 focus:ring-[#008f28]/50 disabled:opacity-40 transition"
-                  style={{ background: "#1a191b" }}
+                  className="flex-1 px-4 py-3 rounded-xl text-[14px] text-white placeholder:text-white/30 outline-none border border-white/10 bg-black/40 shadow-inner focus:border-brand-primary focus:bg-black/60 focus:ring-1 focus:ring-brand-primary/50 disabled:opacity-40 transition-all font-body"
                 />
                 <button
                   type="submit"
                   disabled={!inputValue.trim() || isLoading}
-                  className="p-3 rounded-xl text-white disabled:opacity-30 transition-all hover:brightness-110 active:scale-95"
-                  style={{ background: !inputValue.trim() || isLoading ? "#484849" : "#008f28" }}
+                  className={`relative overflow-hidden group/send p-3 rounded-xl text-white transition-all disabled:opacity-40 ${
+                    !inputValue.trim() || isLoading 
+                      ? 'bg-black/40 border border-white/10' 
+                      : 'bg-gradient-to-b from-brand-primary/90 to-brand-primary shadow-[0_4px_12px_rgba(0,186,52,0.3),inset_0_1px_2px_rgba(255,255,255,0.4)] border border-white/20 active:scale-95'
+                  }`}
                 >
-                  <Send className="w-4 h-4" />
+                  <span className="relative z-10"><Send className="w-4 h-4 drop-shadow-sm" /></span>
+                  {inputValue.trim() && !isLoading && (
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent opacity-0 group-hover/send:opacity-100 transition-opacity duration-300 z-0"></div>
+                  )}
                 </button>
               </div>
             </form>
@@ -240,17 +236,16 @@ export function AiChatWidget() {
 
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          whileHover={{ scale: 1.08 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="relative z-10 w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-white transition-shadow hover:shadow-[0_0_25px_rgba(0,143,40,0.3)]"
-          style={{ background: "#008f28" }}
+          className="relative group/btn z-10 w-[56px] h-[56px] rounded-full flex items-center justify-center text-white transition-all duration-300 bg-gradient-to-b from-brand-primary/90 to-brand-primary shadow-[0_6px_16px_rgba(0,186,52,0.3),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-4px_6px_rgba(0,0,0,0.2)] border border-white/20 backdrop-blur-md overflow-hidden hover:shadow-[0_8px_25px_rgba(0,186,52,0.4),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-4px_6px_rgba(0,0,0,0.2)]"
           aria-label="Toggle Chat"
         >
-          {isOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <MessageCircle className="w-6 h-6" />
-          )}
+          <span className="relative z-10">
+            {isOpen ? <X className="w-6 h-6 drop-shadow-sm" /> : <MessageCircle className="w-6 h-6 drop-shadow-sm" />}
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+          <div className="absolute inset-0 rounded-full shadow-[inset_0_0_10px_rgba(255,255,255,0.3)] z-0"></div>
         </motion.button>
       </div>
     </div>

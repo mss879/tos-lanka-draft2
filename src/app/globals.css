@@ -25,6 +25,10 @@ body {
   font-family: var(--font-body);
 }
 
+html, body {
+  overscroll-behavior-y: none;
+}
+
 .glass-panel {
   background: rgba(44, 44, 45, 0.4);
   backdrop-filter: blur(20px);
@@ -43,6 +47,13 @@ body {
   background-size: 30px 30px;
 }
 
+.tech-grid-dark {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
 /* Infinite Scroll Animation Utilities */
 @keyframes infinite-scroll {
   0% { transform: translateX(0); }
@@ -53,8 +64,4 @@ body {
   animation: infinite-scroll 40s linear infinite;
   display: flex;
   width: max-content;
-}
-
-.animate-infinite-scroll:hover {
-  animation-play-state: paused;
 }

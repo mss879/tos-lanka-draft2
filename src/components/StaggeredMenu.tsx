@@ -3,6 +3,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 
 export interface StaggeredMenuItem {
   label: string;
@@ -52,9 +53,15 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         { label: 'Supply Chain', link: '/services/supply-chain' },
       ]
     },
+    { label: 'Industries', ariaLabel: 'Industries we serve', link: '/industries' },
     { label: 'Certifications', ariaLabel: 'View our certifications', link: '/certification' },
-    { label: 'Articles', ariaLabel: 'Read our articles', link: '/articles' },
-    { label: 'FAQ', ariaLabel: 'Frequently Asked Questions', link: '/faq' },
+    { 
+      label: 'Resources', ariaLabel: 'View our resources', link: '#',
+      subItems: [
+        { label: 'Articles', link: '/articles' },
+        { label: 'FAQ', link: '/faq' },
+      ]
+    },
     { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
   ],
   socialItems = [
@@ -549,7 +556,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   return (
                     <li className="sm-panel-itemWrap relative overflow-hidden leading-none" key={it.label + idx}>
                       <div className="flex items-center">
-                        <a
+                        <Link
                           className="sm-panel-item relative text-black font-medium font-heading text-[2.2rem] md:text-[3.2rem] cursor-pointer leading-tight tracking-[-0.04em] transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[0.5em] hover:text-brand-tertiary"
                           href={hasSubItems ? '#' : it.link}
                           aria-label={it.ariaLabel}
@@ -570,7 +577,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                               </svg>
                             )}
                           </span>
-                        </a>
+                        </Link>
                       </div>
                       
                       {/* Sub-Items Accordion */}
@@ -581,13 +588,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                           <ul className="overflow-hidden flex flex-col gap-3 pl-4 md:pl-8 border-l-2 border-brand-outline/30 ml-2">
                             {it.subItems!.map((sub, sIdx) => (
                               <li key={sIdx + sub.label}>
-                                <a 
+                                <Link 
                                   href={sub.link} 
                                   className="text-[1.1rem] md:text-[1.3rem] font-medium text-black/60 hover:text-brand-tertiary transition-colors block py-1"
                                   onClick={() => closeMenu()}
                                 >
                                   {sub.label}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

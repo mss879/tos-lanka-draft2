@@ -15,7 +15,7 @@ export default function CtaSection() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <Link 
-            href="/contacts" 
+            href="/contact" 
             className="group inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-brand-primary rounded-full hover:bg-brand-primary-hover transition-all duration-300 transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(0,143,40,0.3)]"
           >
             Request a Free Quote

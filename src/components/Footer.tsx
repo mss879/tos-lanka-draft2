@@ -55,7 +55,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/90 text-sm leading-relaxed pr-6">
-              A wholly-owned subsidiary of Tosslec Ltd., Kyoto, Japan. The only Tosslec manufacturing facility established outside Japan. BOI Section 17 registered. Proudly manufacturing precision electronics in Sri Lanka since 1995.
+              As the sole international manufacturing facility of Tosslec Co. Ltd., Kyoto, TOS Lanka has engineered Japanese-precision electronics in Sri Lanka since 1995. Operating as a registered BOI Section 17 enterprise, we uphold uncompromising world-class quality standards.
             </p>
           </div>
 
@@ -97,9 +97,11 @@ export default function Footer() {
               {[
                 { label: 'Home', href: '/' },
                 { label: 'About Us', href: '/about' },
+                { label: 'Industries', href: '/industries' },
                 { label: 'Services', href: '/#services' },
                 { label: 'Certifications', href: '/certification' },
                 { label: 'Articles', href: '/articles' },
+                { label: 'FAQ', href: '/faq' },
                 { label: 'Contact', href: '/contact' },
               ].map((link, i) => (
                 <li key={i}>

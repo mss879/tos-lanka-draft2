@@ -26,11 +26,11 @@ export const servicesData: ServiceData[] = [
     title: "Surface Mount Technology (SMT)",
     shortTitle: "SMT Assembly",
     tagline: "25+ Years of Precision Placement",
-    metaTitle: "SMT Assembly Services | TOS Lanka — Precision Surface Mount Technology",
+    metaTitle: "SMT Assembly Services Sri Lanka | Surface Mount Technology & Reflow Soldering | TOS Lanka",
     metaDescription:
-      "TOS Lanka delivers world-class SMT assembly with Panasonic high-speed placement machines, ROHS-compliant processes, and 25+ years of expertise. Multi-layer PCB assembly for automotive, medical, and industrial applications.",
+      "TOS Lanka delivers world-class SMT assembly and Surface Mount Technology services in Sri Lanka. Panasonic high-speed placement, reflow soldering, and electronic assembly for automotive, medical, and industrial electronics. 25+ years of contract manufacturing excellence.",
     icon: Cpu,
-    image: "/services/smt_new.png",
+    image: "/services/smt_new.webp",
     heroParagraphs: [
       "With over 25 years of expertise in Surface Mount Technology, TOS Lanka delivers precision, reliability, and innovation in every project. Our state-of-the-art Panasonic high-speed placement machines and fully ROHS-compliant processes ensure your products meet the highest global quality standards.",
       "From multi-layer PCB assembly and fine-pitch component placement to lead-free soldering, we serve industries spanning automotive, medical devices, consumer electronics, and industrial control — with customized solutions tailored to high-volume production or specialized small-batch orders.",
@@ -65,11 +65,11 @@ export const servicesData: ServiceData[] = [
     title: "System Integration & Box Build",
     shortTitle: "Systems Integration",
     tagline: "Complete Turnkey Product Assembly",
-    metaTitle: "System Integration & Box Build | TOS Lanka — Turnkey Electronics Assembly",
+    metaTitle: "Box Build Assembly & System Integration Sri Lanka | Electronic Assembly | TOS Lanka",
     metaDescription:
-      "TOS Lanka provides complete product assembly, box build, and functional testing — from sub-assemblies to fully finished electronics products with zero-defect manufacturing.",
+      "TOS Lanka provides complete box build assembly and system integration in Sri Lanka — from printed circuit board sub-assemblies to fully finished electronics products. Contract manufacturing with zero-defect electronic assembly.",
     icon: Blocks,
-    image: "/services/integration_new.png",
+    image: "/services/integration_new.webp",
     heroParagraphs: [
       "We deliver complete product assembly and functional testing as turnkey solutions — from sub-assemblies to fully finished products. Using a combination of manual craftsmanship and precision semi-automatic tools, every component is assembled to exact specifications with zero-defect outcomes.",
       "From mechanical integration to electronic component assembly, our skilled team handles a wide range of product complexities with speed and accuracy. Customized assembly solutions ensure seamless integration into your supply chain, bringing your products to market faster — built to last.",
@@ -104,11 +104,11 @@ export const servicesData: ServiceData[] = [
     title: "Through Hole Assembly",
     shortTitle: "Through Hole",
     tagline: "Japan-Trained Precision Soldering",
-    metaTitle: "Through Hole Assembly Services | TOS Lanka — Reliable THT Manufacturing",
+    metaTitle: "Through Hole Assembly (THT) Services Sri Lanka | Wave & Manual Soldering | TOS Lanka",
     metaDescription:
-      "TOS Lanka's Through Hole assembly combines insertion machines with Japan-trained technicians for superior quality. Manual hand soldering expertise for complex and high-reliability applications.",
+      "TOS Lanka's Through Hole Technology (THT) assembly combines automated insertion machines with Japan-trained technicians for wave soldering and manual soldering excellence in Sri Lanka. Electronic assembly for industrial, automotive, and medical electronics.",
     icon: CircuitBoard,
-    image: "/services/through-hole_new.png",
+    image: "/services/through-hole_new.webp",
     heroParagraphs: [
       "Our Through Hole assembly process combines advanced insertion machines with the expertise of skilled, Japan-trained technicians to deliver superior quality and precision. This hybrid approach ensures consistent, reliable placement of components that demand enhanced mechanical strength and durability.",
       "We specialize in manual hand soldering for complex or sensitive components, employing rigorous techniques to guarantee strong, defect-free solder joints. With strict quality control and adherence to international manufacturing standards, every through-hole assembly enhances product longevity and performance.",
@@ -143,11 +143,11 @@ export const servicesData: ServiceData[] = [
     title: "Conformal Coating & Potting",
     shortTitle: "Coating & Potting",
     tagline: "Advanced Electronics Protection",
-    metaTitle: "Conformal Coating & Potting Services | TOS Lanka — Electronics Protection",
+    metaTitle: "Conformal Coating & Epoxy Filling Services Sri Lanka | PCB Protection | TOS Lanka",
     metaDescription:
-      "TOS Lanka provides conformal coating and potting solutions to protect electronics from moisture, dust, vibration, and harsh environments. Custom and inline coating systems for PCB protection.",
+      "TOS Lanka provides conformal coating and epoxy filling solutions in Sri Lanka to protect printed circuit boards from moisture, dust, vibration, and harsh environments. Custom inline coating for automotive, medical, and industrial electronics.",
     icon: Droplets,
-    image: "/services/coating_new.png",
+    image: "/services/coating_new.webp",
     heroParagraphs: [
       "We provide specialized coating and potting solutions designed to protect sensitive electronics from moisture, dust, vibration, and harsh environmental conditions. Our capabilities include custom conformal coating for moisture-sensitive PCBs and inline coating systems for high-efficiency production.",
       "Our encapsulation processes enhance insulation, improve mechanical strength, and extend product lifespan. We work with a variety of industry-approved materials ensuring compatibility with your specific application and performance requirements — whether for automotive electronics, industrial controls, or consumer devices.",
@@ -182,11 +182,11 @@ export const servicesData: ServiceData[] = [
     title: "Test & Inspection",
     shortTitle: "Test & Inspection",
     tagline: "Zero-Compromise Quality Assurance",
-    metaTitle: "Test & Inspection Services | TOS Lanka — AOI, ICT & Functional Testing",
+    metaTitle: "In-Circuit Testing (ICT) & Inspection Services Sri Lanka | AOI | TOS Lanka",
     metaDescription:
-      "TOS Lanka offers advanced testing and inspection with YAMAHA AOI machines, In-Circuit Testing (ICT), functional testing, and firmware uploading for zero-defect electronics manufacturing.",
+      "TOS Lanka offers advanced in-circuit testing (ICT), YAMAHA AOI inspection, functional testing, and firmware uploading in Sri Lanka. Zero-defect electronic assembly verification for printed circuit boards.",
     icon: Microscope,
-    image: "/services/inspection_new.png",
+    image: "/services/inspection_new.webp",
     heroParagraphs: [
       "Our facility is equipped with advanced YAMAHA Automated Optical Inspection (AOI) machines capable of detecting even the smallest defects in solder joints, component placement, and PCB integrity with exceptional accuracy.",
       "For electrical verification, we use In-Circuit Testing (ICT) systems to ensure every circuit board meets exact performance specifications. We also offer functional testing and firmware uploading to guarantee each product performs flawlessly in real-world applications — delivering zero-compromise manufacturing quality.",
@@ -221,11 +221,11 @@ export const servicesData: ServiceData[] = [
     title: "Prototype PCB Assembly",
     shortTitle: "Prototyping",
     tagline: "Accelerate Your Innovation Cycle",
-    metaTitle: "Prototype PCB Assembly | TOS Lanka — Rapid Prototyping Services",
+    metaTitle: "Prototyping & Prototype PCB Assembly Services Sri Lanka | TOS Lanka",
     metaDescription:
-      "TOS Lanka offers rapid prototype PCB assembly with fast turnaround, flexible processes, and expert technicians. Cost-effective prototyping to accelerate your product development cycle.",
+      "TOS Lanka offers rapid prototyping and prototype printed circuit board assembly in Sri Lanka. Fast turnaround, flexible EMS processes, and seamless prototype-to-production transition for electronic assembly.",
     icon: Beaker,
-    image: "/services/prototype_new.png",
+    image: "/services/prototype_new.webp",
     heroParagraphs: [
       "At TOS Lanka, we recognize the vital role prototypes play in driving innovation. Our expert technicians specialize in prototype PCB assembly, offering cost-effective and flexible solutions tailored to your design and testing requirements.",
       "With rapid turnaround times and uncompromising quality, we help accelerate your development cycles. Our adaptable processes accommodate design changes and last-minute modifications, ensuring your prototypes align perfectly with your vision — supported by industry expertise and responsive service for a smooth transition from prototype to production.",
@@ -260,11 +260,11 @@ export const servicesData: ServiceData[] = [
     title: "Automotive Wire Harnessing",
     shortTitle: "Automotive Harnessing",
     tagline: "Safety-Critical Wiring for Global Brands",
-    metaTitle: "Automotive Wire Harnessing | TOS Lanka — Safety Sensor & ABS Harness Assembly",
+    metaTitle: "Cable Harness & Automotive Electronics Assembly Sri Lanka | TOS Lanka",
     metaDescription:
-      "TOS Lanka specializes in automotive wiring harness assembly for safety sensors, seat belts, and ABS systems. Certified quality, zero-defect manufacturing for global automotive brands.",
+      "TOS Lanka specializes in cable harness assembly and automotive electronics manufacturing in Sri Lanka. Safety sensor harnesses, ABS system wiring, and EV cable harnesses for global automotive brands.",
     icon: CarFront,
-    image: "/services/automotive_new.png",
+    image: "/services/automotive_new.webp",
     heroParagraphs: [
       "With extensive experience in the automotive industry, TOS Lanka specializes in assembling high-quality wiring harnesses for critical vehicle systems. Our expertise includes safety sensor harnesses for seat belts, ABS system wiring, and complex harness assemblies for major global automotive brands.",
       "We adhere to the most stringent industry standards and quality certifications, ensuring every harness delivers optimal performance, durability, and safety under demanding automotive conditions. Our skilled technicians use advanced tools and precision techniques to manage complex wiring layouts, connectors, and shielding requirements.",
@@ -299,11 +299,11 @@ export const servicesData: ServiceData[] = [
     title: "Inductive Component Assemblies",
     shortTitle: "Inductive Components",
     tagline: "Precision Magnetic Component Assembly",
-    metaTitle: "Inductive Component Assembly | TOS Lanka — Coils, Transformers & Inductors",
+    metaTitle: "Coil Winding & Inductive Component Assembly Sri Lanka | Industrial Electronics | TOS Lanka",
     metaDescription:
-      "TOS Lanka specializes in inductive component assembly — coils, transformers, chokes, and inductors for power electronics, automotive, and telecom. Consistent quality from prototype to volume production.",
+      "TOS Lanka specializes in coil winding and inductive component assembly in Sri Lanka — coils, transformers, chokes, and inductors for industrial electronics, power electronics, automotive, and telecom applications.",
     icon: Magnet,
-    image: "/services/inductive_new.png",
+    image: "/services/inductive_new.webp",
     heroParagraphs: [
       "TOS Lanka specializes in the precise assembly of inductive components — including coils, transformers, chokes, and inductors — tailored to diverse industrial applications. Our skilled professionals bring deep expertise in handling sensitive magnetic components, ensuring optimal placement and soldering for peak performance.",
       "We support industries ranging from power electronics and telecommunications to automotive and consumer electronics, delivering assemblies that meet stringent quality standards and electrical specifications. From prototype builds to high-volume production, we offer flexible solutions designed to meet your unique requirements and timelines.",
@@ -338,11 +338,11 @@ export const servicesData: ServiceData[] = [
     title: "Supply Chain Network",
     shortTitle: "Supply Chain",
     tagline: "Global Sourcing, Local Excellence",
-    metaTitle: "Supply Chain Network | TOS Lanka — Global Electronics Sourcing & Procurement",
+    metaTitle: "Electronics Supply Chain & Procurement Sri Lanka | Contract Manufacturing | TOS Lanka",
     metaDescription:
-      "TOS Lanka offers consigned and turnkey supply chain solutions with a global sourcing network spanning Japan, USA, Germany, China, Taiwan, and more. Flexible procurement for electronics manufacturing.",
+      "TOS Lanka offers consigned and turnkey supply chain solutions for contract manufacturing in Sri Lanka. Global sourcing network spanning Japan, USA, Germany, China, Taiwan. Flexible procurement for EMS and electronic assembly.",
     icon: Globe,
-    image: "/services/supply-chain_new.png",
+    image: "/services/supply-chain_new.webp",
     heroParagraphs: [
       "We provide both consigned and turnkey solutions, adapting seamlessly to your procurement requirements. Our global sourcing network spans multiple continents, ensuring flexibility, quality, and reliability in every project.",
       "By leveraging established relationships with trusted suppliers across Asia, North America, and Europe, we secure competitive pricing, verified quality, and dependable lead times — so you can focus on product development while we manage the supply chain.",

@@ -7,6 +7,8 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import FluidCorner from './ui/FluidCorner';
 import StaggeredMenu from './StaggeredMenu';
+import Image from 'next/image';
+import Link from 'next/link';
 
 gsap.registerPlugin(useGSAP);
 
@@ -77,19 +79,23 @@ export default function Hero() {
       <div className="relative w-full h-full rounded-[32px] bg-brand-surface overflow-hidden glow-border pointer-events-auto shadow-2xl">
 
         {/* Cinematic Background Layer */}
-        <div className="absolute inset-0 z-0 bg-brand-background">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-[0.35] mix-blend-luminosity"></div>
+        <div className="absolute inset-0 z-0 bg-brand-background pointer-events-none transform-gpu">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=60&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-[0.35] mix-blend-luminosity will-change-transform"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-brand-background via-brand-background/70 to-transparent"></div>
-          <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-primary opacity-10 blur-[120px] rounded-full"></div>
+          <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-primary opacity-10 blur-[120px] rounded-full transform-gpu will-change-transform"></div>
         </div>
 
         {/* --- ISLANDS OVERLAY --- */}
 
         {/* 1. Top-Left Logo Island */}
         <div className="absolute top-0 left-0 bg-white rounded-br-[32px] z-[60] pt-2 lg:pt-4 pl-4 lg:pl-6 pr-6 pb-4 flex items-center justify-center pointer-events-auto shadow-sm">
-          <img
+          <Image
             src="/tos-logo.png"
             alt="TOS Lanka Logo"
+            width={160}
+            height={40}
+            priority
+            quality={90}
             className="h-8 lg:h-10 w-auto object-contain"
           />
           {/* Connecting fluid corners */}
@@ -99,15 +105,70 @@ export default function Hero() {
 
         {/* 2. Top-Right Nav Island */}
         <div className="absolute top-0 right-0 bg-white rounded-bl-[32px] z-[60] pt-2 lg:pt-3 pr-4 lg:pr-5 pl-5 pb-3 flex items-center gap-3 pointer-events-auto shadow-sm">
-          {/* Search Trigger */}
-          <button
-            onClick={openSearch}
-            className="flex items-center justify-center w-[44px] h-[44px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-gray-700 shadow-sm cursor-pointer"
-            title="Search (Cmd+K)"
-          >
-            <Search size={18} />
-          </button>
-          <StaggeredMenu />
+          {/* Desktop Full Menu */}
+          <div className="hidden xl:flex items-center gap-6 mr-1">
+            <Link href="/" className="text-[13px] font-extrabold tracking-widest uppercase text-gray-900 hover:text-brand-primary transition-colors">Home</Link>
+            <Link href="/about" className="text-[13px] font-extrabold tracking-widest uppercase text-gray-900 hover:text-brand-primary transition-colors">About</Link>
+
+            <div className="relative group/menu py-2">
+              <span className="cursor-default flex items-center gap-1 text-[13px] font-extrabold tracking-widest uppercase text-gray-900 group-hover/menu:text-brand-primary transition-colors">
+                Services
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/menu:-scale-y-100"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[240px] bg-white rounded-2xl shadow-xl shadow-black/10 border border-gray-100 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 transform translate-y-2 group-hover/menu:translate-y-0 overflow-hidden z-[70] py-2">
+                <Link href="/services/smt" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">SMT Assembly</Link>
+                <Link href="/services/system-integration" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Systems Integration</Link>
+                <Link href="/services/through-hole" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Through Hole</Link>
+                <Link href="/services/coating-potting" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Coating & Potting</Link>
+                <Link href="/services/test-inspection" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Test & Inspection</Link>
+                <Link href="/services/prototype-assembling" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Prototyping</Link>
+                <Link href="/services/automotive-harnessing" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Automotive Harnessing</Link>
+                <Link href="/services/inductive-components" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Inductive Components</Link>
+                <Link href="/services/supply-chain" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Supply Chain</Link>
+              </div>
+            </div>
+
+            <Link href="/industries" className="text-[13px] font-extrabold tracking-widest uppercase text-gray-900 hover:text-brand-primary transition-colors">Industries</Link>
+            <Link href="/certification" className="text-[13px] font-extrabold tracking-widest uppercase text-gray-900 hover:text-brand-primary transition-colors">Certifications</Link>
+            <div className="relative group/menu py-2">
+              <span className="cursor-default flex items-center gap-1 text-[13px] font-extrabold tracking-widest uppercase text-gray-900 group-hover/menu:text-brand-primary transition-colors">
+                Resources
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/menu:-scale-y-100"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[160px] bg-white rounded-2xl shadow-xl shadow-black/10 border border-gray-100 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 transform translate-y-2 group-hover/menu:translate-y-0 overflow-hidden z-[70] py-2">
+                <Link href="/articles" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">Articles</Link>
+                <Link href="/faq" className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">FAQ</Link>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 pl-2">
+              <button
+                onClick={openSearch}
+                className="flex items-center justify-center w-[38px] h-[38px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-brand-primary shadow-sm cursor-pointer"
+                title="Search (Cmd+K)"
+              >
+                <Search size={16} />
+              </button>
+
+              <Link href="/contact" className="relative group/btn text-[13px] font-bold tracking-widest uppercase text-white overflow-hidden rounded-xl px-6 py-3 transition-transform hover:-translate-y-0.5 active:translate-y-0 duration-300 bg-gradient-to-b from-brand-primary/90 to-brand-primary shadow-[0_6px_16px_rgba(0,186,52,0.3),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-4px_6px_rgba(0,0,0,0.2)] border border-white/20 backdrop-blur-md">
+                <span className="relative z-10 drop-shadow-sm">Contact</span>
+                <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                <div className="absolute inset-0 rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.3)] z-0"></div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Mobile Search and Staggered Menu */}
+          <div className="xl:hidden flex items-center gap-3">
+            <button
+              onClick={openSearch}
+              className="flex items-center justify-center w-[44px] h-[44px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-gray-700 shadow-sm cursor-pointer"
+              title="Search (Cmd+K)"
+            >
+              <Search size={18} />
+            </button>
+            <StaggeredMenu />
+          </div>
 
           <FluidCorner position="top-right" radius={24} color="#ffffff" className="top-0 -left-[23.5px]" />
           <FluidCorner position="top-right" radius={24} color="#ffffff" className="right-0 -bottom-[23.5px]" />
@@ -127,7 +188,6 @@ export default function Hero() {
             <div className="relative z-10 flex justify-between items-center mb-5">
               <div>
                 <h3 className="font-heading text-lg font-bold text-white leading-tight">SMT ASSEMBLY</h3>
-                <p className="text-[10px] text-brand-primary font-mono mt-1 tracking-wider uppercase">PANASONIC HIGH-SPEED</p>
               </div>
               <div className="w-10 h-10 rounded-[12px] bg-white/5 flex items-center justify-center border border-white/10">
                 <div ref={activityIconRef} className="flex">
@@ -144,6 +204,7 @@ export default function Hero() {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 suppressHydrationWarning
                 className="w-full h-full object-cover transform scale-[1.03] group-hover:scale-100 transition-transform duration-700"
               />

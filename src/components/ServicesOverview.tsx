@@ -13,7 +13,7 @@ const services = [
     slug: "smt",
     description: "Tos Lanka, with 20+ years in Surface Mount Technology, excels using advanced Panasonic machines and ROHS compliance.",
     icon: Cpu,
-    image: "/services/smt_new.png"
+    image: "/services/smt_new.webp"
   },
   {
     id: "002",
@@ -21,7 +21,7 @@ const services = [
     slug: "system-integration",
     description: "We provide complete product assemblies and testing, ensuring zero defects using manual and semi-automatic tools.",
     icon: Blocks,
-    image: "/services/integration_new.png"
+    image: "/services/integration_new.webp"
   },
   {
     id: "003",
@@ -29,7 +29,7 @@ const services = [
     slug: "coating-potting",
     description: "We offer custom coating for moisture-sensitive PCBs, featuring inline coating and potting facilities for components.",
     icon: Droplets,
-    image: "/services/coating_new.png"
+    image: "/services/coating_new.webp"
   },
   {
     id: "004",
@@ -37,7 +37,7 @@ const services = [
     slug: "supply-chain",
     description: "We provide both consigned and turnkey solutions, adapting seamlessly to customer requirements.\n• PCBs & Components: sourced from Hong Kong, China, Taiwan, Japan, USA, Germany, and India\n• Consumables (solder, flux, chemicals): sourced from Singapore and Malaysia\n• Plastic & Aluminum Parts (including enclosures): sourced from China, Vietnam, and Sri Lanka\nBy leveraging a diverse global supply network, we ensure flexibility, quality, and reliability in every project.",
     icon: Globe,
-    image: "/services/supply-chain_new.png"
+    image: "/services/supply-chain_new.webp"
   },
   {
     id: "005",
@@ -45,7 +45,7 @@ const services = [
     slug: "test-inspection",
     description: "Equipped with advanced AOI machines, we ensure quality through inspections, testing, and firmware uploading for circuit boards.",
     icon: Microscope,
-    image: "/services/inspection_new.png"
+    image: "/services/inspection_new.webp"
   },
   {
     id: "006",
@@ -53,7 +53,7 @@ const services = [
     slug: "through-hole",
     description: "Through Hole technology utilizes advanced machines for component insertion, supported by skilled, Japan-trained workers for hand soldering.",
     icon: CircuitBoard,
-    image: "/services/through-hole_new.png"
+    image: "/services/through-hole_new.webp"
   },
   {
     id: "007",
@@ -61,7 +61,7 @@ const services = [
     slug: "prototype-assembling",
     description: "Prototype PCB assemblies are handled by skilled technicians, offering affordable, flexible processes with fast turnaround times.",
     icon: Beaker,
-    image: "/services/prototype_new.png"
+    image: "/services/prototype_new.webp"
   },
   {
     id: "008",
@@ -69,7 +69,7 @@ const services = [
     slug: "automotive-harnessing",
     description: "Extensive experience includes assembling automotive safety sensor harnesses for seat belts and ABS systems for major brands.",
     icon: CarFront,
-    image: "/services/automotive_new.png"
+    image: "/services/automotive_new.webp"
   },
   {
     id: "009",
@@ -77,7 +77,7 @@ const services = [
     slug: "inductive-components",
     description: "Specializing in inductive component assemblies, skilled professionals leverage expertise for various industrial applications and needs.",
     icon: Magnet,
-    image: "/services/inductive_new.png"
+    image: "/services/inductive_new.webp"
   }
 ];
 
@@ -123,9 +123,6 @@ export default function ServicesOverview() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-6 md:gap-12">
-                    <span className="text-lg md:text-xl font-mono transition-colors duration-300 text-[#F5F5F5]/40 group-hover:text-[#F5F5F5]/70">
-                      /{service.id}
-                    </span>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide transition-colors duration-300 text-[#F5F5F5] group-hover:text-white">
                       {service.title}
                     </h3>
@@ -162,9 +159,6 @@ export default function ServicesOverview() {
                             <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10">
                               <IconComponent className="w-5 h-5 text-blue-400" strokeWidth={1.5} />
                             </div>
-                            <span className="text-xs uppercase tracking-[0.3em] text-white/40 font-medium">
-                              Service Line {service.id}
-                            </span>
                           </div>
                           <p className="text-[#F5F5F5]/60 text-base md:text-lg leading-relaxed">
                             {service.description}

@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import WhoWeAre from "../components/WhoWeAre";
 import ServicesOverview from "../components/ServicesOverview";
+import WhyUsSection from "../components/WhyUsSection";
 import ProcessSection from "../components/ProcessSection";
 import CtaSection from "../components/CtaSection";
 import Footer from "../components/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
       <WhoWeAre />
       <MembershipLogos />
       <ServicesOverview />
+      <WhyUsSection />
       <ProcessSection />
       <CtaSection />
       <Footer />

@@ -13,10 +13,29 @@ export default function SubPageNavbar() {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
-    { label: 'Services', href: '/#services' },
+    { 
+      label: 'Services', 
+      subLinks: [
+        { label: 'SMT Assembly', href: '/services/smt' },
+        { label: 'Systems Integration', href: '/services/system-integration' },
+        { label: 'Through Hole', href: '/services/through-hole' },
+        { label: 'Coating & Potting', href: '/services/coating-potting' },
+        { label: 'Test & Inspection', href: '/services/test-inspection' },
+        { label: 'Prototyping', href: '/services/prototype-assembling' },
+        { label: 'Automotive Harnessing', href: '/services/automotive-harnessing' },
+        { label: 'Inductive Components', href: '/services/inductive-components' },
+        { label: 'Supply Chain', href: '/services/supply-chain' },
+      ]
+    },
+    { label: 'Industries', href: '/industries' },
     { label: 'Certifications', href: '/certification' },
-    { label: 'Articles', href: '/articles' },
-    { label: 'FAQ', href: '/faq' },
+    { 
+      label: 'Resources', 
+      subLinks: [
+        { label: 'Articles', href: '/articles' },
+        { label: 'FAQ', href: '/faq' },
+      ]
+    },
   ];
 
   return (
@@ -44,13 +63,29 @@ export default function SubPageNavbar() {
           {/* Middle: Inline Links (Desktop/Tablet) */}
           <div className="hidden lg:flex items-center justify-center flex-1 space-x-1 mx-4">
             {navLinks.map((link) => (
-              <Link 
-                key={link.label}
-                href={link.href}
-                className="px-5 py-2.5 text-[14px] font-bold tracking-wide text-black/60 hover:text-brand-primary transition-colors duration-300 rounded-full hover:bg-black/5"
-              >
-                {link.label}
-              </Link>
+              link.subLinks ? (
+                <div key={link.label} className="relative group/menu py-2">
+                  <span className="cursor-default px-5 py-2.5 text-[14px] font-bold tracking-wide text-black/60 group-hover/menu:text-brand-primary transition-colors duration-300 rounded-full hover:bg-black/5 flex items-center gap-1">
+                    {link.label}
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/menu:-scale-y-100"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-[240px] bg-white rounded-2xl shadow-xl shadow-black/10 border border-gray-100 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 transform translate-y-2 group-hover/menu:translate-y-0 overflow-hidden z-[105] py-2 max-h-[70vh] overflow-y-auto">
+                    {link.subLinks.map((sub) => (
+                      <Link key={sub.label} href={sub.href} className="block px-5 py-2.5 text-[14px] font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-50 transition-colors">
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link 
+                  key={link.label}
+                  href={link.href!}
+                  className="px-5 py-2.5 text-[14px] font-bold tracking-wide text-black/60 hover:text-brand-primary transition-colors duration-300 rounded-full hover:bg-black/5"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
 
@@ -68,9 +103,10 @@ export default function SubPageNavbar() {
 
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center px-7 py-2.5 bg-brand-primary text-white text-[15px] font-bold rounded-full hover:bg-brand-primary-hover transition-colors shadow-sm"
+              className="relative group/btn inline-flex items-center justify-center px-7 py-2.5 text-[13px] font-bold tracking-widest uppercase text-white overflow-hidden rounded-xl transition-transform hover:-translate-y-0.5 active:translate-y-0 duration-300 bg-gradient-to-b from-brand-primary/90 to-brand-primary shadow-[0_6px_16px_rgba(0,186,52,0.3),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-4px_6px_rgba(0,0,0,0.2)] border border-white/20 backdrop-blur-md"
             >
-              Contact Us
+              <span className="relative z-10 drop-shadow-sm">Contact</span>
+              <span className="absolute inset-0 bg-gradient-to-t from-white/0 to-white/10 pointer-events-none" />
             </Link>
             
           </div>

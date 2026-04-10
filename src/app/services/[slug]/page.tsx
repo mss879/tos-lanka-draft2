@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { servicesData, getServiceBySlug, getAllServiceSlugs } from "../../../data/servicesData";
 import ServicePageContent from "../../../components/ServicePageContent";
 
-// Generate static params for all service slugs
+// Generate static params for all service slugs — ensures every service page is
+// statically generated at build time for optimal crawlability and performance.
 export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
 }
@@ -21,15 +22,152 @@ export async function generateMetadata({
     return { title: "Service Not Found | TOS Lanka" };
   }
 
+  const canonicalUrl = `https://www.toslanka.com/services/${service.slug}`;
+  const imageUrl = `https://www.toslanka.com${service.image}`;
+
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    keywords: [
+      service.title,
+      service.shortTitle,
+      ...service.industries,
+      "TOS Lanka",
+      "Sri Lanka",
+      "EMS",
+      "Electronic Manufacturing Services",
+      "contract manufacturing",
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
+      url: canonicalUrl,
+      siteName: "TOS Lanka",
+      locale: "en_US",
       type: "website",
-      images: [{ url: service.image, width: 1200, height: 630 }],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${service.title} — TOS Lanka Electronic Manufacturing Services`,
+        },
+      ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: [imageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large" as const,
+        "max-snippet": -1,
+      },
+    },
+  };
+}
+
+// JSON-LD Structured Data generator for each service page
+function generateServiceJsonLd(service: ReturnType<typeof getServiceBySlug>) {
+  if (!service) return null;
+
+  const canonicalUrl = `https://www.toslanka.com/services/${service.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${canonicalUrl}#service`,
+        name: service.title,
+        description: service.metaDescription,
+        url: canonicalUrl,
+        image: `https://www.toslanka.com${service.image}`,
+        provider: {
+          "@type": "Organization",
+          "@id": "https://www.toslanka.com/#organization",
+          name: "TOS Lanka Co. (Pvt.) Ltd.",
+          url: "https://www.toslanka.com",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "Sri Lanka",
+        },
+        serviceType: service.title,
+        category: "Electronic Manufacturing Services",
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: `${service.shortTitle} Capabilities`,
+          itemListElement: service.capabilities.map((cap, idx) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: cap.title,
+              description: cap.description,
+            },
+            position: idx + 1,
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.toslanka.com",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: "https://www.toslanka.com/#services",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.shortTitle,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: service.metaTitle,
+        description: service.metaDescription,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://www.toslanka.com/#website",
+          url: "https://www.toslanka.com",
+          name: "TOS Lanka",
+          publisher: {
+            "@type": "Organization",
+            "@id": "https://www.toslanka.com/#organization",
+          },
+        },
+        breadcrumb: {
+          "@id": `${canonicalUrl}#breadcrumb`,
+        },
+        about: {
+          "@id": `${canonicalUrl}#service`,
+        },
+        inLanguage: "en-US",
+      },
+    ],
   };
 }
 
@@ -45,6 +183,8 @@ export default async function ServicePage({
     notFound();
   }
 
+  const jsonLd = generateServiceJsonLd(service);
+
   // Serialize data for client component (strip non-serializable icon)
   const serviceProps = {
     slug: service.slug,
@@ -59,5 +199,16 @@ export default async function ServicePage({
     relatedSlugs: service.relatedSlugs,
   };
 
-  return <ServicePageContent service={serviceProps} />;
+  return (
+    <>
+      {/* JSON-LD Structured Data — rendered server-side for immediate crawler access */}
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      <ServicePageContent service={serviceProps} />
+    </>
+  );
 }

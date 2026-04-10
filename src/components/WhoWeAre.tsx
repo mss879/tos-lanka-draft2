@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from 'next/link';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -75,7 +76,7 @@ export default function WhoWeAre() {
                   {/* Copy */}
                   <div className="max-w-4xl space-y-4 lg:pr-10 xl:pr-20">
                     <h3 className="text-xl font-medium md:text-[26px] font-heading leading-tight text-black">
-                      Your Contract Electronics Manufacturing Partner
+                      Your Electronics Manufacturing Partner
                     </h3>
                     <div className="flex flex-col gap-4 text-[13px] text-black/60 md:text-[15px] leading-[1.6]">
                       <p>
@@ -99,7 +100,7 @@ export default function WhoWeAre() {
                         return (
                           <div
                             key={`a-${industry.name}`}
-                            className="group flex shrink-0 items-center gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.06] backdrop-blur-md px-4 py-3 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.12]"
+                            className="group flex shrink-0 items-center gap-3 rounded-[14px] border border-white/[0.08] bg-white/10 px-4 py-3 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.15]"
                           >
                             <span className="text-[13px] sm:text-[14px] font-medium text-white/90 whitespace-nowrap tracking-wide group-hover:text-blue-300 transition-colors duration-300">
                               {industry.name}
@@ -112,7 +113,7 @@ export default function WhoWeAre() {
                         return (
                           <div
                             key={`b-${industry.name}`}
-                            className="group flex shrink-0 items-center gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.06] backdrop-blur-md px-4 py-3 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.12]"
+                            className="group flex shrink-0 items-center gap-3 rounded-[14px] border border-white/[0.08] bg-white/10 px-4 py-3 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.15]"
                           >
                             <span className="text-[13px] sm:text-[14px] font-medium text-white/90 whitespace-nowrap tracking-wide group-hover:text-blue-300 transition-colors duration-300">
                               {industry.name}
@@ -133,12 +134,12 @@ export default function WhoWeAre() {
                   variants={itemVariants}
                   className="relative overflow-hidden flex-1 rounded-[2rem] border border-black/5 bg-black p-5 flex flex-col justify-between shadow-sm lg:min-h-[160px]"
                 >
-                  <div className="absolute inset-0 max-h-full overflow-hidden">
-                    <img
+                  <div className="absolute inset-0 overflow-hidden">
+                    <Image
                       src="/SMT_Line-scaled.jpg"
                       alt="TOS Lanka Factory"
-                      className="h-full w-full object-cover opacity-20 grayscale"
-                      loading="lazy"
+                      fill
+                      className="object-cover opacity-40 grayscale"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
                   </div>
@@ -166,7 +167,7 @@ export default function WhoWeAre() {
                   whileHover={{ y: -2 }}
                   className="relative overflow-hidden flex-1 rounded-[2rem] border border-black/5 bg-white p-5 justify-between flex flex-col cursor-pointer group shadow-sm transition-all lg:min-h-[140px]"
                 >
-                  <a href="/about-us" className="absolute inset-0 z-20" aria-label="Learn More" />
+                  <Link href="/about" className="absolute inset-0 z-20" aria-label="Learn More" />
 
                   <div className="flex flex-col gap-1.5 relative z-10 mt-2">
                     <h3 className="text-[26px] lg:text-[28px] font-semibold leading-tight font-heading text-black tracking-tight">
@@ -276,12 +277,12 @@ export default function WhoWeAre() {
                 variants={itemVariants}
                 className="group relative flex h-full flex-col justify-between rounded-[2rem] border border-black/5 bg-black p-5 lg:p-6 lg:col-span-4 overflow-hidden shadow-sm min-h-[220px]"
               >
-                <div className="absolute inset-0 max-h-full overflow-hidden">
-                  <img
+                <div className="absolute inset-0 overflow-hidden">
+                  <Image
                     src="/zero_defect_bg.png"
                     alt="Zero Defect Manufacturing"
-                    className="h-full w-full object-cover opacity-60 mix-blend-luminosity transition-transform duration-[800ms] group-hover:scale-110"
-                    loading="lazy"
+                    fill
+                    className="object-cover opacity-50 grayscale transition-transform duration-[800ms] group-hover:scale-110 group-hover:opacity-60"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                 </div>
