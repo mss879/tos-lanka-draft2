@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "TOS Lanka",
     title: "TOS Lanka | EMS & Contract Electronics Manufacturing in Sri Lanka",
     description: "Sri Lanka's pioneer EMS provider — 100% Japanese-owned, triple ISO certified. SMT, THT, PCB assembly, cable harness, conformal coating, prototyping, and box build for global OEMs.",
-    images: [{ url: "/tos-logo.png", width: 400, height: 100 }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
   },
   alternates: {
     canonical: "https://www.toslanka.com",
