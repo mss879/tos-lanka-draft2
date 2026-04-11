@@ -80,7 +80,14 @@ export default function Hero() {
 
         {/* Cinematic Background Layer */}
         <div className="absolute inset-0 z-0 bg-brand-background pointer-events-none transform-gpu">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=60&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-[0.35] mix-blend-luminosity will-change-transform"></div>
+          <Image 
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=60&w=1600&auto=format&fit=crop"
+            alt="Circuit Board Background"
+            fill
+            priority
+            unoptimized
+            className="object-cover object-center opacity-[0.35] mix-blend-luminosity will-change-transform"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-background via-brand-background/70 to-transparent"></div>
           <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-primary opacity-10 blur-[120px] rounded-full transform-gpu will-change-transform"></div>
         </div>

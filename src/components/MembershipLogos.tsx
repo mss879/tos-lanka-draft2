@@ -72,6 +72,7 @@ export default function MembershipLogos() {
                   src={logo.src}
                   alt={logo.alt}
                   fill
+                  quality={60}
                   sizes="(max-width: 768px) 120px, (max-width: 1024px) 150px, 180px"
                   className="object-contain"
                 />

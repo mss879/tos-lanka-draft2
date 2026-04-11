@@ -171,12 +171,30 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Logo - BV_Cert */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-          <div className="flex items-center text-sm text-white/70">
+        {/* Bottom Logo, ARC AI Credit, BV_Cert */}
+        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 w-full">
+          <div className="flex items-center text-sm text-white/70 md:w-1/3">
             © {currentYear} TOS Lanka Co. (Pvt.) Ltd. All rights reserved.
           </div>
-          <div className="flex items-center">
+          
+          <div className="flex items-center justify-center md:w-1/3 text-sm text-white/70">
+            <a
+              href="https://www.arcai.agency"
+              target="_blank"
+              rel="noopener"
+              title="ARC AI - Web Design & Digital Solutions"
+              className="flex items-center hover:text-white transition-colors group"
+            >
+              Designed & Developed by
+              <img 
+                src="/arc%20logo.png" 
+                alt="ARC AI - Web Design & Digital Solutions" 
+                className="h-8 w-auto ml-2 mt-1 object-contain opacity-90 group-hover:opacity-100 transition-opacity" 
+              />
+            </a>
+          </div>
+
+          <div className="flex items-center justify-end md:w-1/3">
             <Image 
               src="/BV_Cert_ISO_9001_-UKAS_-768x305.png" 
               alt="Bureau Veritas ISO Certification" 

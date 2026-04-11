@@ -1,0 +1,10 @@
+/* TEAM */
+Agency: ARC AI
+Site: https://www.arcai.agency
+Role: Web Design & Digital Solutions
+
+/* SITE */
+Last update: 2026/04/11
+Standards: HTML5, CSS3, Next.js
+Components: React, Tailwind CSS
+Software: VS Code

@@ -139,6 +139,7 @@ export default function WhoWeAre() {
                       src="/SMT_Line-scaled.jpg"
                       alt="TOS Lanka Factory"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover opacity-40 grayscale"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
@@ -210,6 +211,7 @@ export default function WhoWeAre() {
                     loop
                     muted
                     playsInline
+                    preload="none"
                     suppressHydrationWarning
                     className="h-full w-full object-cover border-none outline-none"
                   />
@@ -282,6 +284,7 @@ export default function WhoWeAre() {
                     src="/zero_defect_bg.png"
                     alt="Zero Defect Manufacturing"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover opacity-50 grayscale transition-transform duration-[800ms] group-hover:scale-110 group-hover:opacity-60"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />

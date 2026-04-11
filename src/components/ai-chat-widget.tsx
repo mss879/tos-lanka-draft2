@@ -15,7 +15,7 @@ function generateUUID() {
 
 type Message = { role: "user" | "assistant"; content: string };
 
-const WELCOME_MESSAGE = "Hey there! 👋 I'm part of the **TOS Lanka** team — we're a Japanese-owned electronics manufacturer based in Sri Lanka.\n\nWhether you've got questions about **PCB assembly**, **prototyping**, **automotive harnessing**, or any of our 9 service lines — I'm here to help.\n\nWhat are you working on?";
+const WELCOME_MESSAGE = "Hi! 👋 I'm the **TOS Lanka** AI assistant.\n\nHow can I help you with our electronics manufacturing services today?";
 
 export function AiChatWidget() {
   const [isOpen, setIsOpen] = useState(false);

@@ -143,6 +143,7 @@ export default function RootLayout({
       className={`${rajdhani.variable} ${manrope.variable} h-full antialiased`}
     >
       <head>
+        <meta name="generator" content="ARC AI" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
