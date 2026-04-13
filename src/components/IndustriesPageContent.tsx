@@ -124,7 +124,7 @@ export default function IndustriesPageContent() {
              >
                <Image 
                  src="/industries/automotive_electronics_v5.webp" 
-                 alt="Advanced automotive electronic assembly" 
+                 alt="Advanced automotive electronic assembly - TOS Lanka" 
                  fill 
                  priority
                  quality={85}
@@ -141,7 +141,7 @@ export default function IndustriesPageContent() {
              >
                <Image 
                  src="/industries/medical_electronics_v5.webp" 
-                 alt="Precision medical electronic manufacturing" 
+                 alt="Precision medical electronic manufacturing - TOS Lanka" 
                  fill 
                  quality={85}
                  sizes="(max-width: 1024px) 50vw, 25vw"

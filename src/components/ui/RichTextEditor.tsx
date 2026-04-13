@@ -8,6 +8,30 @@ import Placeholder from '@tiptap/extension-placeholder';
 import { Bold, Italic, Underline as UnderlineIcon, Strikethrough, Heading1, Heading2, List, ListOrdered, Link as LinkIcon, Quote, RotateCcw, RotateCw } from 'lucide-react';
 import { useCallback } from 'react';
 
+const ToolbarBtn = ({ 
+  isActive, 
+  onClick, 
+  disabled,
+  children 
+}: { 
+  isActive?: boolean, 
+  onClick: () => void, 
+  disabled?: boolean,
+  children: React.ReactNode 
+}) => (
+  <button
+    type="button"
+    onClick={onClick}
+    disabled={disabled}
+    className={`p-2 rounded-lg transition-colors flex items-center justify-center
+      ${isActive ? 'bg-black text-white' : 'text-black/60 hover:bg-black/5 hover:text-black'}
+      ${disabled ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}
+    `}
+  >
+    {children}
+  </button>
+);
+
 export default function RichTextEditor({ 
   content, 
   onChange 
@@ -61,31 +85,6 @@ export default function RichTextEditor({
   if (!editor) {
     return null;
   }
-
-  const ToolbarBtn = ({ 
-    isActive, 
-    onClick, 
-    disabled,
-    children 
-  }: { 
-    isActive?: boolean, 
-    onClick: () => void, 
-    disabled?: boolean,
-    children: React.ReactNode 
-  }) => (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      className={`p-2 rounded-lg transition-colors flex items-center justify-center
-        ${isActive ? 'bg-black text-white' : 'text-black/60 hover:bg-black/5 hover:text-black'}
-        ${disabled ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}
-      `}
-    >
-      {children}
-    </button>
-  );
-
   return (
     <div className="border border-black/10 rounded-2xl overflow-hidden bg-white flex flex-col focus-within:ring-1 focus-within:ring-brand-tertiary focus-within:border-brand-tertiary transition-all">
       {/* Editor Toolbar */}

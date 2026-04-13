@@ -151,7 +151,7 @@ export default function ServicesOverview() {
                       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-10 pl-[calc(1.5rem+theme(spacing.6))] md:pl-[calc(1.25rem+theme(spacing.12))] lg:pl-[calc(1.25rem+theme(spacing.12))] flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                      <div className="pb-10 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                         
                         {/* Text Content */}
                         <div className="flex-1 space-y-5 max-w-xl">
@@ -178,7 +178,7 @@ export default function ServicesOverview() {
                         <div className="relative w-full md:w-[320px] lg:w-[400px] aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-black/50 shrink-0">
                           <Image
                             src={service.image}
-                            alt={service.title}
+                            alt={`${service.title} - TOS Lanka contract manufacturing process`}
                             fill
                             sizes="(max-width: 768px) 100vw, 400px"
                             className="object-cover"

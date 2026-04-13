@@ -82,7 +82,7 @@ export default function Hero() {
         <div className="absolute inset-0 z-0 bg-brand-background pointer-events-none transform-gpu">
           <Image 
             src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=60&w=1600&auto=format&fit=crop"
-            alt="Circuit Board Background"
+            alt="Close-up of an electronic circuit board with SMT components - TOS Lanka manufacturing background"
             fill
             priority
             unoptimized
@@ -92,28 +92,30 @@ export default function Hero() {
           <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-primary opacity-10 blur-[120px] rounded-full transform-gpu will-change-transform"></div>
         </div>
 
-        {/* --- ISLANDS OVERLAY --- */}
+        {/* --- DESKTOP ISLANDS OVERLAY --- */}
 
-        {/* 1. Top-Left Logo Island */}
-        <div className="absolute top-0 left-0 bg-white rounded-br-[32px] z-[60] pt-2 lg:pt-4 pl-4 lg:pl-6 pr-6 pb-4 flex items-center justify-center pointer-events-auto shadow-sm">
-          <Image
-            src="/tos-logo.png"
-            alt="TOS Lanka Logo"
-            width={160}
-            height={40}
-            priority
-            quality={90}
-            className="h-8 lg:h-10 w-auto object-contain"
-          />
+        {/* 1. Top-Left Logo Island (Desktop) */}
+        <div className="hidden xl:flex absolute top-0 left-0 bg-white rounded-br-[32px] z-[60] pt-4 pl-6 pr-6 pb-4 items-center justify-center pointer-events-auto shadow-sm">
+          <Link href="/">
+            <Image
+              src="/tos-logo.png"
+              alt="TOS Lanka Official Logo"
+              width={160}
+              height={40}
+              priority
+              quality={90}
+              className="h-10 w-auto object-contain"
+            />
+          </Link>
           {/* Connecting fluid corners */}
           <FluidCorner position="top-left" radius={24} color="#ffffff" className="top-0 -right-[23.5px]" />
           <FluidCorner position="top-left" radius={24} color="#ffffff" className="left-0 -bottom-[23.5px]" />
         </div>
 
-        {/* 2. Top-Right Nav Island */}
-        <div className="absolute top-0 right-0 bg-white rounded-bl-[32px] z-[60] pt-2 lg:pt-3 pr-4 lg:pr-5 pl-5 pb-3 flex items-center gap-3 pointer-events-auto shadow-sm">
+        {/* 2. Top-Right Nav Island (Desktop) */}
+        <div className="hidden xl:flex absolute top-0 right-0 bg-white rounded-bl-[32px] z-[60] pt-3 pr-5 pl-5 pb-3 items-center gap-3 pointer-events-auto shadow-sm">
           {/* Desktop Full Menu */}
-          <div className="hidden xl:flex items-center gap-6 mr-1">
+          <div className="flex items-center gap-6 mr-1">
             <Link href="/" className="text-[13px] font-extrabold tracking-widest uppercase text-gray-900 hover:text-brand-primary transition-colors">Home</Link>
             <Link href="/about" className="text-[13px] font-extrabold tracking-widest uppercase text-gray-900 hover:text-brand-primary transition-colors">About</Link>
 
@@ -165,20 +167,34 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Mobile Search and Staggered Menu */}
-          <div className="xl:hidden flex items-center gap-3">
+          <FluidCorner position="top-right" radius={24} color="#ffffff" className="top-0 -left-[23.5px]" />
+          <FluidCorner position="top-right" radius={24} color="#ffffff" className="right-0 -bottom-[23.5px]" />
+        </div>
+
+        {/* --- MOBILE FULL WIDTH HEADER (< xl) --- */}
+        <div className="xl:hidden absolute top-0 left-0 w-full bg-white z-[60] flex items-center justify-between px-5 py-3 pointer-events-auto border-b border-gray-100">
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/tos-logo.png"
+              alt="TOS Lanka Official Logo"
+              width={160}
+              height={40}
+              priority
+              quality={90}
+              className="h-8 w-auto object-contain"
+            />
+          </Link>
+
+          <div className="flex items-center gap-3">
             <button
               onClick={openSearch}
-              className="flex items-center justify-center w-[44px] h-[44px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-gray-700 shadow-sm cursor-pointer"
+              className="flex items-center justify-center w-[40px] h-[40px] bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 text-gray-500 hover:text-brand-primary shadow-sm cursor-pointer"
               title="Search (Cmd+K)"
             >
               <Search size={18} />
             </button>
             <StaggeredMenu />
           </div>
-
-          <FluidCorner position="top-right" radius={24} color="#ffffff" className="top-0 -left-[23.5px]" />
-          <FluidCorner position="top-right" radius={24} color="#ffffff" className="right-0 -bottom-[23.5px]" />
         </div>
 
         {/* 3. Bottom-Right Product/SMT Card Island */}

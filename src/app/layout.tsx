@@ -58,8 +58,8 @@ export const metadata: Metadata = {
 
 import { SearchProvider } from "@/context/SearchContext";
 import GlobalSearch from "@/components/GlobalSearch";
-import { AiChatWidget } from "@/components/ai-chat-widget";
 import Navbar from "@/components/Navbar";
+import { AiChatWidget } from "@/components/AiChatWidgetWrapper";
 
 /* JSON-LD Structured Data */
 const jsonLd = {
