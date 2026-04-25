@@ -28,16 +28,7 @@ export async function generateMetadata({
   return {
     title: service.metaTitle,
     description: service.metaDescription,
-    keywords: [
-      service.title,
-      service.shortTitle,
-      ...service.industries,
-      "TOS Lanka",
-      "Sri Lanka",
-      "EMS",
-      "Electronic Manufacturing Services",
-      "contract manufacturing",
-    ],
+    keywords: service.keywords,
     alternates: {
       canonical: canonicalUrl,
     },
@@ -171,6 +162,24 @@ function generateServiceJsonLd(service: ReturnType<typeof getServiceBySlug>) {
   };
 }
 
+// FAQ Page JSON-LD for rich snippet eligibility
+function generateFaqJsonLd(service: ReturnType<typeof getServiceBySlug>) {
+  if (!service || !service.faqs || service.faqs.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
 export default async function ServicePage({
   params,
 }: {
@@ -184,6 +193,7 @@ export default async function ServicePage({
   }
 
   const jsonLd = generateServiceJsonLd(service);
+  const faqJsonLd = generateFaqJsonLd(service);
 
   // Serialize data for client component (strip non-serializable icon)
   const serviceProps = {
@@ -195,6 +205,7 @@ export default async function ServicePage({
     image: service.image,
     heroParagraphs: service.heroParagraphs,
     capabilities: service.capabilities,
+    faqs: service.faqs,
     industries: service.industries,
     relatedSlugs: service.relatedSlugs,
   };
@@ -206,6 +217,13 @@ export default async function ServicePage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {/* FAQ JSON-LD — enables rich snippet "People also ask" boxes */}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
       <ServicePageContent service={serviceProps} />

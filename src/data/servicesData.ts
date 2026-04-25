@@ -5,6 +5,11 @@ export interface ServiceCapability {
   description: string;
 }
 
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface ServiceData {
   slug: string;
   title: string;
@@ -12,10 +17,12 @@ export interface ServiceData {
   tagline: string;
   metaTitle: string;
   metaDescription: string;
+  keywords: string[];
   icon: LucideIcon;
   image: string;
   heroParagraphs: string[];
   capabilities: ServiceCapability[];
+  faqs: ServiceFAQ[];
   industries: string[];
   relatedSlugs: string[];
 }
@@ -26,9 +33,10 @@ export const servicesData: ServiceData[] = [
     title: "Surface Mount Technology (SMT)",
     shortTitle: "SMT Assembly",
     tagline: "25+ Years of Precision Placement",
-    metaTitle: "SMT Assembly Services Sri Lanka | Surface Mount Technology & Reflow Soldering | TOS Lanka",
+    metaTitle: "PCB Assembly & SMT Services Sri Lanka | Panasonic High-Speed Line | TOS Lanka",
     metaDescription:
-      "TOS Lanka delivers world-class SMT assembly and Surface Mount Technology services in Sri Lanka. Panasonic high-speed placement, reflow soldering, and electronic assembly for automotive, medical, and industrial electronics. 25+ years of contract manufacturing excellence.",
+      "PCB assembly and SMT services in Sri Lanka — Panasonic high-speed placement, lead-free reflow soldering, fine-pitch BGA assembly. Japanese-owned, triple ISO certified EMS provider. Serving automotive, medical, and industrial OEMs worldwide.",
+    keywords: ["PCB assembly services Sri Lanka", "SMT assembly company Sri Lanka", "surface mount technology provider Sri Lanka", "Panasonic SMT placement line", "fine pitch BGA assembly services", "lead free reflow soldering Sri Lanka", "contract PCB assembly Asia"],
     icon: Cpu,
     image: "/services/smt_new.webp",
     heroParagraphs: [
@@ -57,6 +65,11 @@ export const servicesData: ServiceData[] = [
           "A proven track record of international partnerships and export excellence, combining advanced technology with a highly skilled workforce.",
       },
     ],
+    faqs: [
+      { question: "What SMT equipment does TOS Lanka operate?", answer: "Our SMT lines feature Panasonic high-speed placement machines capable of placing fine-pitch components including BGAs, QFNs, and 0201 passives. All lines operate with lead-free, RoHS-compliant reflow soldering profiles." },
+      { question: "Can you handle mixed-technology boards with both SMT and through-hole?", answer: "Yes. Our facility integrates SMT placement with through-hole assembly, wave soldering, and selective soldering — all under one roof. Mixed-technology boards are a core capability." },
+      { question: "What quality certifications cover your SMT assembly?", answer: "Our SMT operations are covered by ISO 9001:2015 (Quality), ISO 14001:2015 (Environmental), and ISO 45001:2018 (Safety) certifications, all audited by Bureau Veritas." },
+    ],
     industries: ["Automotive", "Medical Devices", "Consumer Electronics", "Industrial Control", "Telecommunications"],
     relatedSlugs: ["through-hole", "test-inspection", "prototype-assembling"],
   },
@@ -65,9 +78,10 @@ export const servicesData: ServiceData[] = [
     title: "System Integration & Box Build",
     shortTitle: "Systems Integration",
     tagline: "Complete Turnkey Product Assembly",
-    metaTitle: "Box Build Assembly & System Integration Sri Lanka | Electronic Assembly | TOS Lanka",
+    metaTitle: "Box Build & Turnkey Product Assembly Sri Lanka | PCB to Finished Product | TOS Lanka",
     metaDescription:
-      "TOS Lanka provides complete box build assembly and system integration in Sri Lanka — from printed circuit board sub-assemblies to fully finished electronics products. Contract manufacturing with zero-defect electronic assembly.",
+      "Box build assembly and turnkey product integration in Sri Lanka — from PCB sub-assemblies to fully finished, tested, and packaged electronics. Japanese-owned EMS with zero-defect manufacturing and triple ISO certification.",
+    keywords: ["box build assembly company Sri Lanka", "turnkey product assembly EMS", "electromechanical assembly Sri Lanka", "PCB to finished product manufacturer", "systems integration electronics Sri Lanka", "contract box build Asia"],
     icon: Blocks,
     image: "/services/integration_new.webp",
     heroParagraphs: [
@@ -96,6 +110,11 @@ export const servicesData: ServiceData[] = [
           "Stringent quality standards and streamlined processes guarantee zero-defect outcomes, reducing rework and maximizing reliability.",
       },
     ],
+    faqs: [
+      { question: "What does box build assembly include?", answer: "Our box build service covers the complete journey from bare PCB assembly through mechanical integration, cable and harness routing, firmware loading, functional testing, and final packaging — delivering a finished, market-ready product." },
+      { question: "Can you handle both the PCB assembly and the final product assembly?", answer: "Yes. As a full-service EMS provider with nine integrated service lines, we assemble the PCBs, wind any custom inductive components, build the cable harnesses, and integrate everything into the final enclosure — all in one facility." },
+      { question: "What industries do you serve with box build?", answer: "We provide box build services for consumer electronics, industrial equipment, medical devices, telecommunications, and IoT products. Our facility handles a wide range of product complexities." },
+    ],
     industries: ["Consumer Electronics", "Industrial Equipment", "Medical Devices", "Telecommunications"],
     relatedSlugs: ["smt", "test-inspection", "coating-potting"],
   },
@@ -104,9 +123,10 @@ export const servicesData: ServiceData[] = [
     title: "Through Hole Assembly",
     shortTitle: "Through Hole",
     tagline: "Japan-Trained Precision Soldering",
-    metaTitle: "Through Hole Assembly (THT) Services Sri Lanka | Wave & Manual Soldering | TOS Lanka",
+    metaTitle: "Through Hole & Wave Soldering Assembly Sri Lanka | IPC Class 3 | TOS Lanka",
     metaDescription:
-      "TOS Lanka's Through Hole Technology (THT) assembly combines automated insertion machines with Japan-trained technicians for wave soldering and manual soldering excellence in Sri Lanka. Electronic assembly for industrial, automotive, and medical electronics.",
+      "Through hole assembly and wave soldering in Sri Lanka — automated insertion, Japan-trained manual soldering technicians, and IPC Class 3 quality. Industrial, automotive, and power electronics THT assembly by a triple ISO certified EMS.",
+    keywords: ["through hole assembly services Sri Lanka", "wave soldering manufacturer Sri Lanka", "manual soldering electronics Sri Lanka", "THT PCB assembly provider", "IPC Class 3 soldering services", "selective soldering Sri Lanka"],
     icon: CircuitBoard,
     image: "/services/through-hole_new.webp",
     heroParagraphs: [
@@ -135,6 +155,11 @@ export const servicesData: ServiceData[] = [
           "Rigorous soldering techniques and multi-point inspection ensure strong, defect-free joints that meet international quality standards.",
       },
     ],
+    faqs: [
+      { question: "What soldering methods does TOS Lanka use for through-hole assembly?", answer: "We offer wave soldering for high-volume production, selective soldering for mixed-technology boards, and expert manual hand soldering by Japan-trained technicians for complex or heat-sensitive components." },
+      { question: "Can you assemble boards with both SMT and through-hole components?", answer: "Absolutely. Mixed-technology PCB assembly is one of our core strengths. We integrate our SMT and THT lines to handle boards requiring both surface mount and through-hole components in a single production flow." },
+      { question: "What quality standards apply to your through-hole soldering?", answer: "All through-hole assemblies are inspected against IPC-A-610 workmanship standards. Our triple ISO certification and Japanese-trained workforce ensure consistently high-reliability solder joints." },
+    ],
     industries: ["Industrial Equipment", "Automotive", "Medical Devices", "Power Electronics"],
     relatedSlugs: ["smt", "test-inspection", "prototype-assembling"],
   },
@@ -143,9 +168,10 @@ export const servicesData: ServiceData[] = [
     title: "Conformal Coating & Potting",
     shortTitle: "Coating & Potting",
     tagline: "Advanced Electronics Protection",
-    metaTitle: "Conformal Coating & Epoxy Filling Services Sri Lanka | PCB Protection | TOS Lanka",
+    metaTitle: "Conformal Coating & Potting Services Sri Lanka | Automotive Medical Industrial | TOS Lanka",
     metaDescription:
-      "TOS Lanka provides conformal coating and epoxy filling solutions in Sri Lanka to protect printed circuit boards from moisture, dust, vibration, and harsh environments. Custom inline coating for automotive, medical, and industrial electronics.",
+      "Conformal coating and epoxy potting services in Sri Lanka — protect PCBs from moisture, dust, vibration, and chemicals. Inline coating systems for automotive, medical, and marine electronics. Triple ISO certified EMS.",
+    keywords: ["conformal coating services Sri Lanka", "PCB potting encapsulation Sri Lanka", "epoxy filling electronics protection", "conformal coating automotive electronics", "inline coating systems EMS", "PCB moisture protection manufacturer"],
     icon: Droplets,
     image: "/services/coating_new.webp",
     heroParagraphs: [
@@ -174,6 +200,11 @@ export const servicesData: ServiceData[] = [
           "We work with a broad range of industry-approved coating and potting compounds, matched to your application's thermal, chemical, and electrical requirements.",
       },
     ],
+    faqs: [
+      { question: "What types of conformal coating does TOS Lanka apply?", answer: "We apply acrylic, silicone, and urethane-based conformal coatings depending on the application requirements. Our inline coating systems provide consistent, production-scale application for high-volume orders." },
+      { question: "When should I use potting instead of conformal coating?", answer: "Potting and encapsulation provide more robust protection than conformal coating. It is recommended for electronics exposed to extreme vibration, submersion, or significant thermal cycling — common in automotive and marine applications." },
+      { question: "Can you coat boards that were assembled elsewhere?", answer: "Yes. We accept boards assembled by other manufacturers for conformal coating and potting services. We will review your boards and recommend the appropriate coating process for your application." },
+    ],
     industries: ["Automotive Electronics", "Industrial Controls", "Consumer Devices", "Marine Electronics"],
     relatedSlugs: ["smt", "system-integration", "test-inspection"],
   },
@@ -182,9 +213,10 @@ export const servicesData: ServiceData[] = [
     title: "Test & Inspection",
     shortTitle: "Test & Inspection",
     tagline: "Zero-Compromise Quality Assurance",
-    metaTitle: "In-Circuit Testing (ICT) & Inspection Services Sri Lanka | AOI | TOS Lanka",
+    metaTitle: "PCB Testing & Inspection Sri Lanka | ICT, AOI, X-Ray, Functional Test | TOS Lanka",
     metaDescription:
-      "TOS Lanka offers advanced in-circuit testing (ICT), YAMAHA AOI inspection, functional testing, and firmware uploading in Sri Lanka. Zero-defect electronic assembly verification for printed circuit boards.",
+      "PCB testing and inspection services in Sri Lanka — in-circuit testing (ICT), YAMAHA AOI, X-ray inspection, functional testing, and firmware uploading. Zero-defect verification for every board by a triple ISO certified EMS.",
+    keywords: ["PCB testing inspection Sri Lanka", "in circuit testing ICT company Sri Lanka", "AOI inspection services PCB", "X-ray inspection BGA verification", "functional testing EMS Sri Lanka", "zero defect verification electronics"],
     icon: Microscope,
     image: "/services/inspection_new.webp",
     heroParagraphs: [
@@ -213,6 +245,11 @@ export const servicesData: ServiceData[] = [
           "On-line firmware uploading and verification ensures each unit ships production-ready with the latest validated software.",
       },
     ],
+    faqs: [
+      { question: "What testing methods does TOS Lanka offer?", answer: "We provide automated optical inspection (AOI) using YAMAHA systems, in-circuit testing (ICT) for electrical verification, X-ray inspection for BGA and hidden joint verification, functional testing, and firmware uploading." },
+      { question: "Do you develop custom test fixtures?", answer: "Yes. Our engineering team designs and builds custom ICT fixtures and functional test jigs tailored to each customer's specific board layout and test requirements." },
+      { question: "Can you test boards that were assembled elsewhere?", answer: "Yes. We accept externally assembled boards for inspection and testing services, including AOI, ICT, X-ray, and functional testing on a contract basis." },
+    ],
     industries: ["All Manufacturing Sectors", "Automotive", "Medical Devices", "Industrial Equipment"],
     relatedSlugs: ["smt", "through-hole", "system-integration"],
   },
@@ -221,9 +258,10 @@ export const servicesData: ServiceData[] = [
     title: "Prototype PCB Assembly",
     shortTitle: "Prototyping",
     tagline: "Accelerate Your Innovation Cycle",
-    metaTitle: "Prototyping & Prototype PCB Assembly Services Sri Lanka | TOS Lanka",
+    metaTitle: "Prototype PCB Assembly Sri Lanka | Low MOQ, Free DFM Review | TOS Lanka",
     metaDescription:
-      "TOS Lanka offers rapid prototyping and prototype printed circuit board assembly in Sri Lanka. Fast turnaround, flexible EMS processes, and seamless prototype-to-production transition for electronic assembly.",
+      "Prototype PCB assembly in Sri Lanka with low minimum orders, free DFM review, and seamless prototype-to-production transition. Japanese-owned EMS with production-grade quality from the first board.",
+    keywords: ["prototype PCB assembly company Sri Lanka", "low MOQ electronics assembly", "rapid prototyping EMS Sri Lanka", "free DFM review PCB assembly", "prototype to production manufacturer", "fast turn PCB prototype Asia"],
     icon: Beaker,
     image: "/services/prototype_new.webp",
     heroParagraphs: [
@@ -252,6 +290,11 @@ export const servicesData: ServiceData[] = [
           "Seamless transition from prototype validation to full-scale production — same facility, same quality standards, zero re-tooling delays.",
       },
     ],
+    faqs: [
+      { question: "What is TOS Lanka's minimum order for prototypes?", answer: "We accept prototype orders starting from a small number of boards. There is no prohibitively high minimum order quantity — we treat every prototype with the same production-grade quality as a full production run." },
+      { question: "Do you offer a DFM review before assembly?", answer: "Yes. Every new project receives a complimentary Design for Manufacturing review. Our engineers identify potential manufacturing issues before they reach the production floor, saving you time and revision cycles." },
+      { question: "Can I scale from prototype to production with TOS Lanka?", answer: "Absolutely. One of our key advantages is prototype-to-production continuity. Your prototype and production boards are built in the same facility, by the same team, on the same equipment — eliminating transfer risk." },
+    ],
     industries: ["R&D Labs", "Startups", "Consumer Electronics", "Industrial Innovation"],
     relatedSlugs: ["smt", "through-hole", "test-inspection"],
   },
@@ -260,9 +303,10 @@ export const servicesData: ServiceData[] = [
     title: "Automotive Wire Harnessing",
     shortTitle: "Automotive Harnessing",
     tagline: "Safety-Critical Wiring for Global Brands",
-    metaTitle: "Cable Harness & Automotive Electronics Assembly Sri Lanka | TOS Lanka",
+    metaTitle: "Automotive Wire Harness Manufacturer Sri Lanka | Safety, ABS, EV Harnesses | TOS Lanka",
     metaDescription:
-      "TOS Lanka specializes in cable harness assembly and automotive electronics manufacturing in Sri Lanka. Safety sensor harnesses, ABS system wiring, and EV cable harnesses for global automotive brands.",
+      "Automotive wire harness manufacturer in Sri Lanka — safety sensor harnesses, ABS system wiring, EV cable harnesses for global OEMs. 100% continuity tested, triple ISO certified. Japanese-owned EMS.",
+    keywords: ["automotive wire harness manufacturer Sri Lanka", "cable harness assembly company Sri Lanka", "safety sensor harness manufacturer", "ABS wiring harness assembly", "EV cable harness manufacturer Asia", "automotive electronics assembly Sri Lanka"],
     icon: CarFront,
     image: "/services/automotive_new.webp",
     heroParagraphs: [
@@ -291,6 +335,11 @@ export const servicesData: ServiceData[] = [
           "Adherence to stringent automotive quality standards with zero-defect manufacturing and comprehensive end-of-line testing.",
       },
     ],
+    faqs: [
+      { question: "What types of automotive harnesses does TOS Lanka manufacture?", answer: "We manufacture safety sensor harnesses for seat belt systems, ABS brake system wiring, engine management harnesses, and EV cable harnesses including high-voltage battery interconnects and charging system wiring." },
+      { question: "How do you ensure harness quality?", answer: "Every harness undergoes 100% electrical continuity testing before shipment. Our automotive-grade quality processes include full traceability, visual inspection against IPC/WHMA-A-620 standards, and pull-force verification on all crimped connections." },
+      { question: "Do you supply harnesses to global automotive brands?", answer: "Yes. We manufacture wire harnesses for major global automotive OEMs, with proven export relationships across Japan, Europe, and North America. Our harnesses are installed in vehicles worldwide." },
+    ],
     industries: ["Automotive OEMs", "Tier-1 Suppliers", "Electric Vehicles", "Commercial Vehicles"],
     relatedSlugs: ["system-integration", "test-inspection", "inductive-components"],
   },
@@ -299,9 +348,10 @@ export const servicesData: ServiceData[] = [
     title: "Inductive Component Assemblies",
     shortTitle: "Inductive Components",
     tagline: "Precision Magnetic Component Assembly",
-    metaTitle: "Coil Winding & Inductive Component Assembly Sri Lanka | Industrial Electronics | TOS Lanka",
+    metaTitle: "Custom Coil Winding & Transformer Manufacturer Sri Lanka | TOS Lanka",
     metaDescription:
-      "TOS Lanka specializes in coil winding and inductive component assembly in Sri Lanka — coils, transformers, chokes, and inductors for industrial electronics, power electronics, automotive, and telecom applications.",
+      "Custom coil winding and inductive component manufacturing in Sri Lanka — transformers, inductors, EMI chokes, and ferrite core assemblies. Unique dual capability: wound components and PCB assembly under one roof.",
+    keywords: ["custom coil winding company Sri Lanka", "transformer manufacturer Sri Lanka", "inductor assembly manufacturer Asia", "EMI choke winding services", "ferrite core assembly manufacturer", "inductive component EMS provider"],
     icon: Magnet,
     image: "/services/inductive_new.webp",
     heroParagraphs: [
@@ -330,6 +380,11 @@ export const servicesData: ServiceData[] = [
           "From prototype builds to high-volume manufacturing — adaptable processes designed to match your design requirements and delivery timelines.",
       },
     ],
+    faqs: [
+      { question: "What inductive components can TOS Lanka manufacture?", answer: "We wind and assemble custom transformers, power inductors, EMI common-mode chokes, ferrite core assemblies, and signal transformers. Components are wound to your exact specification including turns ratio, inductance value, and insulation class." },
+      { question: "Can you manufacture wound components and assemble them onto PCBs?", answer: "Yes — this is our unique advantage. We are one of the very few EMS providers globally that manufactures custom wound components and assembles PCBs under the same roof, eliminating inter-vendor logistics and quality mismatches." },
+      { question: "What testing is performed on inductive components?", answer: "Every component undergoes inductance measurement, DC resistance verification, turns ratio testing for transformers, insulation resistance testing, and dielectric withstand (Hi-Pot) testing per applicable safety specifications." },
+    ],
     industries: ["Power Electronics", "Telecommunications", "Automotive", "Consumer Electronics"],
     relatedSlugs: ["smt", "through-hole", "automotive-harnessing"],
   },
@@ -338,9 +393,10 @@ export const servicesData: ServiceData[] = [
     title: "Supply Chain Network",
     shortTitle: "Supply Chain",
     tagline: "Global Sourcing, Local Excellence",
-    metaTitle: "Electronics Supply Chain & Procurement Sri Lanka | Contract Manufacturing | TOS Lanka",
+    metaTitle: "Electronics Supply Chain & Turnkey Procurement Sri Lanka | Global Sourcing | TOS Lanka",
     metaDescription:
-      "TOS Lanka offers consigned and turnkey supply chain solutions for contract manufacturing in Sri Lanka. Global sourcing network spanning Japan, USA, Germany, China, Taiwan. Flexible procurement for EMS and electronic assembly.",
+      "Turnkey and consigned electronics supply chain solutions from Sri Lanka — global component sourcing across Japan, USA, Germany, China, and Taiwan. Competitive pricing, verified quality, and reliable lead times.",
+    keywords: ["electronics supply chain Sri Lanka", "turnkey component sourcing EMS", "consigned PCB assembly Sri Lanka", "global electronics procurement Asia", "component sourcing Japan USA Germany", "BOM management EMS provider"],
     icon: Globe,
     image: "/services/supply-chain_new.webp",
     heroParagraphs: [
@@ -368,6 +424,11 @@ export const servicesData: ServiceData[] = [
         description:
           "Full flexibility to work with customer-supplied components or manage complete procurement through our turnkey supply chain.",
       },
+    ],
+    faqs: [
+      { question: "Does TOS Lanka offer turnkey manufacturing?", answer: "Yes. We offer both turnkey (we source all components) and consigned (you supply the components) models. Our global sourcing network covers Japan, USA, Germany, China, Taiwan, Hong Kong, India, Singapore, and Malaysia." },
+      { question: "How do you verify component quality?", answer: "All incoming components undergo inspection including visual verification, packaging integrity checks, and cross-referencing against the approved BOM. For critical applications, we perform additional electrical verification." },
+      { question: "Can you help with BOM optimisation to reduce costs?", answer: "Absolutely. Our procurement team regularly identifies cost-saving component alternatives and consolidation opportunities. We work with your engineering team to validate any suggested alternatives before implementation." },
     ],
     industries: ["All Manufacturing Sectors"],
     relatedSlugs: ["smt", "system-integration", "automotive-harnessing"],

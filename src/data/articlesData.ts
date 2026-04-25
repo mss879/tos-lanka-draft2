@@ -20,9 +20,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-smt-guide",
     slug: "what-is-surface-mount-technology-smt-guide",
     title: "What is Surface Mount Technology (SMT)? A Complete Guide",
-    metaTitle: "What is Surface Mount Technology (SMT)? Complete Guide | TOS Lanka Sri Lanka",
-    metaDescription: "Learn about Surface Mount Technology (SMT), the leading method for electronic assembly. Discover how reflow soldering, pick-and-place machines, and automated SMT lines deliver precision PCB assembly in Sri Lanka.",
-    keywords: ["SMT", "Surface Mount Technology", "reflow soldering", "electronic assembly", "PCB assembly Sri Lanka"],
+    metaTitle: "SMT Assembly Services Sri Lanka | High-Speed Surface Mount Technology | TOS Lanka",
+    metaDescription: "Precision SMT assembly services in Sri Lanka — Panasonic high-speed placement, lead-free reflow soldering, 0201 component capability. Japanese-owned, triple ISO certified. Get a free quote from TOS Lanka.",
+    keywords: ["SMT assembly services Sri Lanka", "surface mount technology Sri Lanka", "SMT assembly", "Panasonic SMT placement", "fine pitch BGA assembly", "lead free SMT assembly RoHS", "high speed SMT placement", "0201 component placement", "reflow soldering services"],
     excerpt: "Surface Mount Technology (SMT) is the backbone of modern electronic assembly. Learn how this advanced process works, why it dominates PCB manufacturing, and how TOS Lanka delivers world-class SMT services from Sri Lanka.",
     coverImage: "/articles/smt_assembly.webp",
     createdAt: "2026-03-15T08:00:00Z",
@@ -91,9 +91,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-tht-guide",
     slug: "through-hole-assembly-tht-guide",
     title: "Through Hole Assembly (THT): When & Why It Still Matters",
-    metaTitle: "Through Hole Assembly (THT) Guide | Wave & Manual Soldering | TOS Lanka Sri Lanka",
-    metaDescription: "Discover why Through Hole Technology (THT) remains essential for rugged electronics. Learn about wave soldering, manual soldering, and when THT assembly outperforms SMT in industrial and automotive applications.",
-    keywords: ["THT", "Through hole assembly", "wave soldering", "manual soldering", "electronic assembly"],
+    metaTitle: "Through Hole Assembly Services Sri Lanka | THT, Wave & Manual Soldering | TOS Lanka",
+    metaDescription: "Through hole assembly (THT) services in Sri Lanka — wave soldering, selective soldering, and IPC-certified manual soldering by Japan-trained technicians. Mixed technology PCB assembly for industrial and automotive electronics.",
+    keywords: ["through hole assembly guide THT", "THT PCB assembly", "wave soldering PCB assembly", "manual soldering services electronics", "mixed technology PCB assembly SMT THT", "selective soldering services"],
     excerpt: "Through Hole Technology (THT) remains essential for applications requiring extreme mechanical strength. Learn when THT outperforms SMT and how wave soldering and manual soldering deliver reliability.",
     coverImage: "/articles/tht_assembly.webp",
     createdAt: "2026-03-14T08:00:00Z",
@@ -156,9 +156,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-ems-sri-lanka",
     slug: "electronic-manufacturing-services-ems-sri-lanka",
     title: "Electronic Manufacturing Services (EMS) in Sri Lanka: The Complete Overview",
-    metaTitle: "Electronic Manufacturing Services (EMS) in Sri Lanka | TOS Lanka — Premier EMS Provider",
-    metaDescription: "Discover why Sri Lanka is a growing hub for Electronic Manufacturing Services (EMS). Learn about EMS capabilities, electronic assembly, contract manufacturing, and OEM manufacturing at TOS Lanka.",
-    keywords: ["EMS", "Electronic Manufacturing Services", "electronic assembly", "contract manufacturing", "OEM manufacturing", "Sri Lanka"],
+    metaTitle: "Electronic Manufacturing Services (EMS) Sri Lanka | Pioneer EMS Provider Since 1995 | TOS Lanka",
+    metaDescription: "Sri Lanka's pioneer EMS provider since 1995 — Japanese-owned, triple ISO certified, 9 service lines under one roof. SMT, THT, box build, coating, harnessing, prototyping. Discover why global OEMs choose TOS Lanka.",
+    keywords: ["electronics manufacturing services Sri Lanka", "EMS provider Sri Lanka", "EMS companies in Sri Lanka", "electronic assembly company Sri Lanka", "ISO certified electronics manufacturer Sri Lanka", "Japanese owned factory Sri Lanka", "electronics manufacturing Biyagama"],
     excerpt: "Sri Lanka is emerging as a premier destination for Electronic Manufacturing Services. Learn how EMS providers like TOS Lanka deliver world-class electronic assembly, contract manufacturing, and OEM solutions.",
     coverImage: "/articles/ems_contract.webp",
     createdAt: "2026-03-13T08:00:00Z",
@@ -236,9 +236,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-contract-vs-oem",
     slug: "contract-manufacturing-vs-oem-manufacturing",
     title: "Contract Manufacturing vs OEM Manufacturing: Key Differences Explained",
-    metaTitle: "Contract Manufacturing vs OEM Manufacturing | Key Differences | TOS Lanka Sri Lanka",
-    metaDescription: "Understand the key differences between contract manufacturing and OEM manufacturing in electronics. Learn which model suits your business for electronic assembly, PCB production, and product development.",
-    keywords: ["contract manufacturing", "OEM manufacturing", "EMS", "electronic assembly"],
+    metaTitle: "Contract Electronics Manufacturing vs OEM Manufacturing | Which Model Suits You? | TOS Lanka",
+    metaDescription: "Contract manufacturing vs OEM manufacturing — understand the key differences for electronics. Learn which model protects your IP, reduces costs, and accelerates production with a trusted Sri Lankan EMS partner.",
+    keywords: ["contract electronics manufacturer Sri Lanka", "OEM electronics manufacturing partner", "contract manufacturing vs OEM", "outsource electronics manufacturing Sri Lanka", "turnkey electronics manufacturing", "contract PCB assembly services"],
     excerpt: "Contract manufacturing and OEM manufacturing are two distinct partnership models in electronics. Discover which approach best suits your product development strategy and business goals.",
     coverImage: "/articles/oem_contract_mfg.webp",
     createdAt: "2026-03-12T08:00:00Z",
@@ -330,9 +330,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-cable-harness",
     slug: "cable-harness-assembly-design-process-quality",
     title: "Cable Harness Assembly: Design, Process & Quality Standards",
-    metaTitle: "Cable Harness Assembly Guide | Automotive Electronics | TOS Lanka Sri Lanka",
-    metaDescription: "Learn about cable harness assembly for automotive electronics. Discover the design process, quality standards, and testing methods used in wire harness manufacturing at TOS Lanka Sri Lanka.",
-    keywords: ["cable harness", "automotive electronics", "wire harness", "electronic assembly"],
+    metaTitle: "Wire Harness Assembly & Cable Harness Manufacturing | Design, Process & Testing | TOS Lanka",
+    metaDescription: "Custom cable harness and wire harness assembly — automotive, industrial, and medical applications. 100% continuity testing, airbag sensor harnesses, ABS wiring, EV cable harnesses. ISO certified Sri Lankan manufacturer.",
+    keywords: ["cable harness assembly", "wire harness assembly services", "custom cable harness assembly", "wire harness manufacturer", "automotive wiring loom manufacturer", "wire harness with 100% continuity testing", "industrial cable harness assembly", "medical device cable assembly"],
     excerpt: "Cable harness assembly is critical for automotive electronics and industrial applications. Understand the design process, quality testing methods, and why precision matters in wire harness manufacturing.",
     coverImage: "/articles/cable_harness.webp",
     createdAt: "2026-03-11T08:00:00Z",
@@ -397,9 +397,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-medical-electronics",
     slug: "medical-device-electronics-assembly-compliance",
     title: "Medical Device Electronics Assembly: Compliance & Best Practices",
-    metaTitle: "Medical Device Assembly | Medical Electronics Manufacturing | TOS Lanka Sri Lanka",
-    metaDescription: "Expert guide on medical device assembly and medical electronics manufacturing. Learn about NMRA compliance, GMP standards, and precision assembly practices for healthcare devices in Sri Lanka.",
-    keywords: ["medical electronics", "medical device assembly", "electronic assembly", "EMS"],
+    metaTitle: "Medical Device Electronics Assembly Sri Lanka | NMRA Approved ISO Certified | TOS Lanka",
+    metaDescription: "NMRA-approved medical device electronics assembly in Sri Lanka — GMP compliant, triple ISO certified, full traceability. Patient monitoring, diagnostic equipment, and therapeutic devices. Japanese-quality manufacturing.",
+    keywords: ["medical device electronics assembly Sri Lanka", "NMRA approved manufacturer Sri Lanka", "medical electronics contract manufacturer", "medical device PCB assembly ISO certified", "medical device assembly services Asia", "GMP electronics assembly medical"],
     excerpt: "Medical device assembly demands the highest standards of quality and compliance. Learn about regulatory requirements, GMP standards, and how TOS Lanka delivers NMRA-approved medical electronics from Sri Lanka.",
     coverImage: "/articles/medical_electronics.webp",
     createdAt: "2026-03-10T08:00:00Z",
@@ -476,9 +476,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-industrial-electronics",
     slug: "industrial-electronics-manufacturing-control-systems",
     title: "Industrial Electronics Manufacturing: Control Systems & Automation",
-    metaTitle: "Industrial Electronics Manufacturing | Control Systems & Automation | TOS Lanka Sri Lanka",
-    metaDescription: "Expert guide on industrial electronics manufacturing and control systems assembly. Learn about factory automation, PLC electronics, power management, and precision manufacturing in Sri Lanka.",
-    keywords: ["industrial electronics", "control systems", "electronic assembly", "EMS"],
+    metaTitle: "Industrial Electronics Manufacturing Sri Lanka | Control Systems, Automation & Power | TOS Lanka",
+    metaDescription: "Industrial electronics manufacturing in Sri Lanka — PLC controllers, factory automation, elevator control systems, energy meters, power supplies. Japanese-quality, triple ISO certified EMS for rugged industrial applications.",
+    keywords: ["industrial control PCB assembly", "industrial electronics manufacturing Sri Lanka", "elevator control system PCB manufacturer", "energy meter electronics assembly", "factory automation electronics", "control systems assembly"],
     excerpt: "Industrial electronics power global automation and control systems. Discover how precision manufacturing, rugged assembly processes, and rigorous testing ensure reliability in the most demanding environments.",
     coverImage: "/articles/industrial_control.webp",
     createdAt: "2026-03-09T08:00:00Z",
@@ -554,9 +554,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-pcba-guide",
     slug: "printed-circuit-board-assembly-pcba-guide",
     title: "Printed Circuit Board Assembly (PCBA): The Definitive Process Guide",
-    metaTitle: "Printed Circuit Board Assembly (PCBA) Guide | PCB Manufacturing | TOS Lanka Sri Lanka",
-    metaDescription: "The definitive guide to printed circuit board assembly (PCBA). Learn the complete PCB manufacturing process from solder paste to testing, covering SMT, THT, reflow soldering, and quality inspection.",
-    keywords: ["printed circuit boards", "PCB assembly", "electronic assembly", "SMT", "THT"],
+    metaTitle: "PCB Assembly Sri Lanka | Printed Circuit Board Assembly Guide & Services | TOS Lanka",
+    metaDescription: "PCB assembly services in Sri Lanka — complete PCBA guide covering SMT, THT, reflow soldering, AOI, ICT testing. Japanese-owned, triple ISO certified. Turnkey and consigned options from 5 boards to 100,000+.",
+    keywords: ["PCB assembly Sri Lanka", "printed circuit board assembly", "PCBA services Sri Lanka", "multi layer PCB assembly manufacturer", "PCB assembly company with X-ray inspection", "complete PCBA process guide"],
     excerpt: "Printed circuit board assembly is the foundation of all electronic manufacturing. This guide covers every step of the PCBA process from solder paste application to final testing and inspection.",
     coverImage: "/articles/pcba_guide.webp",
     createdAt: "2026-03-08T08:00:00Z",
@@ -623,9 +623,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-box-build",
     slug: "box-build-assembly-pcb-finished-product",
     title: "Box Build Assembly: From PCB to Finished Product",
-    metaTitle: "Box Build Assembly Guide | Electronic Assembly & Integration | TOS Lanka Sri Lanka",
-    metaDescription: "Complete guide to box build assembly in electronics manufacturing. Learn how EMS providers transform PCB assemblies into finished products with system integration, testing, and packaging.",
-    keywords: ["box build assembly", "electronic assembly", "EMS", "contract manufacturing"],
+    metaTitle: "Box Build Assembly Services Sri Lanka | PCB to Finished Product | TOS Lanka",
+    metaDescription: "Box build assembly services in Sri Lanka — from PCB sub-assembly to finished, tested, packaged product. Firmware loading, electromechanical integration, single-source EMS. Japanese quality, competitive pricing.",
+    keywords: ["box build assembly services Sri Lanka", "electromechanical assembly manufacturer", "turnkey product assembly electronics", "PCB to finished product assembly", "systems integration EMS provider", "contract box build manufacturer Asia", "firmware loading packaging EMS", "single source electronics manufacturer"],
     excerpt: "Box build assembly transforms bare PCBs into complete, market-ready products. Learn about the system integration process, quality testing, and how to choose the right EMS partner for your box build needs.",
     coverImage: "/articles/box_build_assembly.webp",
     createdAt: "2026-03-07T08:00:00Z",
@@ -694,9 +694,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-prototyping",
     slug: "prototyping-electronics-manufacturing-speed-market",
     title: "Prototyping in Electronics Manufacturing: Speed to Market",
-    metaTitle: "Electronics Prototyping | Rapid PCB Prototype Assembly | TOS Lanka Sri Lanka",
-    metaDescription: "Speed your product to market with rapid electronics prototyping. Learn how prototype PCB assembly, fast turnaround, and flexible processes help innovators validate designs faster in Sri Lanka.",
-    keywords: ["prototyping", "printed circuit boards", "PCB prototype", "electronic assembly"],
+    metaTitle: "Prototype PCB Assembly Sri Lanka | Fast Turn, No Minimum Order | TOS Lanka",
+    metaDescription: "Prototype PCB assembly in Sri Lanka — 5-board minimum, production-grade quality, free DFM review, seamless scale to production. Fast turnaround prototyping with Japanese-quality SMT and THT from TOS Lanka.",
+    keywords: ["prototype PCB assembly Sri Lanka", "fast turn prototype PCB assembly", "rapid prototype electronics assembly", "low volume PCB assembly no minimum order", "prototype to production PCB manufacturer", "quick turn PCBA prototyping", "DFM review PCB assembly service", "5 board PCB prototype assembly"],
     excerpt: "Rapid prototyping accelerates product development cycles. Learn how expert prototype assembly, flexible manufacturing processes, and seamless scale-up paths help you bring innovations to market faster.",
     coverImage: "/articles/prototyping_electronics.webp",
     createdAt: "2026-03-06T08:00:00Z",
@@ -772,9 +772,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-reflow-wave",
     slug: "reflow-soldering-vs-wave-soldering-process",
     title: "Reflow Soldering vs Wave Soldering: Choosing the Right Process",
-    metaTitle: "Reflow Soldering vs Wave Soldering | SMT & THT Soldering Guide | TOS Lanka Sri Lanka",
-    metaDescription: "Compare reflow soldering and wave soldering processes for PCB assembly. Learn when to use each method for SMT and THT components, and how manual soldering complements both approaches.",
-    keywords: ["reflow soldering", "wave soldering", "manual soldering", "SMT", "THT"],
+    metaTitle: "Reflow Soldering vs Wave Soldering vs Manual Soldering | Complete Process Comparison | TOS Lanka",
+    metaDescription: "Reflow soldering vs wave soldering vs manual soldering — complete comparison for PCB assembly. Learn which process to use for SMT, THT, and mixed-technology boards. Expert guidance from TOS Lanka Sri Lanka.",
+    keywords: ["reflow soldering vs wave soldering", "SMT reflow soldering services", "soldering temperature profile PCB", "manual soldering services", "selective soldering", "lead free soldering process"],
     excerpt: "Reflow soldering and wave soldering are the two primary methods for permanently bonding components to circuit boards. Learn the technical differences, advantages, and best applications for each process.",
     coverImage: "/articles/reflow_wave_soldering.webp",
     createdAt: "2026-03-05T08:00:00Z",
@@ -868,9 +868,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-conformal-coating",
     slug: "conformal-coating-epoxy-filling-pcb-protection",
     title: "Conformal Coating & Epoxy Filling: Protecting Your PCBs",
-    metaTitle: "Conformal Coating & Epoxy Filling | PCB Protection Services | TOS Lanka Sri Lanka",
-    metaDescription: "Complete guide to conformal coating and epoxy filling for PCB protection. Learn about coating types, application methods, and how these processes protect electronics in automotive, medical, and industrial environments.",
-    keywords: ["conformal coating", "epoxy filling", "PCB protection", "electronic assembly"],
+    metaTitle: "Conformal Coating & Epoxy Filling Services Sri Lanka | PCB Protection | TOS Lanka",
+    metaDescription: "Conformal coating and epoxy filling services in Sri Lanka — acrylic, silicone, polyurethane, and epoxy coatings for automotive, medical, and industrial PCB protection. ISO certified, integrated with full EMS capability.",
+    keywords: ["conformal coating services PCB Sri Lanka", "conformal coating PCB Sri Lanka", "PCB potting and encapsulation", "conformal coating manufacturer Asia", "epoxy filling PCB protection", "conformal coating for automotive electronics", "protect electronics from moisture dust"],
     excerpt: "Conformal coating and epoxy filling protect electronic assemblies from moisture, chemicals, and extreme environments. Learn about coating types, application methods, and why protection matters for reliability.",
     coverImage: "/articles/conformal_coating.webp",
     createdAt: "2026-03-04T08:00:00Z",
@@ -947,9 +947,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-ict",
     slug: "in-circuit-testing-ict-zero-defect-electronics",
     title: "In-Circuit Testing (ICT): Ensuring Zero-Defect Electronics",
-    metaTitle: "In-Circuit Testing (ICT) Guide | Zero-Defect Electronics | TOS Lanka Sri Lanka",
-    metaDescription: "Complete guide to In-Circuit Testing (ICT) for electronic assemblies. Learn how ICT ensures zero-defect PCB manufacturing by detecting shorts, opens, and component faults in Sri Lanka.",
-    keywords: ["in circuit testing", "ICT", "electronic assembly", "PCB testing", "zero defect"],
+    metaTitle: "In-Circuit Testing (ICT) Services Sri Lanka | Zero-Defect PCB Testing | TOS Lanka",
+    metaDescription: "In-circuit testing (ICT) services in Sri Lanka — AOI, X-ray inspection, functional testing, solder paste inspection. Zero-defect electronics manufacturing with custom test fixture design. TOS Lanka EMS.",
+    keywords: ["in circuit testing ICT services Sri Lanka", "AOI inspection PCB guide", "X-ray inspection BGA PCB", "functional testing electronics assembly", "zero defect electronics manufacturer", "solder paste inspection SPI services", "PCB testing services Sri Lanka"],
     excerpt: "In-Circuit Testing (ICT) is the gold standard for validating electronic assemblies. Learn how ICT detects manufacturing defects, reduces field failures, and ensures zero-defect quality in PCB production.",
     coverImage: "/articles/in_circuit_testing.webp",
     createdAt: "2026-03-03T08:00:00Z",
@@ -1031,9 +1031,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-coil-winding",
     slug: "coil-winding-inductive-component-assembly-industrial",
     title: "Coil Winding & Inductive Component Assembly for Industrial Applications",
-    metaTitle: "Coil Winding & Inductive Component Assembly | Industrial Electronics | TOS Lanka Sri Lanka",
-    metaDescription: "Expert guide on coil winding and inductive component assembly for industrial electronics. Learn about transformer winding, inductor assembly, and precision manufacturing techniques in Sri Lanka.",
-    keywords: ["coil winding", "industrial electronics", "inductive components", "electronic assembly"],
+    metaTitle: "Custom Coil Winding & Inductive Component Manufacturer Sri Lanka | TOS Lanka",
+    metaDescription: "Custom coil winding and inductive component assembly in Sri Lanka — transformers, inductors, EMI chokes, ferrite core assemblies. The only EMS provider manufacturing wound components AND PCBs under one roof.",
+    keywords: ["custom coil winding services Sri Lanka", "coil winding inductive component manufacturer Sri Lanka", "inductor manufacturer custom specifications", "transformer assembly manufacturer Asia", "EMI choke manufacturer custom", "custom wound components EMS provider", "ferrite core transformer manufacturer", "inductive component assembly PCB"],
     excerpt: "Coil winding and inductive component assembly are essential for power electronics, automotive, and industrial applications. Learn about manufacturing techniques, quality control, and precision requirements.",
     coverImage: "/articles/coil_winding.webp",
     createdAt: "2026-03-02T08:00:00Z",
@@ -1119,9 +1119,9 @@ export const staticArticles: StaticArticle[] = [
     id: "static-automotive-sri-lanka",
     slug: "automotive-electronics-manufacturing-sri-lanka",
     title: "Automotive Electronics Manufacturing in Sri Lanka: Capabilities & Standards",
-    metaTitle: "Automotive Electronics Manufacturing Sri Lanka | EMS & Cable Harness | TOS Lanka",
-    metaDescription: "Explore automotive electronics manufacturing capabilities in Sri Lanka. Learn about cable harness assembly, PCB manufacturing, EMS services, and quality standards for the automotive industry.",
-    keywords: ["automotive electronics", "cable harness", "EMS", "electronic assembly", "Sri Lanka"],
+    metaTitle: "Automotive Electronics & Wire Harness Manufacturer Sri Lanka | EV, ABS, Airbag | TOS Lanka",
+    metaDescription: "Automotive wire harness manufacturer and electronics assembly in Sri Lanka — airbag sensor harnesses, ABS wiring, EV cable harnesses, dashboard PCBAs. Japanese-owned, 100% continuity tested, serving global Tier-1 OEMs.",
+    keywords: ["automotive wire harness manufacturing guide", "automotive electronics manufacturer Sri Lanka", "EV cable harness manufacturer", "airbag sensor harness manufacturer", "ABS wire harness assembly", "automotive electronics manufacturing Sri Lanka", "wire harness assembly services Asia"],
     excerpt: "Sri Lanka is a growing hub for automotive electronics manufacturing. Discover the capabilities, quality standards, and expertise that TOS Lanka brings to global automotive OEMs and Tier-1 suppliers.",
     coverImage: "/articles/automotive_electronics.webp",
     createdAt: "2026-03-01T08:00:00Z",
@@ -1129,6 +1129,10 @@ export const staticArticles: StaticArticle[] = [
     content: `
 <h2>Automotive Electronics: A Growing Industry</h2>
 <p>The automotive industry is undergoing a fundamental transformation driven by electrification, autonomous driving, and connected vehicle technologies. The average modern vehicle contains over $3,000 worth of electronic content — from engine management and safety systems to infotainment and advanced driver assistance (ADAS). This growth creates enormous demand for reliable <strong>automotive electronics</strong> manufacturing and <a href="/articles/cable-harness-assembly-design-process-quality">cable harness assembly</a>.</p>
+
+<h2>EV Cable Harness Manufacturing</h2>
+<p>Electric vehicles require fundamentally different cable harness architectures compared to internal combustion vehicles. <strong>EV cable harnesses</strong> must handle high-voltage power distribution (400V-800V), battery management system interconnections, and charging infrastructure connectivity — all while meeting stringent safety and EMI shielding requirements.</p>
+<p>TOS Lanka's <a href="/services/automotive-harnessing">automotive harnessing division</a> manufactures EV cable harnesses including battery pack interconnects, motor controller wiring, and on-board charger harnesses. Every EV harness assembly undergoes 100% high-voltage continuity testing and insulation resistance verification before shipment to global automotive OEMs.</p>
 
 <h2>Why Sri Lanka for Automotive Electronics?</h2>
 <p>Sri Lanka offers compelling advantages for <strong>automotive electronics</strong> manufacturing:</p>
@@ -1190,7 +1194,518 @@ export const staticArticles: StaticArticle[] = [
 <p>TOS Lanka provides complete <a href="/articles/electronic-manufacturing-services-ems-sri-lanka">Electronic Manufacturing Services</a> for the automotive industry — from initial <a href="/articles/prototyping-electronics-manufacturing-speed-market">prototyping</a> through <a href="/articles/box-build-assembly-pcb-finished-product">box build assembly</a> and final testing. Our nine integrated service lines deliver everything under one roof: <a href="/services/smt">SMT</a>, <a href="/services/through-hole">THT</a>, <a href="/services/coating-potting">coating</a>, <a href="/services/test-inspection">testing</a>, <a href="/services/automotive-harnessing">harnessing</a>, <a href="/services/inductive-components">inductive components</a>, and more.</p>
 <p>Ready to leverage Sri Lanka's premier <strong>automotive electronics</strong> manufacturer? <a href="/contact">Contact TOS Lanka</a> today.</p>
 `
-  }
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // ARTICLE 16: China+1 Electronics Manufacturing
+  // ─────────────────────────────────────────────────────────────────
+  {
+    id: "static-china-plus-one",
+    slug: "china-plus-one-electronics-manufacturing-sri-lanka",
+    title: "China Plus One: Why Sri Lanka Is the Smart Choice for Electronics Manufacturing Diversification",
+    metaTitle: "China Plus One Electronics Manufacturing Sri Lanka | Supply Chain Diversification | TOS Lanka",
+    metaDescription: "China plus one electronics manufacturing in Sri Lanka — diversify your supply chain with a Japanese-owned, triple ISO certified EMS provider. Lower risk, Japanese quality, competitive costs. Learn why global OEMs choose Sri Lanka.",
+    keywords: ["China plus one electronics manufacturing", "alternative to China for electronics manufacturing", "electronics manufacturing outside China", "diversify electronics supply chain Asia", "low cost electronics manufacturing not China", "India plus one manufacturing partner", "China plus one electronics manufacturing Sri Lanka"],
+    excerpt: "Global OEMs are actively diversifying electronics manufacturing away from China. Discover why Sri Lanka — and specifically TOS Lanka — represents the ideal China+1 partner for PCB assembly, wire harness, and full EMS services.",
+    coverImage: "/articles/ems_contract.webp",
+    createdAt: "2026-04-25T08:00:00Z",
+    published: true,
+    content: `
+<h2>The China Plus One Imperative</h2>
+<p>The <strong>China plus one</strong> strategy has moved from boardroom theory to operational necessity. Over the past five years, a convergence of forces — US-China trade tensions, pandemic-induced supply chain disruptions, rising Chinese labour costs, and geopolitical uncertainty — has compelled procurement leaders at global OEMs to actively seek <strong>alternative electronics manufacturing</strong> locations outside China.</p>
+<p>The concept is straightforward: maintain existing Chinese manufacturing relationships for scale, but establish at least one additional production source in a different country to mitigate concentration risk. For electronics — where a single factory shutdown can halt production lines across continents — this diversification is no longer optional. It is a fiduciary responsibility.</p>
+
+<h2>Why Electronics Manufacturing Is Particularly Vulnerable</h2>
+<p>Electronics supply chains are uniquely fragile. A typical <a href="/articles/printed-circuit-board-assembly-pcba-guide">printed circuit board assembly</a> contains hundreds of components sourced from dozens of suppliers across multiple countries. The manufacturing process itself — <a href="/articles/what-is-surface-mount-technology-smt-guide">SMT placement</a>, <a href="/articles/reflow-soldering-vs-wave-soldering-process">reflow soldering</a>, <a href="/articles/in-circuit-testing-ict-zero-defect-electronics">in-circuit testing</a>, <a href="/articles/conformal-coating-epoxy-filling-pcb-protection">conformal coating</a> — requires specialized equipment and trained technicians that cannot be replicated overnight.</p>
+<p>When your sole <a href="/articles/electronic-manufacturing-services-ems-sri-lanka">EMS provider</a> is located in a single geographic region, you face:</p>
+<ul>
+<li><strong>Single point of failure:</strong> Natural disasters, pandemics, or political events can halt production entirely</li>
+<li><strong>Tariff exposure:</strong> Trade policy changes can instantly make your product uncompetitive</li>
+<li><strong>Lead time volatility:</strong> Port congestion and shipping disruptions compound manufacturing delays</li>
+<li><strong>IP risk:</strong> Concentrated manufacturing in regions with weaker IP protections increases vulnerability</li>
+<li><strong>Currency risk:</strong> Single-country dependency amplifies foreign exchange exposure</li>
+</ul>
+
+<h2>Sri Lanka: The Overlooked China+1 Destination</h2>
+<p>When procurement teams evaluate <strong>alternatives to China for electronics manufacturing</strong>, the usual candidates emerge: Vietnam, India, Thailand, Malaysia, and the Philippines. Sri Lanka rarely appears on initial shortlists — and that represents a significant opportunity for early movers.</p>
+
+<h3>Strategic Geographic Position</h3>
+<p>Sri Lanka sits at the crossroads of major East-West shipping lanes, with Colombo Port ranked among Asia's top transshipment hubs. This provides efficient connectivity to Japan, Europe, North America, and the Middle East — the primary markets for most electronics OEMs. Shipping times to European ports are actually shorter from Colombo than from most Chinese manufacturing centres.</p>
+
+<h3>Established Electronics Manufacturing Infrastructure</h3>
+<p>Sri Lanka is not starting from zero. The country's electronics manufacturing sector has operated within Board of Investment (BOI) Export Processing Zones since the 1970s. Companies like <a href="/about">TOS Lanka</a> — established in 1995 as the sole overseas factory of Tosslec Ltd., Kyoto — have operated for nearly three decades, building deep manufacturing expertise and a trained workforce.</p>
+
+<h3>Cost Competitiveness</h3>
+<p>Sri Lanka offers significant cost advantages compared to China, Japan, and Europe for electronics assembly. Labour costs are competitive with Vietnam and India, while the BOI framework provides additional advantages including tax holidays, duty-free raw material imports, and streamlined customs processes for Export Processing Zone manufacturers.</p>
+
+<h3>Educated, Trainable Workforce</h3>
+<p>Sri Lanka boasts a 92% literacy rate — one of the highest in Asia — and produces thousands of engineering graduates annually. At TOS Lanka, our technicians undergo training at our parent company's facilities in Kyoto, Japan, ensuring they meet the same quality standards as Japanese domestic production. This combination of local education and Japanese training methodology produces a workforce that consistently delivers zero-defect manufacturing.</p>
+
+<h3>Political Stability and Business Environment</h3>
+<p>Sri Lanka has established a stable, investor-friendly business environment for export-oriented manufacturing. The BOI provides a single-window clearance system for foreign investors, and the legal framework protects intellectual property rights — a critical consideration for OEMs concerned about design protection.</p>
+
+<h2>TOS Lanka: Your China+1 Partner</h2>
+<p>TOS Lanka represents the most compelling <strong>China plus one</strong> proposition in the electronics manufacturing sector. Here's why:</p>
+
+<h3>Japanese Ownership and Quality Culture</h3>
+<p>As a 100% subsidiary of Tosslec Company Limited, Kyoto, TOS Lanka operates with Japanese manufacturing discipline — Kaizen continuous improvement, 5S workplace organisation, and a zero-defect quality culture. This is not a marketing claim; it is the operational reality of a factory that has exported to Japanese OEMs for 30 years.</p>
+
+<h3>Triple ISO Certification</h3>
+<p>TOS Lanka holds ISO 9001:2015 (Quality), ISO 14001:2015 (Environmental), and ISO 45001:2018 (Safety) certifications from Bureau Veritas — providing the quality assurance framework that global OEMs require from any manufacturing partner.</p>
+
+<h3>Nine Service Lines Under One Roof</h3>
+<p>Unlike many EMS providers that specialise in a single process, TOS Lanka offers nine integrated service lines:</p>
+<ul>
+<li><a href="/services/smt">SMT Assembly</a> — Panasonic high-speed placement with lead-free reflow</li>
+<li><a href="/services/through-hole">Through Hole Assembly</a> — Wave, selective, and manual soldering</li>
+<li><a href="/services/system-integration">Box Build Assembly</a> — <a href="/articles/box-build-assembly-pcb-finished-product">Complete system integration</a></li>
+<li><a href="/services/coating-potting">Conformal Coating & Potting</a> — Environmental protection</li>
+<li><a href="/services/rework">BGA Rework</a> — X-ray verified component-level repair</li>
+<li><a href="/services/test-inspection">Test & Inspection</a> — AOI, ICT, functional testing</li>
+<li><a href="/services/prototype-assembling">Prototype Assembly</a> — <a href="/articles/prototyping-electronics-manufacturing-speed-market">5-board minimum</a></li>
+<li><a href="/services/automotive-harnessing">Automotive Harnessing</a> — <a href="/articles/cable-harness-assembly-design-process-quality">Wire harness assembly</a></li>
+<li><a href="/services/inductive-components">Inductive Components</a> — <a href="/articles/coil-winding-inductive-component-assembly-industrial">Custom coil winding</a></li>
+</ul>
+<p>This breadth of capability means you can consolidate multiple vendor relationships into a single partnership — reducing supply chain complexity, logistics costs, and quality management overhead.</p>
+
+<h3>Proven Export Track Record</h3>
+<p>TOS Lanka currently exports to Japan, Germany, Norway, Switzerland, Canada, USA, and Australia — serving OEMs across <a href="/articles/automotive-electronics-manufacturing-sri-lanka">automotive</a>, <a href="/articles/medical-device-electronics-assembly-compliance">medical</a>, <a href="/articles/industrial-electronics-manufacturing-control-systems">industrial</a>, and consumer electronics sectors. This is not a theoretical capability; it is a proven, operational supply chain that global brands rely on daily.</p>
+
+<h2>China+1 vs India+1: Where Sri Lanka Fits</h2>
+<p>Some OEMs are also implementing an <strong>India plus one</strong> strategy — diversifying away from dependence on Indian manufacturing. Sri Lanka serves equally well in this role. The proximity to India (a short flight from Chennai or Mumbai), combined with a distinct regulatory environment and workforce culture, makes Sri Lanka a natural complement to Indian manufacturing operations.</p>
+
+<h2>How to Evaluate a China+1 Electronics Manufacturing Partner</h2>
+<p>When assessing potential <strong>alternatives to China for electronics manufacturing</strong>, procurement teams should evaluate:</p>
+<ul>
+<li><strong>Quality certifications:</strong> ISO 9001 as a minimum; triple ISO certification preferred</li>
+<li><strong>Equipment standards:</strong> Panasonic, YAMAHA, or equivalent Tier-1 production equipment</li>
+<li><strong>Customer references:</strong> Verified export relationships with OEMs in your target markets</li>
+<li><strong>IP protection:</strong> Legal framework and facility security measures</li>
+<li><strong>Scalability:</strong> Ability to ramp from prototype to production volumes</li>
+<li><strong>Communication:</strong> English-speaking workforce with experience serving international clients</li>
+<li><strong>Financial stability:</strong> Ownership structure and business continuity assurance</li>
+</ul>
+<p>TOS Lanka meets every criterion on this list. As a Japanese-owned, BOI-registered entity with 30 years of continuous operation, we offer the stability, quality, and capability that global OEMs require from a strategic manufacturing partner.</p>
+
+<h2>Start Your China+1 Evaluation</h2>
+<p>If your organisation is implementing a <strong>China plus one</strong> or supply chain diversification strategy, TOS Lanka offers a compelling, low-risk entry point. We provide factory tours, sample production runs, and comprehensive capability presentations to help your team make an informed decision.</p>
+<p><a href="/contacts">Contact TOS Lanka</a> to schedule a consultation and discover how Sri Lanka's premier electronics manufacturer can strengthen your global supply chain.</p>
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // ARTICLE 17: Custom Transformers + PCBs Under One Roof
+  // ─────────────────────────────────────────────────────────────────
+  {
+    id: "static-transformers-pcbs-one-roof",
+    slug: "custom-transformers-pcbs-single-source-ems",
+    title: "The Only EMS Provider Manufacturing Custom Transformers AND PCBs Under One Roof",
+    metaTitle: "Custom Wound Components & PCB Assembly | Single Source EMS | TOS Lanka Sri Lanka",
+    metaDescription: "Who manufactures custom transformers and PCBs together? TOS Lanka — the only EMS provider offering inductive component winding alongside full PCB assembly. Consolidate your supply chain with one partner.",
+    keywords: ["who manufactures custom transformers and PCBs together", "single source electronics manufacturer all services", "EMS company that does PCB and wire harness", "transformers and PCBs under one roof", "contract manufacturer for power electronics inductors", "consolidate PCB and wound component suppliers"],
+    excerpt: "Most EMS providers assemble PCBs. Some wind coils. Almost none do both. Discover why TOS Lanka's unique dual capability — custom inductive components and full PCB assembly under one roof — transforms your supply chain.",
+    coverImage: "/articles/coil_winding.webp",
+    createdAt: "2026-04-24T08:00:00Z",
+    published: true,
+    content: `
+<h2>A Manufacturing Capability That Shouldn't Exist — But Does</h2>
+<p>In the global <a href="/articles/electronic-manufacturing-services-ems-sri-lanka">Electronic Manufacturing Services (EMS)</a> industry, companies specialise. <strong>PCB assembly</strong> houses run SMT lines and wave soldering. Wound component manufacturers operate coil winding machines and core assembly stations. These are considered separate disciplines, served by separate suppliers, managed under separate purchase orders.</p>
+<p>TOS Lanka breaks this convention. We manufacture <strong>custom wound components</strong> — transformers, inductors, EMI chokes, and ferrite core assemblies — alongside full <a href="/articles/printed-circuit-board-assembly-pcba-guide">PCB assembly</a>, <a href="/articles/cable-harness-assembly-design-process-quality">wire harness</a> production, and <a href="/articles/box-build-assembly-pcb-finished-product">box build integration</a> in the same ISO-certified facility. This is not a recent addition or a marketing aspiration — it is a core competency inherited from our parent company, Tosslec Ltd., Kyoto, which has manufactured inductive components for decades.</p>
+
+<h2>Why This Matters for Your Product</h2>
+<p>If your product contains both assembled PCBs and custom inductive components — and many power electronics, lighting, industrial, and automotive products do — the conventional approach forces you to manage two entirely separate supply chains:</p>
+<ul>
+<li><strong>Vendor A:</strong> Winds your custom transformers, ships them to...</li>
+<li><strong>Vendor B:</strong> Assembles your PCBs, receives transformers from Vendor A, solders them onto the board</li>
+</ul>
+<p>This creates multiple failure points: shipping delays between vendors, quality mismatches, finger-pointing when defects occur, and the administrative burden of coordinating two suppliers who have no relationship with each other.</p>
+
+<h3>The Single-Source Advantage</h3>
+<p>When both your custom transformer and the PCB it mounts on are manufactured in the same facility, under the same quality management system, by a team that understands both technologies:</p>
+<ul>
+<li><strong>One purchase order</strong> — Simplified procurement and payment</li>
+<li><strong>One shipping lane</strong> — No inter-vendor logistics to manage</li>
+<li><strong>One quality discussion</strong> — Unified ISO 9001 quality system covering both disciplines</li>
+<li><strong>One point of accountability</strong> — No vendor finger-pointing when issues arise</li>
+<li><strong>Matched quality standards</strong> — Both components manufactured to identical quality criteria</li>
+<li><strong>Design coordination</strong> — Our engineers understand both PCB and wound component requirements simultaneously</li>
+</ul>
+
+<h2>What We Wind</h2>
+<p>TOS Lanka's <a href="/services/inductive-components">inductive components division</a> manufactures a comprehensive range of <strong>custom wound components</strong>:</p>
+
+<h3>Transformers</h3>
+<p>Custom transformers for isolated DC-DC converters, flyback transformers for AC-DC power supplies, forward converter transformers, and signal transformers for telecommunications. Every transformer is wound to your exact specification — turns ratio, inductance, leakage inductance, and insulation class.</p>
+
+<h3>Inductors</h3>
+<p>Power inductors for buck, boost, and SEPIC topologies. Custom inductance values, saturation current ratings, and DCR specifications. From prototype quantities through production volumes.</p>
+
+<h3>EMI Chokes</h3>
+<p>Common-mode chokes for conducted emission compliance (CISPR 25 for automotive, CISPR 32 for industrial), differential-mode filter inductors, and line impedance stabilisation components. Critical for helping your product pass EMC certification.</p>
+
+<h3>Ferrite Core Assemblies</h3>
+<p>Complete <strong>ferrite core transformer</strong> assemblies including core selection, bobbin preparation, precision winding, termination, and encapsulation. We work with standard ferrite geometries (E-cores, toroidal, pot cores) as well as custom core shapes.</p>
+
+<h2>What We Assemble</h2>
+<p>Alongside our winding capability, TOS Lanka provides the full spectrum of <a href="/articles/electronic-manufacturing-services-ems-sri-lanka">EMS services</a>:</p>
+<ul>
+<li><a href="/articles/what-is-surface-mount-technology-smt-guide">SMT Assembly</a> — Panasonic high-speed placement with lead-free reflow</li>
+<li><a href="/articles/through-hole-assembly-tht-guide">Through Hole Assembly</a> — Wave soldering, selective soldering, manual soldering</li>
+<li><a href="/articles/in-circuit-testing-ict-zero-defect-electronics">Test & Inspection</a> — AOI, ICT, X-ray, functional testing</li>
+<li><a href="/articles/conformal-coating-epoxy-filling-pcb-protection">Conformal Coating</a> — Environmental protection for harsh applications</li>
+<li><a href="/articles/cable-harness-assembly-design-process-quality">Wire Harness Assembly</a> — Automotive and industrial cable harnesses</li>
+<li><a href="/articles/box-build-assembly-pcb-finished-product">Box Build Integration</a> — Complete product assembly and packaging</li>
+</ul>
+
+<h2>Competitive Landscape: Why This Is Genuinely Rare</h2>
+<p>We are transparent about our competitive positioning. Here is how TOS Lanka's capability set compares to other EMS providers operating in South and Southeast Asia:</p>
+<table>
+<thead><tr><th>EMS Provider</th><th>PCB Assembly</th><th>Wire Harness</th><th>Inductive Components</th></tr></thead>
+<tbody>
+<tr><td><strong>TOS Lanka</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>GPV Group</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>VarioSystems</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>Syrma SGS</td><td>✅</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
+<p>This three-pillar capability — PCB assembly, wire harness, and inductive components — is genuinely unique in the EMS competitive landscape. It is rooted in decades of Tosslec heritage and cannot be replicated overnight by competitors.</p>
+
+<h2>Applications That Benefit Most</h2>
+<p>Products that benefit from our dual capability include:</p>
+<ul>
+<li><strong>Power supplies:</strong> Custom transformers mounted directly on the power PCB — designed and built together</li>
+<li><strong>Motor drives:</strong> Line reactors, EMI chokes, and control PCBs from one source</li>
+<li><strong><a href="/articles/automotive-electronics-manufacturing-sri-lanka">Automotive electronics</a>:</strong> Ignition coils, sensor coils, and associated PCBAs</li>
+<li><strong>LED lighting:</strong> Driver transformers and control boards assembled together</li>
+<li><strong>Industrial controls:</strong> Current transformers for energy metering integrated with measurement PCBs</li>
+<li><strong><a href="/articles/medical-device-electronics-assembly-compliance">Medical devices</a>:</strong> Isolation transformers and patient-safety power supply boards</li>
+</ul>
+
+<h2>Quality Verification for Wound Components</h2>
+<p>Every inductive component manufactured at TOS Lanka undergoes comprehensive electrical testing:</p>
+<ul>
+<li><strong>Inductance measurement</strong> at specified frequency and current bias conditions</li>
+<li><strong>DC Resistance (DCR)</strong> verification against specification limits</li>
+<li><strong>Turns ratio</strong> verification for transformers</li>
+<li><strong>Insulation resistance</strong> testing between windings and winding-to-core</li>
+<li><strong>Dielectric withstand (Hi-Pot)</strong> testing per safety specifications</li>
+<li><strong>Saturation current</strong> measurement for power inductors</li>
+</ul>
+
+<h2>From Your Specification to Our Winding Machines</h2>
+<p>Whether you need a prototype run of custom transformers, a production supply of EMI chokes, or inductors wound to a precise specification — our inductive component team is ready to deliver. Share your component specifications alongside your PCB Gerber files, and we will provide a comprehensive manufacturing proposal covering both disciplines.</p>
+<p><a href="/contacts">Request your custom component quote</a> — or email <strong>dexter@toslanka.com</strong> with your specifications.</p>
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // ARTICLE 18: How to Outsource PCB Assembly
+  // ─────────────────────────────────────────────────────────────────
+  {
+    id: "static-outsource-pcb-guide",
+    slug: "how-to-outsource-pcb-assembly-overseas-complete-guide",
+    title: "How to Outsource PCB Assembly Overseas: The Complete Guide for Hardware Teams",
+    metaTitle: "How to Outsource PCB Assembly Overseas | Complete Guide | TOS Lanka Sri Lanka",
+    metaDescription: "Complete guide to outsourcing PCB assembly overseas — how to evaluate EMS partners, prepare Gerber files, manage quality, and avoid common mistakes. Expert guidance from a 30-year Japanese-owned manufacturer.",
+    keywords: ["how to outsource PCB assembly overseas", "how to find reliable EMS partner in Asia", "find electronics manufacturer for prototype and production", "send Gerber files get PCB quote", "how to get PCB assembled in Sri Lanka", "electronics factory near Colombo Sri Lanka", "evaluate EMS partner checklist"],
+    excerpt: "Thinking about outsourcing your PCB assembly? This guide covers everything — from evaluating EMS partners and preparing your files to managing quality across borders. Written by engineers, not marketers.",
+    coverImage: "/articles/pcba_guide.webp",
+    createdAt: "2026-04-23T08:00:00Z",
+    published: true,
+    content: `
+<h2>Why Outsource PCB Assembly?</h2>
+<p>For most hardware companies — from funded startups to established OEMs — building an in-house <a href="/articles/printed-circuit-board-assembly-pcba-guide">PCB assembly</a> line is neither practical nor economical. The capital investment in <a href="/articles/what-is-surface-mount-technology-smt-guide">SMT placement machines</a>, <a href="/articles/reflow-soldering-vs-wave-soldering-process">reflow ovens</a>, <a href="/articles/in-circuit-testing-ict-zero-defect-electronics">test equipment</a>, and skilled operators runs into millions of dollars — and that equipment sits idle unless you have continuous production volume to justify it.</p>
+<p><strong>Outsourcing PCB assembly</strong> to a specialised <a href="/articles/electronic-manufacturing-services-ems-sri-lanka">Electronic Manufacturing Services (EMS)</a> provider gives you access to world-class manufacturing capability without the capital burden. But choosing the right partner — and managing the relationship effectively — requires careful planning.</p>
+
+<h2>Step 1: Prepare Your Manufacturing Package</h2>
+<p>Before contacting any EMS provider, ensure your design documentation is complete. A professional manufacturing package includes:</p>
+<ul>
+<li><strong>Gerber files:</strong> Complete fabrication data for the bare PCB (copper layers, solder mask, silkscreen, drill files)</li>
+<li><strong>Bill of Materials (BOM):</strong> Component part numbers, manufacturers, quantities, and approved alternates</li>
+<li><strong>Assembly drawings:</strong> Component placement, polarity indicators, and any special assembly instructions</li>
+<li><strong>Pick-and-place file:</strong> Machine-readable component coordinates and rotations (centroid file)</li>
+<li><strong>Test specifications:</strong> In-circuit test requirements, functional test procedures, acceptance criteria</li>
+<li><strong>Special requirements:</strong> <a href="/articles/conformal-coating-epoxy-filling-pcb-protection">Conformal coating</a>, potting, firmware loading, specific IPC class</li>
+</ul>
+<p>The more complete your package, the more accurate your quote will be — and the fewer surprises you will encounter during production.</p>
+
+<h2>Step 2: Evaluate Potential EMS Partners</h2>
+<p>When searching for a <strong>reliable EMS partner</strong>, evaluate candidates against these criteria:</p>
+
+<h3>Technical Capability</h3>
+<ul>
+<li>Can they handle your specific component types? Fine-pitch BGAs, 0201 passives, QFN packages?</li>
+<li>Do they have the right equipment? Panasonic or equivalent high-speed placement, X-ray inspection, AOI?</li>
+<li>Can they handle both <a href="/articles/what-is-surface-mount-technology-smt-guide">SMT</a> and <a href="/articles/through-hole-assembly-tht-guide">through hole</a> if your board requires mixed technology?</li>
+<li>Do they offer <a href="/articles/box-build-assembly-pcb-finished-product">box build</a> if you need complete product assembly?</li>
+</ul>
+
+<h3>Quality Certifications</h3>
+<ul>
+<li><strong>ISO 9001:</strong> Non-negotiable baseline for quality management</li>
+<li><strong>ISO 14001:</strong> Environmental management — increasingly required by European OEMs</li>
+<li><strong>ISO 45001:</strong> Occupational safety — demonstrates operational maturity</li>
+<li><strong>NMRA approval:</strong> Required for <a href="/articles/medical-device-electronics-assembly-compliance">medical device manufacturing</a></li>
+</ul>
+
+<h3>Volume Flexibility</h3>
+<p>The ideal partner handles both <a href="/articles/prototyping-electronics-manufacturing-speed-market">prototypes</a> and production volumes. This eliminates the painful and risky transition between a prototype shop and a production manufacturer. At TOS Lanka, we accept orders from 5 boards to 100,000+ — with the same quality standards applied regardless of volume.</p>
+
+<h3>Communication and Responsiveness</h3>
+<p>Can you communicate effectively in English? Do they respond to emails within 24 hours? Will they provide a dedicated project contact? These practical factors often determine the success of an outsourcing relationship more than technical capability alone.</p>
+
+<h2>Step 3: Request Quotes and Compare</h2>
+<p>Send your manufacturing package to 3-5 shortlisted EMS providers and request detailed quotations. A professional quote should include:</p>
+<ul>
+<li>Unit price (per board or per assembly) with quantity price breaks</li>
+<li>Tooling and fixture costs (stencils, test fixtures)</li>
+<li>Component procurement costs (if turnkey)</li>
+<li>Lead time from order to delivery</li>
+<li>NRE (non-recurring engineering) charges for test program development</li>
+<li>DFM feedback on your design</li>
+</ul>
+<p><strong>Red flag:</strong> If a provider quotes without asking technical questions about your BOM or design, they are either not reviewing your files carefully or they plan to address issues later — when changes are more expensive.</p>
+
+<h2>Step 4: The DFM Review — Your Free Quality Check</h2>
+<p>Reputable EMS providers offer a <strong>Design for Manufacturing (DFM) review</strong> as part of the quotation process. This engineering review identifies potential manufacturing issues before they reach the production floor:</p>
+<ul>
+<li>Component footprint mismatches that could cause placement errors</li>
+<li>Insufficient solder mask clearances around fine-pitch components</li>
+<li>Panel layout optimisation for cost reduction</li>
+<li>Component orientation standardisation for efficient placement</li>
+<li>Testability improvements (adding test points, improving probe access)</li>
+</ul>
+<p>At TOS Lanka, every new project receives a complimentary DFM review — because catching a design issue before production is infinitely cheaper than discovering it during assembly.</p>
+
+<h2>Step 5: Start with a Pilot Run</h2>
+<p>Before committing to full production volumes, order a pilot run of 10-50 boards. This validates:</p>
+<ul>
+<li>The manufacturer's ability to build your specific design correctly</li>
+<li>Component sourcing reliability and lead times</li>
+<li>Test coverage and yield rates</li>
+<li>Packaging and shipping quality</li>
+<li>Communication responsiveness under real project pressure</li>
+</ul>
+
+<h2>Step 6: Scale to Production</h2>
+<p>Once the pilot run validates quality and process capability, scale to production volumes with confidence. Establish clear agreements on:</p>
+<ul>
+<li>Forecast and ordering cadence (monthly, quarterly)</li>
+<li>Safety stock levels for critical components</li>
+<li>Quality metrics and reporting frequency</li>
+<li>Engineering change order (ECO) process</li>
+<li>Continuous improvement targets</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+<li><strong>Choosing on price alone:</strong> The cheapest quote often becomes the most expensive project</li>
+<li><strong>Skipping the pilot run:</strong> Going straight to production with an unproven partner invites disaster</li>
+<li><strong>Incomplete documentation:</strong> Missing files cause delays, errors, and additional charges</li>
+<li><strong>Ignoring time zones:</strong> Choose a partner in a compatible time zone for efficient communication</li>
+<li><strong>Single-sourcing everything:</strong> Consider a <a href="/articles/china-plus-one-electronics-manufacturing-sri-lanka">China+1 strategy</a> for supply chain resilience</li>
+</ul>
+
+<h2>Why TOS Lanka for Your First Outsourced Assembly</h2>
+<p><a href="/about">TOS Lanka</a> is particularly well-suited for companies outsourcing PCB assembly for the first time:</p>
+<ul>
+<li><strong>Free DFM review</strong> on every new project</li>
+<li><strong>5-board minimum</strong> — no prohibitive MOQs for startups</li>
+<li><strong>48-hour quotation turnaround</strong> — fast, responsive communication</li>
+<li><strong>English-speaking team</strong> experienced in serving international clients</li>
+<li><strong>Prototype-to-production continuity</strong> — same facility, same team, same quality</li>
+<li><strong>Japanese quality culture</strong> — zero-defect manufacturing as standard</li>
+</ul>
+<p>Ready to outsource your PCB assembly? <a href="/contacts">Send us your Gerber files and BOM</a> and receive a detailed quote within 48 hours.</p>
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // ARTICLE 19: Sri Lanka vs Vietnam vs India
+  // ─────────────────────────────────────────────────────────────────
+  {
+    id: "static-sri-lanka-vs-vietnam-india",
+    slug: "sri-lanka-vs-vietnam-india-electronics-manufacturing-comparison",
+    title: "Sri Lanka vs Vietnam vs India for Electronics Manufacturing: An Honest Comparison",
+    metaTitle: "Sri Lanka vs Vietnam vs India Electronics Manufacturing | Honest Comparison | TOS Lanka",
+    metaDescription: "Sri Lanka vs Vietnam vs India for electronics manufacturing — honest comparison of costs, quality, infrastructure, and EMS capabilities. Which country is right for your China+1 strategy? Data-driven analysis.",
+    keywords: ["Sri Lanka vs Vietnam electronics manufacturing", "electronics manufacturing comparison Asia", "best country for electronics manufacturing Asia", "China plus one Vietnam India Sri Lanka", "electronics manufacturing cost comparison Asia"],
+    excerpt: "Evaluating manufacturing locations for your China+1 strategy? This honest, data-driven comparison of Sri Lanka, Vietnam, and India examines costs, quality, infrastructure, and EMS capabilities.",
+    coverImage: "/articles/ems_contract.webp",
+    createdAt: "2026-04-22T08:00:00Z",
+    published: true,
+    content: `
+<h2>The Three Contenders for China+1</h2>
+<p>When global OEMs implement a <a href="/articles/china-plus-one-electronics-manufacturing-sri-lanka">China plus one</a> strategy for electronics manufacturing, three South and Southeast Asian countries consistently appear on the shortlist: Vietnam, India, and Sri Lanka. Each offers distinct advantages and limitations. This comparison provides an honest, fact-based analysis to help procurement teams make informed decisions.</p>
+<p>Full disclosure: TOS Lanka is a Sri Lankan manufacturer. We present this comparison fairly, acknowledging where competitors have advantages, because informed clients make better partners.</p>
+
+<h2>Cost Comparison</h2>
+<table>
+<thead><tr><th>Factor</th><th>Sri Lanka</th><th>Vietnam</th><th>India</th></tr></thead>
+<tbody>
+<tr><td>Average manufacturing labour cost</td><td>$150–250/month</td><td>$200–350/month</td><td>$150–300/month</td></tr>
+<tr><td>BOI/SEZ tax incentives</td><td>Strong (tax holidays)</td><td>Strong</td><td>Variable by state</td></tr>
+<tr><td>Electricity reliability</td><td>Reliable in EPZs</td><td>Improving</td><td>Variable</td></tr>
+<tr><td>Logistics cost to EU</td><td>Competitive (Colombo hub)</td><td>Moderate</td><td>Moderate</td></tr>
+<tr><td>Logistics cost to Japan</td><td>Moderate</td><td>Very competitive</td><td>Moderate</td></tr>
+</tbody>
+</table>
+<p><strong>Verdict:</strong> All three countries offer significant cost advantages over China, Japan, and Western manufacturing. Sri Lanka and India have slight labour cost advantages over Vietnam, but logistics costs vary by destination market.</p>
+
+<h2>Quality and Certifications</h2>
+<table>
+<thead><tr><th>Factor</th><th>Sri Lanka</th><th>Vietnam</th><th>India</th></tr></thead>
+<tbody>
+<tr><td>ISO 9001 certified EMS providers</td><td>Multiple (TOS Lanka, GPV, VarioSystems)</td><td>Many (Samsung, LG subcontractors)</td><td>Many (Syrma SGS, Dixon, Kaynes)</td></tr>
+<tr><td>Japanese quality culture</td><td>Strong (Japanese-owned factories)</td><td>Growing (Japanese FDI)</td><td>Limited</td></tr>
+<tr><td>Medical device (NMRA/CDSCO)</td><td>Available (TOS Lanka NMRA-approved)</td><td>Limited</td><td>Growing (CDSCO)</td></tr>
+<tr><td>Workforce skill level</td><td>High (92% literacy, Japan-trained)</td><td>Growing rapidly</td><td>Variable by region</td></tr>
+</tbody>
+</table>
+<p><strong>Verdict:</strong> Sri Lanka's advantage is quality density — fewer but more mature EMS providers with deep expertise. India offers scale. Vietnam offers proximity to Northeast Asian supply chains.</p>
+
+<h2>EMS Capability Depth</h2>
+<table>
+<thead><tr><th>Capability</th><th>Sri Lanka (TOS Lanka)</th><th>Vietnam (typical EMS)</th><th>India (typical EMS)</th></tr></thead>
+<tbody>
+<tr><td><a href="/articles/what-is-surface-mount-technology-smt-guide">SMT Assembly</a></td><td>✅ Panasonic lines</td><td>✅</td><td>✅</td></tr>
+<tr><td><a href="/articles/through-hole-assembly-tht-guide">THT Assembly</a></td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td><a href="/articles/box-build-assembly-pcb-finished-product">Box Build</a></td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td><a href="/articles/conformal-coating-epoxy-filling-pcb-protection">Conformal Coating</a></td><td>✅</td><td>Variable</td><td>Variable</td></tr>
+<tr><td><a href="/articles/cable-harness-assembly-design-process-quality">Wire Harness</a></td><td>✅ Automotive grade</td><td>Limited</td><td>Growing</td></tr>
+<tr><td><a href="/articles/coil-winding-inductive-component-assembly-industrial">Inductive Components</a></td><td>✅ Unique</td><td>❌</td><td>Rare</td></tr>
+<tr><td>BGA Rework + X-ray</td><td>✅</td><td>Variable</td><td>Variable</td></tr>
+</tbody>
+</table>
+<p><strong>Verdict:</strong> For breadth of capability under one roof, Sri Lanka (specifically TOS Lanka with 9 service lines) is unmatched. India excels in scale. Vietnam excels in high-volume consumer electronics for Northeast Asian brands.</p>
+
+<h2>Ideal Use Cases by Country</h2>
+
+<h3>Choose Sri Lanka When:</h3>
+<ul>
+<li>You need high-mix, low-to-medium volume manufacturing with Japanese quality standards</li>
+<li>Your product requires multiple processes (SMT + wire harness + coil winding + box build)</li>
+<li>You need <a href="/articles/medical-device-electronics-assembly-compliance">medical device</a> or <a href="/articles/automotive-electronics-manufacturing-sri-lanka">automotive electronics</a> with full traceability</li>
+<li>You value a single-source partnership over managing multiple vendors</li>
+<li>You are a European or Japanese OEM seeking a culturally compatible manufacturing partner</li>
+</ul>
+
+<h3>Choose Vietnam When:</h3>
+<ul>
+<li>You need high-volume consumer electronics manufacturing at scale</li>
+<li>Your primary market is Northeast Asia (Japan, South Korea)</li>
+<li>You want proximity to existing Samsung/LG supply chain ecosystems</li>
+<li>Your product is relatively standardised with minimal custom processes</li>
+</ul>
+
+<h3>Choose India When:</h3>
+<ul>
+<li>You need massive production scale (100,000+ units)</li>
+<li>Your primary market is the Indian domestic market</li>
+<li>You want access to India's growing electronics design talent pool</li>
+<li>You are building for the Indian automotive or telecommunications sector</li>
+</ul>
+
+<h2>The Smart Approach: Portfolio Diversification</h2>
+<p>The most resilient supply chain strategies don't pick a single alternative to China — they build a portfolio. Many sophisticated OEMs use a combination:</p>
+<ul>
+<li><strong>China:</strong> High-volume standard products (scale advantage)</li>
+<li><strong>Sri Lanka:</strong> High-reliability, multi-process products (quality + consolidation advantage)</li>
+<li><strong>Vietnam or India:</strong> Regional market-specific production (proximity advantage)</li>
+</ul>
+<p>This portfolio approach provides resilience against country-specific risks while optimising cost and quality for each product type.</p>
+
+<h2>Start Your Evaluation</h2>
+<p>If Sri Lanka matches your manufacturing profile, <a href="/contacts">contact TOS Lanka</a> to discuss your specific requirements. We provide factory tours, sample production runs, and detailed capability presentations to support your evaluation process.</p>
+`
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // ARTICLE 20: Small Orders / Startup-Friendly EMS
+  // ─────────────────────────────────────────────────────────────────
+  {
+    id: "static-small-orders-ems",
+    slug: "electronics-manufacturer-small-orders-startups",
+    title: "Finding an Electronics Manufacturer That Accepts Small Orders: A Guide for Startups and Scale-Ups",
+    metaTitle: "Electronics Manufacturer for Small Orders & Startups | No MOQ | TOS Lanka Sri Lanka",
+    metaDescription: "Looking for an electronics manufacturer that accepts small orders? TOS Lanka offers 5-board minimum, production-grade prototype assembly, free DFM review, and seamless scale to volume. No startup is too small.",
+    keywords: ["electronics manufacturer that accepts small orders", "best contract electronics manufacturer for startups", "EMS provider with free DFM review", "SMT assembly small batch no MOQ", "startup friendly electronics manufacturer", "EMS provider triple ISO certified", "small batch PCB assembly Asia"],
+    excerpt: "Most EMS providers ignore small orders. They shouldn't. Discover how to find an electronics manufacturer that takes your 5-board prototype as seriously as a 50,000-unit production run.",
+    coverImage: "/articles/prototyping_electronics.webp",
+    createdAt: "2026-04-21T08:00:00Z",
+    published: true,
+    content: `
+<h2>The Small Order Problem in Electronics Manufacturing</h2>
+<p>If you have ever tried to get a 10-board prototype assembled by a professional <a href="/articles/electronic-manufacturing-services-ems-sri-lanka">EMS provider</a>, you know the frustration. Many manufacturers have minimum order quantities (MOQs) of 100, 500, or even 1,000 boards. Others technically accept small orders but quote astronomical per-unit prices that make your prototype more expensive than a full production run — effectively discouraging you from placing the order.</p>
+<p>This is a structural problem in the electronics manufacturing industry. Large EMS providers optimise their operations for high-volume throughput. Setting up an <a href="/articles/what-is-surface-mount-technology-smt-guide">SMT line</a> — loading feeders, programming the placement machine, printing a stencil — takes the same effort whether you are running 5 boards or 5,000. The economics simply do not work for most high-volume shops to service small customers profitably.</p>
+<p>But here is the insight that many procurement managers miss: <strong>the best production partner for your 50,000-unit run is often the same partner who built your 5-board prototype.</strong></p>
+
+<h2>Why Prototype-to-Production Continuity Matters</h2>
+<p>The conventional approach — use a cheap prototype shop for development, then transfer to a "real" manufacturer for production — creates significant risks:</p>
+<ul>
+<li><strong>Process transfer risk:</strong> Different equipment, different solder profiles, different inspection criteria. Your board that worked perfectly at the prototype shop may fail at the production facility</li>
+<li><strong>Lost learning:</strong> The prototype shop learned your design's quirks and sensitivities. That knowledge is lost when you move to a new manufacturer</li>
+<li><strong>Time cost:</strong> Manufacturing transfer typically adds 4-8 weeks to your schedule — an eternity for a startup racing to market</li>
+<li><strong>Re-qualification:</strong> For <a href="/articles/medical-device-electronics-assembly-compliance">medical</a> or <a href="/articles/automotive-electronics-manufacturing-sri-lanka">automotive</a> products, changing manufacturers may require full re-qualification</li>
+</ul>
+<p>The ideal scenario: your prototype and production boards come from the same facility, built by the same technicians, on the same equipment, under the same quality system.</p>
+
+<h2>What to Look for in a Small-Order-Friendly EMS</h2>
+
+<h3>1. Stated Minimum Order Quantity</h3>
+<p>Ask directly: "What is your minimum order quantity for prototype assembly?" If the answer is higher than 25 boards, the provider is optimised for volume and may not give your small order adequate attention. At TOS Lanka, our minimum is <strong>5 boards</strong> — because we understand that today's 5-board prototype is tomorrow's 5,000-board production order.</p>
+
+<h3>2. Production-Grade Prototype Quality</h3>
+<p>Some prototype shops cut corners — using manual placement instead of machine placement, skipping AOI inspection, or using consumer-grade components. Your prototype should be built using the exact same processes that will be used in production:</p>
+<ul>
+<li>Machine <a href="/articles/what-is-surface-mount-technology-smt-guide">SMT placement</a> — not hand-placed components</li>
+<li><a href="/articles/reflow-soldering-vs-wave-soldering-process">Reflow soldering</a> with proper thermal profiling</li>
+<li>AOI or manual inspection against IPC-A-610 standards</li>
+<li><a href="/articles/in-circuit-testing-ict-zero-defect-electronics">In-circuit testing</a> if test points are available</li>
+</ul>
+
+<h3>3. Free DFM Review</h3>
+<p>A manufacturer that offers a <strong>free Design for Manufacturing (DFM) review</strong> on prototype orders is demonstrating investment in your success. This review catches design issues before they become manufacturing problems — saving you revision cycles and money.</p>
+
+<h3>4. Transparent Pricing</h3>
+<p>Look for clear, itemised quotes that separate NRE (stencils, programming), component costs, and assembly costs. Avoid providers who quote a single "per board" price without breakdown — you cannot optimise what you cannot see.</p>
+
+<h3>5. Scalability</h3>
+<p>The ultimate test: can this manufacturer scale from your prototype to 1,000 boards to 50,000 boards without changing facilities? If yes, you have found a partner, not just a vendor.</p>
+
+<h2>TOS Lanka's Approach to Small Orders</h2>
+<p><a href="/about">TOS Lanka</a> was built on the principle that every project deserves Japanese-quality manufacturing — regardless of size. Our approach:</p>
+<ul>
+<li><strong>5-board minimum:</strong> No order is too small</li>
+<li><strong>Same SMT lines:</strong> Your 5-board prototype runs on the same Panasonic equipment as our 10,000-board production orders</li>
+<li><strong>Free DFM review:</strong> Every new project receives engineering review at no charge</li>
+<li><strong>48-hour quotation:</strong> Fast response because startups cannot wait weeks for a quote</li>
+<li><strong>Triple ISO certified:</strong> ISO 9001 + 14001 + 45001 quality — no shortcuts regardless of volume</li>
+<li><strong>Turnkey and consigned options:</strong> We source components globally or work with your supplied materials</li>
+<li><strong>Seamless scale-up:</strong> When your product succeeds, production ramps within the same facility</li>
+</ul>
+
+<h2>Industries We Serve at Any Volume</h2>
+<ul>
+<li><strong>IoT and wearables:</strong> Smart devices, sensor modules, connected hardware</li>
+<li><strong><a href="/articles/medical-device-electronics-assembly-compliance">Medical devices</a>:</strong> Patient monitoring, diagnostic equipment (NMRA approved)</li>
+<li><strong><a href="/articles/industrial-electronics-manufacturing-control-systems">Industrial electronics</a>:</strong> Control systems, automation equipment, energy monitoring</li>
+<li><strong><a href="/articles/automotive-electronics-manufacturing-sri-lanka">Automotive</a>:</strong> Sensor assemblies, control units, <a href="/articles/cable-harness-assembly-design-process-quality">wire harnesses</a></li>
+<li><strong>Consumer electronics:</strong> Smart home devices, audio equipment, lighting controls</li>
+</ul>
+
+<h2>How to Get Started</h2>
+<p>Getting your first prototype assembled at TOS Lanka is straightforward:</p>
+<ol>
+<li><strong>Send your files:</strong> Email your Gerber files, BOM, and assembly drawings to <strong>dexter@toslanka.com</strong></li>
+<li><strong>Receive DFM feedback:</strong> Our engineers review your design and provide manufacturing recommendations</li>
+<li><strong>Approve the quote:</strong> We deliver a detailed quotation within 48 hours</li>
+<li><strong>Receive your boards:</strong> Production-grade prototype assemblies delivered to your door</li>
+</ol>
+<p>No startup is too small. No prototype is too simple. <a href="/contacts">Contact TOS Lanka</a> to start your project today.</p>
+`
+  },
+
 ];
 
 export function getStaticArticleBySlug(slug: string): StaticArticle | undefined {

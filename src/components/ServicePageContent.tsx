@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ArrowUpRight, ChevronRight, Mail, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronRight, ChevronDown, Mail, Phone } from "lucide-react";
 import SubPageNavbar from "./SubPageNavbar";
 import Footer from "./Footer";
 import type { ServiceData } from "../data/servicesData";
@@ -20,12 +20,14 @@ interface ServicePageContentProps {
     image: string;
     heroParagraphs: string[];
     capabilities: { title: string; description: string }[];
+    faqs: { question: string; answer: string }[];
     industries: string[];
     relatedSlugs: string[];
   };
 }
 
 export default function ServicePageContent({ service }: ServicePageContentProps) {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null);
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -299,6 +301,72 @@ export default function ServicePageContent({ service }: ServicePageContentProps)
                   ))}
                 </div>
               </motion.section>
+
+              {/* ═══════════════════════════════════════════════
+                  SECTION 2.5: FAQ ACCORDION
+              ═══════════════════════════════════════════════ */}
+              {service.faqs && service.faqs.length > 0 && (
+                <motion.section
+                  variants={itemVariants}
+                  className="w-full bg-white rounded-[2rem] lg:rounded-[3rem] p-8 md:p-14 lg:p-16 border border-black/[0.03] shadow-[0_2px_20px_-10px_rgba(0,0,0,0.03)] relative overflow-hidden mt-0.5 sm:mt-0"
+                  aria-labelledby="faq-heading"
+                >
+                  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-primary/[0.02] blur-[120px] pointer-events-none rounded-full" aria-hidden="true" />
+
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 relative z-10">
+                    <div className="max-w-2xl">
+                      <h2
+                        id="faq-heading"
+                        className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-black mb-4 font-heading leading-[1.1]"
+                        style={{ letterSpacing: "-0.02em" }}
+                      >
+                        Frequently Asked Questions
+                      </h2>
+                      <p className="text-[15px] text-black/50 font-light leading-relaxed">
+                        Common questions about our {service.shortTitle.toLowerCase()} services.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3 relative z-10">
+                    {service.faqs.map((faq, idx) => (
+                      <div
+                        key={idx}
+                        className="rounded-2xl border border-black/[0.05] bg-[#f8f9fa] overflow-hidden transition-all duration-300 hover:border-brand-primary/20"
+                      >
+                        <button
+                          onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                          className="w-full flex items-center justify-between p-6 lg:p-8 text-left cursor-pointer group"
+                          aria-expanded={openFaq === idx}
+                          aria-controls={`faq-answer-${idx}`}
+                        >
+                          <span className="text-[15px] md:text-base font-bold text-black pr-4 group-hover:text-brand-primary transition-colors duration-300">
+                            {faq.question}
+                          </span>
+                          <ChevronDown
+                            className={`w-5 h-5 text-black/30 flex-shrink-0 transition-transform duration-300 ${
+                              openFaq === idx ? "rotate-180 text-brand-primary" : ""
+                            }`}
+                            aria-hidden="true"
+                          />
+                        </button>
+                        <div
+                          id={`faq-answer-${idx}`}
+                          className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                            openFaq === idx ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+                          }`}
+                          role="region"
+                          aria-labelledby={`faq-question-${idx}`}
+                        >
+                          <p className="px-6 lg:px-8 pb-6 lg:pb-8 text-[14px] md:text-[15px] text-black/55 font-medium leading-[1.8]">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.section>
+              )}
 
               {/* ═══════════════════════════════════════════════
                   SECTION 3: CTA + RELATED SERVICES
